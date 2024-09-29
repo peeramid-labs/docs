@@ -1,18 +1,7 @@
 
 # 
-## Description
 
-## Implementation
-
-### public struct Score
-
-```solidity
-struct Score {
-  address participant;
-  uint256 score;
-}
-```
-### public struct RInstanceSettings
+###  RInstanceSettings
 
 ```solidity
 struct RInstanceSettings {
@@ -25,7 +14,8 @@ struct RInstanceSettings {
   struct LibQuadraticVoting.qVotingStruct voting;
 }
 ```
-### public struct RInstanceState
+
+###  RInstanceState
 
 ```solidity
 struct RInstanceState {
@@ -33,7 +23,8 @@ struct RInstanceState {
   struct LibTBG.GameSettings TBGSEttings;
 }
 ```
-### public struct VoteHidden
+
+###  VoteHidden
 
 ```solidity
 struct VoteHidden {
@@ -41,7 +32,8 @@ struct VoteHidden {
   bytes proof;
 }
 ```
-### public struct RInstance
+
+###  RInstance
 
 ```solidity
 struct RInstance {
@@ -60,40 +52,41 @@ struct RInstance {
   mapping(address => bool) playerVoted;
 }
 ```
-###  event RegistrationOpen
+
+###  RegistrationOpen
 
 ```solidity
-event RegistrationOpen(uint256 gameid) 
+event RegistrationOpen(uint256 gameid)
 ```
 
-###  event PlayerJoined
+###  PlayerJoined
 
 ```solidity
-event PlayerJoined(uint256 gameId, address participant) 
+event PlayerJoined(uint256 gameId, address participant)
 ```
 
-###  event GameStarted
+###  GameStarted
 
 ```solidity
-event GameStarted(uint256 gameId) 
+event GameStarted(uint256 gameId)
 ```
 
-###  event gameCreated
+###  gameCreated
 
 ```solidity
-event gameCreated(uint256 gameId, address gm, address creator, uint256 rank) 
+event gameCreated(uint256 gameId, address gm, address creator, uint256 rank)
 ```
 
-###  event GameClosed
+###  GameClosed
 
 ```solidity
-event GameClosed(uint256 gameId) 
+event GameClosed(uint256 gameId)
 ```
 
-###  event PlayerLeft
+###  PlayerLeft
 
 ```solidity
-event PlayerLeft(uint256 gameId, address player) 
+event PlayerLeft(uint256 gameId, address player)
 ```
 
 <!--CONTRACT_END-->

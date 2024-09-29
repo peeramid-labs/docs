@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      rankify-contracts:
-        specifier: ^0.9.4
-        version: 0.9.4(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      '@peeramid-labs/eds':
+        specifier: ^1.0.0
+        version: link:../eds
       rankify-js:
         specifier: ^1.0.0
         version: 1.0.0(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
