@@ -4,6 +4,7 @@ repo_url: https://github.com/rankify-it
 site_description: Rankify documentation portal
 nav:
     - Welcome:
+          - "test.adoc"
           - "index.md"
           - "governance.md"
           - "tokens.md"
@@ -13,7 +14,6 @@ nav:
           - "architecture/specifications.md"
     - interfaces:
           - ...
-          - "interfaces/js.md"
     - Support:
           - "support/index.md"
           - "support/faq.md"
@@ -47,10 +47,13 @@ plugins:
           num_workers: 8
 markdown_extensions:
     - admonition
+    - mkautodoc
     - pymdownx.details
     - pymdownx.superfences
     - attr_list
     - toc:
           permalink: "#"
+extra_css:
+    - css/custom.css
 # nav:
 #     - Home: "Welcome/index.md"

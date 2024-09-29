@@ -27,7 +27,7 @@ A single cell is an autonomous governance unit, structured as an NxM matrix of i
 
 ![cell level infrastructure](../assets/cell-inrastructure.png)
 
-Protocol is modular and trends to support already existing multi-sig infrastructure as well as experimentation hence protocol deployed, established, and modified cells, that are referred as _Primordial_, _Generated_, and _Mutated_ accordingly.
+Protocol is modular, loosely-coupled interfaces oriented and trends to support already existing multi-sig infrastructure, may easily incorporate DAOs built on other frameworks as well as experimentation. Cells may be distinguished in three categories based on origin: Factory deployed, established protocols that adapt technology, and modified experimentation structures, that are referred as _Primordial_, _Generated_, and _Mutated_ accordingly.
 
 Above diagram describes infrastructure _Generated_ cells adhere, while diagram involving governing body (green blocks) on top of this page describes _primordial_ cell, which yet has no Rank NFT asset to complete it, as well as it is not listed in any auto-generation registries.
 
@@ -40,99 +40,106 @@ Above diagram describes infrastructure _Generated_ cells adhere, while diagram i
 
 The core concept of scaling Rankify is to give ability for organizations to easily spawn whole pieces of new infrastructure, such as new cells, or new applications that form organizations unique offerings to others in the network.
 
-Thus we develop a distribution system with goal to provide as generic and permission less approach as possible with yet a security guarantees between different organizations, that are translated trough curating own application infrastructure. Application infrastructure consist of:
+Such spawning should be as easy as possible, yet it should be secure and permission less and scale well.
 
--   **Modular design**: Enables various methods of Ethereum distribution.
--   **Loosely coupled**: Interfaces are designed to be unaware of their consumers, promoting flexibility.
--   **Version controlled**: Facilitates easy upgrades and maintenance.
--   **Easy to use**: A simple API and clear documentation make the system user-friendly.
+Thus we develop a distribution system with goal to provide as generic and permission less approach as possible with yet a security guarantees between different organizations, that are translated trough curating own application infrastructure. Distribution system infrastructure consist of:
+
+-   **[IInstallerPlugin](https://github.com/rankify-it/contracts/blob/main/src/abstracts/IInstallerPlugin.sol)**: Combines the abilities of (`IInstantiator`) and act as a plugin within the Aragon OSx framework (`Plugin`).
+-   **[IDistributon](https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IDistributon.sol)**: Manages and serves information about groups of source code (packages) from version-controlled repositories. It ensures these repositories comply with the `IRepository` interface.
+-   **[IInstantiator](https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IInstantiator.sol)**: Creates new instances of contracts using the `ISourceController` as an authority. It also acts as a registry for active instances and ensures version compatibility with the source controller.
+-   **[IRepository](https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IRepository.sol)**: Defines how source code repositories should be structured. It introduces `SourceTypes` to accommodate different ways of consuming source code.
+-   **[ISourceController](https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/ISourceController.sol)**: The authoritative source for managing source code distribution. It works with repositories (`IRepository`) and defines rules for versioning and access.
+
+```mermaid
+classDiagram
+
+    class IInstallerPlugin {
+        <<abstract>>
+    }
+
+    class IInstantiator {
+        <<Interface>>
+        instantiate(repository, args) uint256
+        instantiateExact(repository, version, args) uint256
+        instanceCheck(instance) bool
+        instanceVersion(instance) Tag
+        remove(instance)
+        getSourceControl(instance) ISourceController
+        getInstance(instanceId) address[]
+        getInstancesNum() uint256
+        getActiveInstancesIds() uint256[]
+    }
+
+    class IDistribution {
+        <<Interface>>
+        getDistributionId() bytes32
+        getDistribution() Distribution
+    }
+
+    class IRepository {
+        <<Interface>>
+        updateReleaseMetadata(release, releaseMetadata)
+        createVersion(release, source, buildMetadata, releaseMetadata)
+        buildCount(release) uint256
+        getVersion(tagHash) Version
+        getVersion(tag) Version
+        getLatestVersion(source) Version
+        getLatestVersion(release) Version
+        latestRelease() uint8
+    }
+
+    class ISourceController {
+        <<Interface>>
+        getDistributors() address[]
+        isDistributor(distributor) bool
+        setVersionRequirement(repository, versionRequired)
+        getVersionRequired(repository) VersionRequirement
+        addDistributor(repository, versionRequired)
+        removeDistributor(repository)
+        addBatchDistributors(repositories, requirements)
+        removeBatchDistributors(repositories)
+        setBatchVersionRequirements(repositories, requirements)
+    }
+
+     class VersionRequirement {
+        <<Interface>>
+        baseVersion Tag
+        requirementType VersionRequirementTypes
+    }
+
+     class Tag {
+        <<struct>>
+        release uint8
+        build uint16
+    }
+
+    class VersionRequirementTypes {
+        <<enumeration>>
+        All
+        MajorVersion
+        ExactVersion
+    }
+
+
+    IInstallerPlugin --|> IInstantiator : implements
+    IInstallerPlugin --|> OSx_Plugin : implements
+    IInstantiator --> ISourceController : uses
+    IInstantiator --> IRepository : uses
+    ISourceController --> IRepository : uses
+    ISourceController --> IDistribution : uses
+    ISourceController --> VersionRequirement : uses
+    VersionRequirement --> Tag
+    VersionRequirement --> VersionRequirementTypes
+    IRepository ..> IDistribution: instantiates
+
+```
+
+App developer either deploys plain source or sets up a repository for his work and deploys his source to that to provide version control interface. Then he can propose any organization to add his repository to their Installer Plugin to have his application available for installation.
+If it succeeds, organization members now can create their own instances of applications that will share same source code, version requirements and permissions to proxy calls on to the DAO contract.
 
 <!-- -   **Distributor**: Combines sources with installation instruction into distribution. -->
 
 <!-- ![app store infra](../assets/Appfra.png){: style="height:auto;width:500px"} -->
-
-```puml
-@startuml
-' -- options --
-
-
-
-' -- classes --
-interface IRepository {
-    ' -- inheritance --
-
-    ' -- usingFor --
-
-    ' -- vars --
-
-    ' -- methods --
-	+updateReleaseMetadata()
-	+createVersion()
-	+🔍buildCount()
-	+🔍getVersion()
-	+🔍getVersion()
-	+🔍getLatestVersion()
-	+🔍getLatestVersion()
-	+🔍latestRelease()
-
-}
-interface IVSourceController {
-    ' -- inheritance --
-
-    ' -- usingFor --
-
-    ' -- vars --
-
-    ' -- methods --
-	+🔍getDistributors()
-	+🔍isDistributor()
-	+setVersionRequirement()
-	+🔍getVersionRequired()
-	+addDistributor()
-	+removeDistributor()
-	+addBatchDistributors()
-	+removeBatchDistributors()
-	+setBatchVersionRequirements()
-
-}
-
-interface IDistributon {
-    ' -- inheritance --
-
-    ' -- usingFor --
-
-    ' -- vars --
-
-    ' -- methods --
-	+🔍getDistributionId()
-	+🔍getDistribution()
-
-}
-
-
-interface IInstantiator {
-    ' -- inheritance --
-
-    ' -- usingFor --
-IVSourceController
-    ' -- vars --
-
-    ' -- methods --
-	+instantiate()
-	+instantiateExact()
-	+🔍tryInstanceId()
-	+🔍instanceCheck()
-	+🔍instanceVersion()
-	+remove()
-	+🔍getSourceControl()
-	+🔍getInstance()
-
-}
-' -- inheritance / usingFor --
-
-
-@enduml
-```
 
 ```puml
 @startuml
@@ -169,16 +176,13 @@ IP -> O: exec()
 @enduml
 ```
 
-App developer either deploys plain source or sets up a repository for his work and deploys his source to that to provide version control interface. Then he can propose any organization to add his repository to their Installer Plugin to have his application available for installation.
-If it succeeds, organization members now can create their own instances of applications that all will share same source code and version.
-
 <!-- ### Factory
 
 The App Factory serves as a source for app installations, guaranteeing deterministic logic source in deployed applications. This enables the creation of interconnected ecosystems where trust is built on a shared understanding of app functionality. -->
 
 <!-- ![App factory](../assets/PluginFactory.png) -->
 
-Anyone can create their own repository, and become distributor, however Rankify DAO curates its own distribution contract, listing its own resources and community-approved third-party applications.
+Anyone may create own repository and become distributor. Rankify DAO will curate its own distribution contract, listing its own resources and community-approved third-party applications.
 [IVRepoFactory](https://github.com/rankify-it/contracts/blob/23-v09-factory-specifications/src/interfaces/IVRepoFactory.sol) is provided for convenience of creating new repositories.
 
 ### Repositories
@@ -188,20 +192,7 @@ Users of that repository can be sure that every time they request specific appli
 
 !!! Note
 
-    The developer source code does not need to be aware of the repository structure, already existing contracts may be added to the repository.
-
-<!-- ## Registry
-
-Unlike immutable Repositories, the Registry is a mutable source of trust, allowing external applications to verify attestations from Rankify on [ENS](https://attest.org/). While developers can deploy their own Repository contracts freely, the DAO curates it's attestations, listing its own resources and community-approved third-party applications. -->
-
-<!-- ### Distributions registry
-
-!!! warning "v2 feature"
-
-    This feature is still TBD, it's being discussed for future release. Please reach if you have an opinion on this feature.
-
-Distributor is a contract that combines sources with installation instructions into a distribution. It must implement [IDistributor]() interface, and it's only interface dependency is [Repository](index.md#repositories) contract.
-DAO curated distributions registry is also able to act as source of trust, showing which applications are approved by the community. -->
+    Source code that is being versioned does not need to be aware of the repository structure, already existing contracts may be added to the repository.
 
 ### Installer
 

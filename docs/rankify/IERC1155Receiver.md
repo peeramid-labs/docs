@@ -1,15 +1,12 @@
 
 # ERC1155 transfer receiver interface
-## Description
 
-## Implementation
-
-### external function onERC1155Received
+###  onERC1155Received
 
 validate receipt of ERC1155 transfer
 
 ```solidity
-function onERC1155Received(address operator, address from, uint256 id, uint256 value, bytes data) external returns (bytes4) 
+function onERC1155Received(address operator, address from, uint256 id, uint256 value, bytes data) external returns (bytes4)
 ```
 
 | Input | Type | Description |
@@ -22,12 +19,12 @@ function onERC1155Received(address operator, address from, uint256 id, uint256 v
 | **Output** | |
 |  `0`  | `bytes4` | function's own selector if transfer is accepted |
 
-### external function onERC1155BatchReceived
+###  onERC1155BatchReceived
 
 validate receipt of ERC1155 batch transfer
 
 ```solidity
-function onERC1155BatchReceived(address operator, address from, uint256[] ids, uint256[] values, bytes data) external returns (bytes4) 
+function onERC1155BatchReceived(address operator, address from, uint256[] ids, uint256[] values, bytes data) external returns (bytes4)
 ```
 
 | Input | Type | Description |
