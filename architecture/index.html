@@ -1,0 +1,1158 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rankify documentation portal">
+      
+      
+      
+        <link rel="canonical" href="https://rankify.it/architecture/">
+      
+      
+        <link rel="prev" href="../tokens/">
+      
+      
+        <link rel="next" href="applications/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>Smart contract infrastructure - Rankify Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#smart-contract-infrastructure" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Rankify Documentation" class="md-header__button md-logo" aria-label="Rankify Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rankify Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Smart contract infrastructure
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rankify-it" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Rankify Documentation" class="md-nav__button md-logo" aria-label="Rankify Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rankify Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rankify-it" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../test.adoc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Smart contract infrastructure
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Smart contract infrastructure
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cells
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethereum-distribution-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethereum Distribution System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethereum Distribution System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osx-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSx Installer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specifications [DRAFT]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    interfaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ethereum Distribution System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Ethereum Distribution System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IDistribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDistribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IDistributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDistributor Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IERC7746/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IERC7746 Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IInitializer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IInitializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IInstaller/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IInstaller Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IRepository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IRepository Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ethereum%20Distribution%20System/IVersionDistributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IVersionDistributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community channels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../support/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently asked questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cells" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cells
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ethereum-distribution-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ethereum Distribution System
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ethereum Distribution System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#repositories" class="md-nav__link">
+    <span class="md-ellipsis">
+      Repositories
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#osx-installer" class="md-nav__link">
+    <span class="md-ellipsis">
+      OSx Installer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="smart-contract-infrastructure">Smart contract infrastructure<a class="headerlink" href="#smart-contract-infrastructure" title="Permanent link">#</a></h1>
+<p>The Rankify smart contract infrastructure is built upon a modular design, emphasizing trustless operations to facilitate progressive decentralization within organizations and to mitigate some of the roadblocks on wider adoption of decentralized governance.</p>
+<p>Adhering to systems theory principles, the architecture can be understood as a black box, responding to stimuli inputs with defined output reactions, while its key feature is the support for recursive patterns, enabling iterative processes on both input and output levels.</p>
+<p>Including governing body, infrastructure as consisting of two main pieces:</p>
+<ul>
+<li><strong>App Store</strong>: Registry of different ranking system applications that may be installed on cells</li>
+<li><strong>Cell infrastructures</strong>: Dimensions for ranking that participants produce.</li>
+</ul>
+<p><img alt="high-level-infrastructure" src="../assets/high-level-architecture.png" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The rankify community governing DAO and multi-sig in the image above can be seen as an instance of <em>Cell</em> infrastructure.</p>
+</div>
+<h2 id="cells">Cells<a class="headerlink" href="#cells" title="Permanent link">#</a></h2>
+<p>A single cell is an autonomous governance unit, structured as an NxM matrix of inputs and outputs connected to a multisig-wallet. Each cell, representing a specific topic or workgroup, leverages a modular and customizable infrastructure consisting of:</p>
+<ul>
+<li><strong>Rank NFT</strong>: A semi-fungible ERC1155 token signifying the bearer's rank within the subject.</li>
+<li><strong>Governance Token</strong>: An ERC20 token used for governance, minted by exchanging Rank NFTs.</li>
+<li><strong>DAO contract</strong>: <a href="https://devs.aragon.org/docs/osx/reference-guide/core/dao/">OSx DAO Contract</a> governed entirely by holders of the governance token.</li>
+<li><strong>App Instance</strong>: Ranking app, implements the autonomous competence identification protocol.</li>
+<li><strong>Multisig Wallet</strong>: A wallet adhering to the Gnosis <a href="https://github.com/safe-global/safe-smart-account/blob/main/contracts/interfaces/ISafe.sol">ISafe</a>, connecting governing bodies and facilitating decision-making.</li>
+</ul>
+<p><img alt="cell level infrastructure" src="../assets/cell-inrastructure.png" /></p>
+<p>Protocol is modular, loosely-coupled interfaces oriented and trends to support already existing multi-sig infrastructure, may easily incorporate DAOs built on other frameworks as well as experimentation. Cells may be distinguished in three categories based on origin: Factory deployed, established protocols that adapt technology, and modified experimentation structures, that are referred as <em>Primordial</em>, <em>Generated</em>, and <em>Mutated</em> accordingly.</p>
+<p>Above diagram describes infrastructure <em>Generated</em> cells adhere, while diagram involving governing body (green blocks) on top of this page describes <em>primordial</em> cell, which yet has no Rank NFT asset to complete it, as well as it is not listed in any auto-generation registries.</p>
+<!-- - **Primordial**: Existing multisig wallets incorporating logic of protocol without having support for immutable head
+- **Complete**: Cells deployed in strict compliance with protocol
+- **Mutated**: Cells that are intentionally modifying rankify protocol for sake of research and further development
+  Initial cell input, also referred as "_head_" -->
+
+<h2 id="ethereum-distribution-system">Ethereum Distribution System<a class="headerlink" href="#ethereum-distribution-system" title="Permanent link">#</a></h2>
+<p>The core concept of scaling Rankify is to give ability for organizations to easily spawn whole pieces of new infrastructure, such as new cells, or new applications that form organizations unique offerings to others in the network.</p>
+<p>Such spawning should be as easy as possible, yet it should be secure and permission less and scale well.</p>
+<p>Thus we develop a distribution system with goal to provide as generic and permission less approach as possible with yet a security guarantees between different organizations, that are translated trough curating own application infrastructure. Distribution system infrastructure consist of:</p>
+<ul>
+<li><strong><a href="https://github.com/rankify-it/contracts/blob/main/src/abstracts/IInstallerPlugin.sol">IInstallerPlugin</a></strong>: Combines the abilities of (<code>IInstantiator</code>) and act as a plugin within the Aragon OSx framework (<code>Plugin</code>).</li>
+<li><strong><a href="https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IDistributon.sol">IDistributon</a></strong>: Manages and serves information about groups of source code (packages) from version-controlled repositories. It ensures these repositories comply with the <code>IRepository</code> interface.</li>
+<li><strong><a href="https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IInstantiator.sol">IInstantiator</a></strong>: Creates new instances of contracts using the <code>ISourceController</code> as an authority. It also acts as a registry for active instances and ensures version compatibility with the source controller.</li>
+<li><strong><a href="https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/IRepository.sol">IRepository</a></strong>: Defines how source code repositories should be structured. It introduces <code>SourceTypes</code> to accommodate different ways of consuming source code.</li>
+<li><strong><a href="https://github.com/rankify-it/contracts/blob/main/src/interfaces/eds/ISourceController.sol">ISourceController</a></strong>: The authoritative source for managing source code distribution. It works with repositories (<code>IRepository</code>) and defines rules for versioning and access.</li>
+</ul>
+<div class="highlight"><pre><span></span><code>classDiagram
+
+    class IInstallerPlugin {
+        &lt;&lt;abstract&gt;&gt;
+    }
+
+    class IInstantiator {
+        &lt;&lt;Interface&gt;&gt;
+        instantiate(repository, args) uint256
+        instantiateExact(repository, version, args) uint256
+        instanceCheck(instance) bool
+        instanceVersion(instance) Tag
+        remove(instance)
+        getSourceControl(instance) ISourceController
+        getInstance(instanceId) address[]
+        getInstancesNum() uint256
+        getActiveInstancesIds() uint256[]
+    }
+
+    class IDistribution {
+        &lt;&lt;Interface&gt;&gt;
+        getDistributionId() bytes32
+        getDistribution() Distribution
+    }
+
+    class IRepository {
+        &lt;&lt;Interface&gt;&gt;
+        updateReleaseMetadata(release, releaseMetadata)
+        createVersion(release, source, buildMetadata, releaseMetadata)
+        buildCount(release) uint256
+        getVersion(tagHash) Version
+        getVersion(tag) Version
+        getLatestVersion(source) Version
+        getLatestVersion(release) Version
+        latestRelease() uint8
+    }
+
+    class ISourceController {
+        &lt;&lt;Interface&gt;&gt;
+        getDistributors() address[]
+        isDistributor(distributor) bool
+        setVersionRequirement(repository, versionRequired)
+        getVersionRequired(repository) VersionRequirement
+        addDistributor(repository, versionRequired)
+        removeDistributor(repository)
+        addBatchDistributors(repositories, requirements)
+        removeBatchDistributors(repositories)
+        setBatchVersionRequirements(repositories, requirements)
+    }
+
+     class VersionRequirement {
+        &lt;&lt;Interface&gt;&gt;
+        baseVersion Tag
+        requirementType VersionRequirementTypes
+    }
+
+     class Tag {
+        &lt;&lt;struct&gt;&gt;
+        release uint8
+        build uint16
+    }
+
+    class VersionRequirementTypes {
+        &lt;&lt;enumeration&gt;&gt;
+        All
+        MajorVersion
+        ExactVersion
+    }
+
+
+    IInstallerPlugin --|&gt; IInstantiator : implements
+    IInstallerPlugin --|&gt; OSx_Plugin : implements
+    IInstantiator --&gt; ISourceController : uses
+    IInstantiator --&gt; IRepository : uses
+    ISourceController --&gt; IRepository : uses
+    ISourceController --&gt; IDistribution : uses
+    ISourceController --&gt; VersionRequirement : uses
+    VersionRequirement --&gt; Tag
+    VersionRequirement --&gt; VersionRequirementTypes
+    IRepository ..&gt; IDistribution: instantiates
+</code></pre></div>
+<p>App developer either deploys plain source or sets up a repository for his work and deploys his source to that to provide version control interface. Then he can propose any organization to add his repository to their Installer Plugin to have his application available for installation.
+If it succeeds, organization members now can create their own instances of applications that will share same source code, version requirements and permissions to proxy calls on to the DAO contract.</p>
+<!-- -   **Distributor**: Combines sources with installation instruction into distribution. -->
+
+<!-- ![app store infra](../assets/Appfra.png){: style="height:auto;width:500px"} -->
+
+<div class="puml"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="635px" preserveAspectRatio="true" style="background: #ffffff" version="1.1" viewBox="0 0 618 635" width="618px" zoomAndPan="magnify"><defs/><g><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="59.9019" x2="59.9019" y1="81.2969" y2="554.3203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="169.3398" x2="169.3398" y1="81.2969" y2="554.3203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="275.7505" x2="275.7505" y1="81.2969" y2="554.3203"/><rect fill="#FFFFFF" height="77.2656" style="stroke:#181818;stroke-width:1.0;" width="10" x="270.7505" y="139.5625"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="400.8896" x2="400.8896" y1="81.2969" y2="554.3203"/><rect fill="#FFFFFF" height="160.8281" style="stroke:#181818;stroke-width:1.0;" width="10" x="395.8896" y="245.9609"/><rect fill="#FFFFFF" height="110.3984" style="stroke:#181818;stroke-width:1.0;" width="10" x="395.8896" y="443.9219"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="495.8926" x2="495.8926" y1="81.2969" y2="554.3203"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="575.3945" x2="575.3945" y1="325.2266" y2="554.3203"/><rect fill="#FFFFFF" height="139.5313" style="stroke:#181818;stroke-width:1.0;" width="10" x="570.3945" y="414.7891"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8037" x="5" y="77.9951">App Developer</text><ellipse cx="59.9019" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M59.9019,21.5 L59.9019,48.5 M46.9019,29.5 L72.9019,29.5 M59.9019,48.5 L46.9019,63.5 M59.9019,48.5 L72.9019,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89.0723" x="124.8037" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.0723" x="131.8037" y="69.9951">Repository</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="103.749" x="223.876" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.749" x="230.876" y="69.9951">Organization</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117.8174" x="341.981" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8174" x="348.981" y="69.9951">Installer Plugin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39.2041" x="473.2905" y="77.9951">Users</text><ellipse cx="495.8926" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M495.8926,21.5 L495.8926,48.5 M482.8926,29.5 L508.8926,29.5 M495.8926,48.5 L482.8926,63.5 M495.8926,48.5 L508.8926,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8037" x="5" y="627.3154">App Developer</text><ellipse cx="59.9019" cy="562.8203" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M59.9019,570.8203 L59.9019,597.8203 M46.9019,578.8203 L72.9019,578.8203 M59.9019,597.8203 L46.9019,612.8203 M59.9019,597.8203 L72.9019,612.8203 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="89.0723" x="124.8037" y="554.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75.0723" x="131.8037" y="574.3154">Repository</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="103.749" x="223.876" y="554.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89.749" x="230.876" y="574.3154">Organization</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="117.8174" x="341.981" y="554.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="103.8174" x="348.981" y="574.3154">Installer Plugin</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39.2041" x="473.2905" y="627.3154">Users</text><ellipse cx="495.8926" cy="562.8203" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M495.8926,570.8203 L495.8926,597.8203 M482.8926,578.8203 L508.8926,578.8203 M495.8926,597.8203 L482.8926,612.8203 M495.8926,597.8203 L508.8926,612.8203 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73.3086" x="538.7402" y="554.3203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.3086" x="545.7402" y="574.3154">instance</text><polygon fill="#181818" points="157.3398,106.4297,167.3398,110.4297,157.3398,114.4297,161.3398,110.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="59.9019" x2="163.3398" y1="110.4297" y2="110.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="76.2163" x="66.9019" y="105.3638">add version</text><polygon fill="#181818" points="258.7505,135.5625,268.7505,139.5625,258.7505,143.5625,262.7505,139.5625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="59.9019" x2="264.7505" y1="139.5625" y2="139.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52.1143" x="66.9019" y="134.4966">Propose</text><path d="M285.7505,123.4297 L285.7505,148.4297 L374.7505,148.4297 L374.7505,133.4297 L364.7505,123.4297 L285.7505,123.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M364.7505,123.4297 L364.7505,133.4297 L374.7505,133.4297 L364.7505,123.4297 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68.7832" x="291.7505" y="140.4966">DAO votes</text><line style="stroke:#181818;stroke-width:1.0;" x1="280.7505" x2="322.7505" y1="174.6953" y2="174.6953"/><line style="stroke:#181818;stroke-width:1.0;" x1="322.7505" x2="322.7505" y1="174.6953" y2="187.6953"/><line style="stroke:#181818;stroke-width:1.0;" x1="281.7505" x2="322.7505" y1="187.6953" y2="187.6953"/><polygon fill="#181818" points="291.7505,183.6953,281.7505,187.6953,291.7505,191.6953,287.7505,187.6953" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="106.1392" x="287.7505" y="169.6294">Add Repository?</text><polygon fill="#181818" points="388.8896,212.8281,398.8896,216.8281,388.8896,220.8281,392.8896,216.8281" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="280.7505" x2="394.8896" y1="216.8281" y2="216.8281"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69.4053" x="287.7505" y="211.7622">addSource</text><polygon fill="#181818" points="416.8896,241.9609,406.8896,245.9609,416.8896,249.9609,412.8896,245.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="410.8896" x2="494.8926" y1="245.9609" y2="245.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="66.0029" x="422.8896" y="240.895">newInstall</text><line style="stroke:#181818;stroke-width:1.0;" x1="405.8896" x2="447.8896" y1="275.0938" y2="275.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="447.8896" x2="447.8896" y1="275.0938" y2="288.0938"/><line style="stroke:#181818;stroke-width:1.0;" x1="406.8896" x2="447.8896" y1="288.0938" y2="288.0938"/><polygon fill="#181818" points="416.8896,284.0938,406.8896,288.0938,416.8896,292.0938,412.8896,288.0938" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38.0605" x="412.8896" y="270.0278">check</text><path d="M102.8799,258.9609 L102.8799,283.9609 L395.8799,283.9609 L395.8799,268.9609 L385.8799,258.9609 L102.8799,258.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M385.8799,258.9609 L385.8799,268.9609 L395.8799,268.9609 L385.8799,258.9609 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="272.0098" x="108.8799" y="276.0278">Check requested source &amp; version are OK</text><polygon fill="#181818" points="180.3398,313.2266,170.3398,317.2266,180.3398,321.2266,176.3398,317.2266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="174.3398" x2="394.8896" y1="317.2266" y2="317.2266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="68.9355" x="186.3398" y="312.1606">get source</text><polygon fill="#181818" points="383.8896,342.3594,393.8896,346.3594,383.8896,350.3594,387.8896,346.3594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="169.3398" x2="389.8896" y1="346.3594" y2="346.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19.2651" x="176.3398" y="341.2935">src</text><rect fill="#E2E2F0" height="30.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="73.3086" x="538.7402" y="325.2266"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59.3086" x="545.7402" y="345.2217">instance</text><polygon fill="#181818" points="526.7402,342.3594,536.7402,346.3594,526.7402,350.3594,530.7402,346.3594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="405.8896" x2="532.7402" y1="346.3594" y2="346.3594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="41.5518" x="412.8896" y="341.2935">create</text><polygon fill="#181818" points="416.8896,373.6563,406.8896,377.6563,416.8896,381.6563,412.8896,377.6563" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="410.8896" x2="574.3945" y1="377.6563" y2="377.6563"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="51.3589" x="422.8896" y="372.5903">address</text><polygon fill="#181818" points="483.8926,402.7891,493.8926,406.7891,483.8926,410.7891,487.8926,406.7891" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="405.8896" x2="489.8926" y1="406.7891" y2="406.7891"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="17.7607" x="412.8896" y="401.7231">Ok</text><polygon fill="#181818" points="558.3945,431.9219,568.3945,435.9219,558.3945,439.9219,562.3945,435.9219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="495.8926" x2="564.3945" y1="435.9219" y2="435.9219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50.502" x="502.8926" y="430.856">interact</text><polygon fill="#181818" points="416.8896,461.0547,406.8896,465.0547,416.8896,469.0547,412.8896,465.0547" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="410.8896" x2="569.3945" y1="465.0547" y2="465.0547"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="73.2837" x="422.8896" y="459.9888">DAO action</text><line style="stroke:#181818;stroke-width:1.0;" x1="405.8896" x2="447.8896" y1="494.1875" y2="494.1875"/><line style="stroke:#181818;stroke-width:1.0;" x1="447.8896" x2="447.8896" y1="494.1875" y2="507.1875"/><line style="stroke:#181818;stroke-width:1.0;" x1="406.8896" x2="447.8896" y1="507.1875" y2="507.1875"/><polygon fill="#181818" points="416.8896,503.1875,406.8896,507.1875,416.8896,511.1875,412.8896,507.1875" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="38.0605" x="412.8896" y="489.1216">check</text><path d="M113.7598,478.0547 L113.7598,503.0547 L395.7598,503.0547 L395.7598,488.0547 L385.7598,478.0547 L113.7598,478.0547 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M385.7598,478.0547 L385.7598,488.0547 L395.7598,488.0547 L385.7598,478.0547 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="261.1299" x="119.7598" y="495.1216">Check instance source &amp; version are OK</text><polygon fill="#181818" points="286.7505,532.3203,276.7505,536.3203,286.7505,540.3203,282.7505,536.3203" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="280.7505" x2="394.8896" y1="536.3203" y2="536.3203"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="40.9805" x="292.7505" y="531.2544">exec()</text></g></svg></div>
+
+<!-- ### Factory
+
+The App Factory serves as a source for app installations, guaranteeing deterministic logic source in deployed applications. This enables the creation of interconnected ecosystems where trust is built on a shared understanding of app functionality. -->
+
+<!-- ![App factory](../assets/PluginFactory.png) -->
+
+<p>Anyone may create own repository and become distributor. Rankify DAO will curate its own distribution contract, listing its own resources and community-approved third-party applications.
+<a href="https://github.com/rankify-it/contracts/blob/23-v09-factory-specifications/src/interfaces/IVRepoFactory.sol">IVRepoFactory</a> is provided for convenience of creating new repositories.</p>
+<h3 id="repositories">Repositories<a class="headerlink" href="#repositories" title="Permanent link">#</a></h3>
+<p>The App Repositories are built upon the <a href="https://github.com/rankify-it/contracts/blob/23-v09-factory-specifications/src/interfaces/IRepository.sol">IRepository</a> interface, which mirrors the functionality of the <a href="https://github.com/aragon/osx/blob/develop/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol">OSx IPluginRepo</a>. It provides a versioned repository for source non-permissive control implementations.
+Users of that repository can be sure that every time they request specific application version, same address will be returned and keep track of newest releases.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Source code that is being versioned does not need to be aware of the repository structure, already existing contracts may be added to the repository.</p>
+</div>
+<h3 id="installer">Installer<a class="headerlink" href="#installer" title="Permanent link">#</a></h3>
+<p>Installer is an <code>abstract</code> integration contract that takes distributions and installs them into target organization. It must implement <a href="">IInstaller</a> interface, and it's only interface dependency is <a href="./#repositories">Repository</a> contract. It is an abstract that must be extended to meet specific target interface requirements.</p>
+<!-- To maximize flexibility for both users and developers, we anticipate that applications installed within organizations will often require internal encapsulation.
+
+![installer plugin](../assets/InstallerPlugin.png){: style="height:auto;width:500px"}
+
+In order to accommodate for that, Installer provides a way to instantiate multiple instances of the same application, each with its own unique configuration. This allows for a more modular and flexible system, where applications can be tailored to the specific needs of each organization. -->
+
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Application might have time-zone specific properties, making it necessary to have multiple instances of the same application, each with its own unique configuration.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Installer main use case assumes ability to instantiate multiple instances, it does not track permissions to install applications nor it enforces their count. Such limits can be introduced in the instantiation logic <code>InstallationPlan</code> requirements that are approved by DAO.</p>
+</div>
+<h4 id="osx-installer">OSx Installer<a class="headerlink" href="#osx-installer" title="Permanent link">#</a></h4>
+<p>A concrete installer version, "OSx Installer" plugin is provided to support integration with <a href="https://aragon.org/aragonosx">Aragon OSx</a> framework. This Installer must be authorized by the DAO, maintains a list of approved distributors as well it is the only system component that must be aware of installation target specific interfaces. It simplifies the process for users to launch whitelisted applications, acting as a proxy between instances and the DAO contract as well as generalizes apps development.</p>
+<!-- ## Security
+
+We aim to provide clear and encapsulated separation between functional components and security measures. This allows for a more modular and flexible system, where security can be tailored to the specific needs of each component without affecting functional requirements.
+
+Defense-in-depth onion approach is used as described in [Smart contract layers](https://github.com/peersky/smart-contract-layers/tree/main), each secured functional component is encapsulated in a proxy that implements security measures.
+
+![security is an onion!](../assets/security-onion.png){: style="height:auto;width:500px"}
+
+Each call to any functional element, no matter is a view or non-view, is routed through a proxy that implements security measures. It receives full call data including sender, signature, call data and values, and can decide to allow or deny the call based on the security requirements. -->
+
+<!-- <div class="puml"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="544px" preserveAspectRatio="true" style="background: #ffffff" version="1.1" viewBox="0 0 315 544" width="315px" zoomAndPan="magnify"><defs/><g><rect fill="#130408" height="1" style="stroke:#130408;stroke-width:1.0;" width="1" x="0" y="0"/><text fill="#33FF02" font-family="sans-serif" font-size="12" font-style="italic" font-weight="bold" lengthAdjust="spacing" textLength="128.0098" x="5" y="17">PlantUML 1.2024.7</text><rect fill="#33FF02" height="21.2969" style="stroke:#33FF02;stroke-width:1.0;" width="303.6387" x="5" y="26.9688"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="181.0225" x="6" y="41.9688">[From string (line 35) ]</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="5" y="62.2656"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="81.4229" x="5" y="78.5625">@startuml</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="123.7578" x="5" y="94.8594">scale 600 width</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="5" y="111.1563"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="5" y="127.4531"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="5" y="143.75"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="15.9551" x="5" y="160.0469">...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="187.0107" x="5" y="176.3438">... ( skipping 596 lines )</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="15.9551" x="5" y="192.6406">...</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="121.5156" x="5" y="208.9375">F -&gt; AC: deploy</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="89.9814" x="5" y="225.2344">activate AC</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130.9902" x="5" y="241.5313">F &lt;- AC: address</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="109.498" x="5" y="257.8281">deactivate AC</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="303.6387" x="5" y="274.125">BO -&gt; B: Register Trusted App Factory</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="198.6934" x="5" y="290.4219">F &lt;-&gt; F: register address</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="121.249" x="5" y="306.7188">U &lt;- F: address</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97.9521" x="5" y="323.0156">deactivate F</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="261.3447" x="5" y="339.3125">U -&gt; B: Register token with audit</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="79.543" x="5" y="355.6094">activate B</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="257.7285" x="5" y="371.9063">B -&gt; F: verify address (eip-1271)</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="78.4355" x="5" y="388.2031">activate F</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="130.1631" x="5" y="404.5">F -&gt; B: response</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="97.9521" x="5" y="420.7969">deactivate F</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="186.1768" x="5" y="437.0938">B &lt;-&gt; B: Activate token</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="135.8438" x="5" y="453.3906">B -&gt; U: Response</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="99.0596" x="5" y="469.6875">deactivate B</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="189.8955" x="5" y="485.9844">U -&gt; B: Bridge token --&gt;</text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="4.874" x="5" y="502.2813"> </text><text fill="#33FF02" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" text-decoration="wavy underline" textLength="29.7363" x="5" y="518.5781">&lt;!--</text><text fill="#FF0000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="107.2354" x="9.874" y="534.875">Syntax Error?</text></g></svg></div> -->
+
+<!-- note left of U: This is a note. -->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../search/main.js"></script>
+      
+    
+  </body>
+</html>

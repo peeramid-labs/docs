@@ -1,0 +1,2021 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rankify documentation portal">
+      
+      
+      
+        <link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IInstaller/">
+      
+      
+        <link rel="prev" href="../IInitializer/">
+      
+      
+        <link rel="next" href="../IRepository/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.17">
+    
+    
+      
+        <title>IInstaller Interface - Rankify Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.bcfcd587.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/custom.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#iinstaller-interface" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rankify Documentation" class="md-header__button md-logo" aria-label="Rankify Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rankify Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              IInstaller Interface
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/rankify-it" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rankify Documentation" class="md-nav__button md-logo" aria-label="Rankify Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Rankify Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/rankify-it" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Welcome
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../test.adoc" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    None
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tokens/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Token types
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Architecture
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Architecture
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Smart contract infrastructure
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/applications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Applications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../architecture/specifications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Specifications [DRAFT]
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    interfaces
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            interfaces
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ethereum Distribution System
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Ethereum Distribution System
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDistribution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDistribution
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IDistributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IDistributor Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IERC7746/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IERC7746 Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IInitializer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IInitializer
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    IInstaller Interface
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    IInstaller Interface
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notaninstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      NotAnInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invaliddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidTarget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alreadyallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      alreadyAllowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributionisnotpermitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionIsNotPermitted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dissalowdistonwhitelisteddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      DissalowDistOnWhitelistedDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorwhitelisted" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributorWhitelisted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorwhitelistrevoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributorWhitelistRevoked
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributionallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionAllowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributiondisallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionDisallowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowdistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      allowDistribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disallowdistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      disallowDistribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitelisteddistributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      whitelistedDistributions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitelistdistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      whitelistDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revokewhitelisteddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      revokeWhitelistedDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isdistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      isDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getwhitelisteddistributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      getWhitelistedDistributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      getInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinstancesnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      getInstancesNum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      isInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorof" class="md-nav__link">
+    <span class="md-ellipsis">
+      distributorOf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    <span class="md-ellipsis">
+      target
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IRepository/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IRepository Interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IVersionDistributor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    IVersionDistributor
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Support
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Support
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Community channels
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../support/faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Frequently asked questions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#notaninstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      NotAnInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invaliddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#invalidtarget" class="md-nav__link">
+    <span class="md-ellipsis">
+      InvalidTarget
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#alreadyallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      alreadyAllowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributionisnotpermitted" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionIsNotPermitted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dissalowdistonwhitelisteddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      DissalowDistOnWhitelistedDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorwhitelisted" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributorWhitelisted
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorwhitelistrevoked" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributorWhitelistRevoked
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributionallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionAllowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributiondisallowed" class="md-nav__link">
+    <span class="md-ellipsis">
+      DistributionDisallowed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allowdistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      allowDistribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disallowdistribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      disallowDistribution
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitelisteddistributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      whitelistedDistributions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whitelistdistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      whitelistDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#revokewhitelisteddistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      revokeWhitelistedDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isdistributor" class="md-nav__link">
+    <span class="md-ellipsis">
+      isDistributor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getwhitelisteddistributors" class="md-nav__link">
+    <span class="md-ellipsis">
+      getWhitelistedDistributors
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installed" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installed
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstalled" class="md-nav__link">
+    <span class="md-ellipsis">
+      Uninstalled
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install" class="md-nav__link">
+    <span class="md-ellipsis">
+      install
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#uninstall" class="md-nav__link">
+    <span class="md-ellipsis">
+      uninstall
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      getInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#getinstancesnum" class="md-nav__link">
+    <span class="md-ellipsis">
+      getInstancesNum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#isinstance" class="md-nav__link">
+    <span class="md-ellipsis">
+      isInstance
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributorof" class="md-nav__link">
+    <span class="md-ellipsis">
+      distributorOf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target" class="md-nav__link">
+    <span class="md-ellipsis">
+      target
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="iinstaller-interface">IInstaller Interface<a class="headerlink" href="#iinstaller-interface" title="Permanent link">#</a></h1>
+<p>Enables target smart account to interact with Distributor contract ecosystem.</p>
+<h3 id="notaninstance">NotAnInstance<a class="headerlink" href="#notaninstance" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>NotAnInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address that was checked and found not to be an instance.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Error indicating that the provided address is not a valid instance.</p>
+</div>
+<h3 id="invaliddistributor">InvalidDistributor<a class="headerlink" href="#invaliddistributor" title="Permanent link">#</a></h3>
+<p>Error indicating that the provided distributor is invalid.</p>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidDistributor<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The distributor that is considered invalid.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invalidtarget">InvalidTarget<a class="headerlink" href="#invalidtarget" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidTarget<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">target</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>target</code></td>
+<td><code>address</code></td>
+<td>The address that is considered invalid.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Error indicating that the provided target address is not the smart account installer serves.</p>
+</div>
+<h3 id="alreadyallowed">alreadyAllowed<a class="headerlink" href="#alreadyallowed" title="Permanent link">#</a></h3>
+<p>Error indicating that the specified distributor is already allowed.</p>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>alreadyAllowed<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The distributor that is already allowed.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distributionisnotpermitted">DistributionIsNotPermitted<a class="headerlink" href="#distributionisnotpermitted" title="Permanent link">#</a></h3>
+<p>Error indicating that a distribution is not permitted (not installed).</p>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DistributionIsNotPermitted<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor containing the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="dissalowdistonwhitelisteddistributor">DissalowDistOnWhitelistedDistributor<a class="headerlink" href="#dissalowdistonwhitelisteddistributor" title="Permanent link">#</a></h3>
+<p>Error indicating that distributor is whitelisted and hence it is not possible to selectively dissalow distriributions.</p>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DissalowDistOnWhitelistedDistributor<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The whitelisted distributor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The ID of the distribution that was attempted to dissalow.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>If getting this error: consider first removing distributor from whitelist, and then dissalowing the distribution.</p>
+</div>
+<h3 id="distributorwhitelisted">DistributorWhitelisted<a class="headerlink" href="#distributorwhitelisted" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributorWhitelisted</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor that has been whitelisted.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a distributor is whitelisted.
+Any distribution of the whitelisted distributor MUST be allowed to be installed.</p>
+</div>
+<h3 id="distributorwhitelistrevoked">DistributorWhitelistRevoked<a class="headerlink" href="#distributorwhitelistrevoked" title="Permanent link">#</a></h3>
+<p>Emitted when a distributor is removed from the whitelist.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributorWhitelistRevoked</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor that was revoked.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>After removal, the distributions that were allowed by id are still allowed.</p>
+</div>
+<h3 id="distributionallowed">DistributionAllowed<a class="headerlink" href="#distributionallowed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionAllowed</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor that is allowed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a distribution is allowed by the installer.</p>
+</div>
+<h3 id="distributiondisallowed">DistributionDisallowed<a class="headerlink" href="#distributiondisallowed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionDisallowed</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor that is disallowed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution that is disallowed.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a distribution is disallowed by the installer.</p>
+</div>
+<h3 id="allowdistribution">allowDistribution<a class="headerlink" href="#allowdistribution" title="Permanent link">#</a></h3>
+<p>Allows a specified distributor to distribute a given distribution ID.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">allowDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor hosting a distribution Id.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The ID of the distribution to be allowed.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>MUST emit <code>DistributionAllowed</code> event.</p>
+</div>
+<h3 id="disallowdistribution">disallowDistribution<a class="headerlink" href="#disallowdistribution" title="Permanent link">#</a></h3>
+<p>Disallows a specific distribution from a given distributor.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">disallowDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor contract.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution to be disallowed.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>MUST emit <code>DistributionDisallowed</code> event.</p>
+</div>
+<h3 id="whitelisteddistributions">whitelistedDistributions<a class="headerlink" href="#whitelisteddistributions" title="Permanent link">#</a></h3>
+<p>Retrieves the list of whitelisted distributions for a given distributor.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">whitelistedDistributions</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[])</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor to query.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bytes32[]</code></td>
+<td>An array of bytes32 representing the whitelisted distributions.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>If the distributor is whitelisted, all distributions are allowed.</p>
+</div>
+<h3 id="whitelistdistributor">whitelistDistributor<a class="headerlink" href="#whitelistdistributor" title="Permanent link">#</a></h3>
+<p>Adds a distributor to the whitelist.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">whitelistDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor to be whitelisted.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>After whitelisting, all distributions of the distributor are allowed. Must emit <code>DistributorWhitelisted</code> event.</p>
+</div>
+<h3 id="revokewhitelisteddistributor">revokeWhitelistedDistributor<a class="headerlink" href="#revokewhitelisteddistributor" title="Permanent link">#</a></h3>
+<p>Revokes the whitelisted status of a given distributor.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">revokeWhitelistedDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor to be revoked.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>After revoking, the distributions that were allowed by id are still allowed. Must emit <code>DistributorWhitelistRevoked</code> event.</p>
+</div>
+<h3 id="isdistributor">isDistributor<a class="headerlink" href="#isdistributor" title="Permanent link">#</a></h3>
+<p>Checks if the given address is a valid distributor.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The address of the distributor to check.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Returns true if the address is a valid distributor, otherwise false.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getwhitelisteddistributors">getWhitelistedDistributors<a class="headerlink" href="#getwhitelisteddistributors" title="Permanent link">#</a></h3>
+<p>Retrieves the list of whitelisted distributor addresses.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getWhitelistedDistributors</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[])</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>address[]</code></td>
+<td>An array of addresses that are whitelisted as distributors.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Installed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">permissions</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address of the installed instance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The identifier of the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>permissions</code></td>
+<td><code>bytes32</code></td>
+<td>The permissions associated with the installation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>args</code></td>
+<td><code>bytes</code></td>
+<td>Additional arguments related to the installation.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when an instance is installed.
+MUST be emitted for every new instance installed via <code>install</code> function.</p>
+</div>
+<h3 id="uninstalled">Uninstalled<a class="headerlink" href="#uninstalled" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Uninstalled</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="install">install<a class="headerlink" href="#install" title="Permanent link">#</a></h3>
+<p>Installs a new instance with the given distributor, distribution ID, and arguments.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">install</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributor</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The distributor contract to be used for the installation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier for the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>args</code></td>
+<td><code>bytes</code></td>
+<td>Additional arguments required for the installation process.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instanceId</code></td>
+<td><code>uint256</code></td>
+<td>The unique identifier of the newly installed instance.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>MUST emit <code>Installed</code> event per installed instance. MUST revert if the distributor is not whitelisted or the distribution is not allowed. MUST revert if the distributor is not a valid distributor.
+After succesfull installation ERC77446 hooks SHALL NOT revert if called by target, specifying active instance in <code>sender</code> field.</p>
+</div>
+<h3 id="uninstall">uninstall<a class="headerlink" href="#uninstall" title="Permanent link">#</a></h3>
+<p>Uninstalls an instance with the given ID.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">uninstall</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instanceId</code></td>
+<td><code>uint256</code></td>
+<td>The unique identifier of the instance to be uninstalled.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>MUST emit <code>Uninstalled</code> event per uninstalled instance. MUST revert if the instance is not installed.
+After succesfull uninstallation ERC77446 hooks SHALL revert if called by target, specifying uninstalled instance in <code>sender</code> field.</p>
+</div>
+<h3 id="getinstance">getInstance<a class="headerlink" href="#getinstance" title="Permanent link">#</a></h3>
+<p>Retrieves the contracts associated with a specific instance.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstance</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instaneContracts<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instanceId</code></td>
+<td><code>uint256</code></td>
+<td>The unique identifier of the instance.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>instaneContracts</code></td>
+<td><code>address[]</code></td>
+<td>An array of addresses representing the contracts of the instance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="getinstancesnum">getInstancesNum<a class="headerlink" href="#getinstancesnum" title="Permanent link">#</a></h3>
+<p>Retrieves the number of instances.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstancesNum</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>uint256</code></td>
+<td>The total number of instances as a uint256.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>this number SHALL NOT decrease after uninstallation.</p>
+</div>
+<h3 id="isinstance">isInstance<a class="headerlink" href="#isinstance" title="Permanent link">#</a></h3>
+<p>Checks if the given address is an active instance.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isInstance</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address to check.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool True if the address is an instance, false otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="distributorof">distributorOf<a class="headerlink" href="#distributorof" title="Permanent link">#</a></h3>
+<p>Returns the distributor associated with a given instance.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">distributorOf</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address of the instance for which the distributor is being queried.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>contract IDistributor</code></td>
+<td>The distributor associated with the specified instance.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="target">target<a class="headerlink" href="#target" title="Permanent link">#</a></h3>
+<p>Retrieves the address of the target contract.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">target</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>address</code></td>
+<td>The address of the target contract.</td>
+</tr>
+</tbody>
+</table>
+<!--CONTRACT_END-->
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.1e8ae164.min.js"></script>
+      
+        <script src="../../search/main.js"></script>
+      
+    
+  </body>
+</html>
