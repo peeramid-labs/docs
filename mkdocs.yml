@@ -1,17 +1,16 @@
-site_name: Rankify Documentation
+site_name: Peeramid Labs Documentation
 site_url: https://rankify.it
-repo_url: https://github.com/rankify-it
+repo_url: https://github.com/peeramid-labs
 site_description: Rankify documentation portal
 nav:
     - Welcome:
-          - "test.adoc"
           - "index.md"
           - "governance.md"
           - "tokens.md"
-    - Architecture:
+    - Developing:
           - "architecture/index.md"
-          - "architecture/applications.md"
-          - "architecture/specifications.md"
+          - "architecture/create.md"
+        #   - "architecture/specifications.md"
     - interfaces:
           - ...
     - Support:
