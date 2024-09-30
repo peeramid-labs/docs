@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/tokens/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Token types - Rankify Documentation</title>
+    <title>Tokenomics - Peeramid Labs Documentation</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,7 +13,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Token types";
+        var mkdocs_page_name = "Tokenomics";
         var mkdocs_page_input_path = "tokens.md";
         var mkdocs_page_url = "/tokens/";
       </script>
@@ -35,7 +35,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Rankify Documentation
+          <a href=".." class="icon icon-home"> Peeramid Labs Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -46,34 +46,34 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Welcome</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="" href="../test.adoc">None</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../governance/">Governance</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../governance/">Meritocratic Autonomous Organizations</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Token types</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Tokenomics</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#rank-token">Rank Token</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#governance-tokens">Governance tokens</a>
+    <li class="toctree-l2"><a class="reference internal" href="#token-types">Token types</a>
         <ul>
     <li class="toctree-l3"><a class="reference internal" href="#rkfy">RKFY</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#rankify-core-nft">"RANKIFY CORE" NFT</a>
+    <li class="toctree-l3"><a class="reference internal" href="#rank-token">Rank Token</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#governance-tokens">Governance tokens</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#derivate-governance-tokens">Derivate governance tokens</a>
+    </li>
+        </ul>
     </li>
         </ul>
     </li>
     </ul>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <p class="caption"><span class="caption-text">Developing</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Smart contract infrastructure</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../architecture/applications/">Applications</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../architecture/specifications/">Specifications [DRAFT]</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/create/">Creating new MAO</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">interfaces</span></p>
@@ -111,7 +111,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Rankify Documentation</a>
+          <a href="..">Peeramid Labs Documentation</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -119,9 +119,9 @@
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Welcome</li>
-      <li class="breadcrumb-item active">Token types</li>
+      <li class="breadcrumb-item active">Tokenomics</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/rankify-it/edit/master/docs/tokens.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/tokens.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -129,26 +129,52 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="token-types">Token types<a class="headerlink" href="#token-types" title="Permanent link">#</a></h1>
+                <h1 id="tokenomics">Tokenomics<a class="headerlink" href="#tokenomics" title="Permanent link">#</a></h1>
+<p>In order to maintain globally interoperable meritocratic system, that can be used by any organization, we have defined a set of tokens that provide a base for the system.</p>
+<p>There is one main token that is used as common denominator for the system, and that is <code>RKFY</code> token. By having this, we may say that the system forms a network of Organizations that all are using same financial basis and hence are interoperable.</p>
+<h2 id="token-types">Token types<a class="headerlink" href="#token-types" title="Permanent link">#</a></h2>
+<h3 id="rkfy">RKFY<a class="headerlink" href="#rkfy" title="Permanent link">#</a></h3>
+<p>RKFY is a utility token that allows to instantiate a new organization on the Rankify platform. It has only use to participate in the competence identification games that are deployed from the shared, trusted factory source code and hence provisions inter organization trust.</p>
+<p>Rankify token is ERC20 token, it will be freely available on the market and hence will ensure that the system is decentralized and is an open economy, anyone can participate in.</p>
 <h3 id="rank-token">Rank Token<a class="headerlink" href="#rank-token" title="Permanent link">#</a></h3>
-<p>Rank NFT is a semi fungible token that represents a competence. It is implemented as <code>ERC1155</code> standard. It acts as a proof of competence that may be used in various scenarios as NFT itself, where token <code>id</code> represents bearers <em>rank</em>.
-These tokens are also may be exchanged for governance tokens under a deployment defined, immutable rules.</p>
-<h3 id="governance-tokens">Governance tokens<a class="headerlink" href="#governance-tokens" title="Permanent link">#</a></h3>
-<p>Governance token is a token that represents a voting power in the DAO. It is implemented as <code>ERC20</code> standard. It is used to vote on proposals and to participate in the governance of the DAO.</p>
-<h4 id="rkfy">RKFY<a class="headerlink" href="#rkfy" title="Permanent link">#</a></h4>
-<p>RKFY is a governance token of the Rankify DAO. Its unique aspect is that it is bootstrapped solely by participating in the ranking games. There will be no ICO nor any other form of direct issuance of RKFY tokens except for the genesis ranking games. The games however are specifically tailored and will represent a real hands-on challenges organization will face, such as code development, community building and so on.</p>
+<p>Rank NFT is a semi fungible token that represents a competence. It is implemented as <code>ERC1155</code> standard. It acts as a proof of competence that may be used in various scenarios as NFT itself, where token <code>id</code> represents bearers <em>rank</em> (competence) of the bearer. Value of this token is determined by the <em>ranking instance</em> that has issued it, in most general case it's value is approximately equal to the value of the <code>RKFY</code> token a sybil attack would cost which in current implementation is exponential of the token id (<em>rank</em>).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>You can think of such distribution system as a "proof of <em>useful</em> work" airdrop for the DAO.</p>
+<p>There can exist multiple Rank Tokens for a different causes, that are defined by merit specifications given by the creator.</p>
 </div>
-<h4 id="rankify-core-nft">"RANKIFY CORE" NFT<a class="headerlink" href="#rankify-core-nft" title="Permanent link">#</a></h4>
-<p>"RANKIFY CORE" NFT is a special NFT that is minted to the DAO members that have participated in the genesis ranking games. It is is exchanged on fixed ratio tied to token Id. It is used to represent the DAO membership and to provide additional benefits to the members.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Smart contract architecture provisions that there might be additional tokens used for the baseline of the system, in parallel to the <code>RKFY</code> token.</p>
+</div>
+<p>These tokens are merit dimension specific and can be exchanged for a governance token in underlying DAO. The exchange mechanism is provided by the MAO factory and is unidirectional, reverse exchange is free-market based.</p>
+<h3 id="governance-tokens">Governance tokens<a class="headerlink" href="#governance-tokens" title="Permanent link">#</a></h3>
+<p>Governance token is a token that represents a voting power in the DAO. It is implemented as <code>ERC20</code> standard with voting extensions. It is used to vote on proposals and to participate in the governance of the DAO.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can think of this as airdrop replacer. "Proof of <em>merit</em>", represented as Rank Token is used to mint governance tokens.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By the design, governance tokens are always a subject of inflation, as ability to mint those is only limited by the amount of <code>RKFY</code> token that is available. This implies that achieving quorum is a matter of time, and that the DAO is always able to make decisions. This is a design feature that is intended to make the DAOs more efficient and to prevent them from being stuck in a deadlock.</p>
+</div>
+<h4 id="derivate-governance-tokens">Derivate governance tokens<a class="headerlink" href="#derivate-governance-tokens" title="Permanent link">#</a></h4>
+<p>Continuous inflation combined with unidirectional exchange mechanism creates everlasting risk of loss of quorum for those currently holding it within a merit-specific DAO.</p>
+<p>To prevent this, a derivate MAO can be created on top of the existing one by using current governance token as baseline instead of <code>RKFY</code>. This creates a situation where there can be multiple sub-organizations that are all derived from the same parent organization, but that have different governance tokens and different quorums.</p>
+<p>This is simple, yet powerful feature that allows to ensure that quorum holders are always able to prevent fund loss or lockups in case of hyperinflation of the governance token.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We provision a mechanism which will allow parent organization to stay in partial control over the sub-organization assets, hence ensuring there is no parent organization value loss in process of progressively decentralizing the organization.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is a powerful feature that allows to create a hierarchy of organizations that are all interoperable and that can be used to create complex governance structures that are able to adapt to the changing environment, and take more granular roles.</p>
+</div>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../governance/" class="btn btn-neutral float-left" title="Governance"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../architecture/" class="btn btn-neutral float-right" title="Smart contract infrastructure">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../governance/" class="btn btn-neutral float-left" title="Meritocratic Autonomous Organizations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../architecture/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -171,7 +197,7 @@ These tokens are also may be exchanged for governance tokens under a deployment 
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/rankify-it" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     

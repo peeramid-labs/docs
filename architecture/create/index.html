@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/architecture/applications/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/architecture/create/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Applications - Rankify Documentation</title>
+    <title>Creating new MAO - Peeramid Labs Documentation</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -13,9 +13,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Applications";
-        var mkdocs_page_input_path = "architecture/applications.md";
-        var mkdocs_page_url = "/architecture/applications/";
+        var mkdocs_page_name = "Creating new MAO";
+        var mkdocs_page_input_path = "architecture/create.md";
+        var mkdocs_page_url = "/architecture/create/";
       </script>
     
     <!--[if lt IE 9]>
@@ -35,7 +35,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Rankify Documentation
+          <a href="../.." class="icon icon-home"> Peeramid Labs Documentation
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -46,28 +46,22 @@
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption"><span class="caption-text">Welcome</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="" href="../../test.adoc">None</a>
-                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../governance/">Governance</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../governance/">Meritocratic Autonomous Organizations</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../tokens/">Token types</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tokens/">Tokenomics</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <p class="caption"><span class="caption-text">Developing</span></p>
               <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../">Smart contract infrastructure</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Applications</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Creating new MAO</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#best-list-challenge">Best list challenge</a>
+    <li class="toctree-l2"><a class="reference internal" href="#getting-distributorsdistid">Getting DistributorsDistId</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../specifications/">Specifications [DRAFT]</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">interfaces</span></p>
@@ -105,17 +99,17 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Rankify Documentation</a>
+          <a href="../..">Peeramid Labs Documentation</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Architecture</li>
-      <li class="breadcrumb-item active">Applications</li>
+          <li class="breadcrumb-item">Developing</li>
+      <li class="breadcrumb-item active">Creating new MAO</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/rankify-it/edit/master/docs/architecture/applications.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/architecture/create.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -123,27 +117,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="applications">Applications<a class="headerlink" href="#applications" title="Permanent link">#</a></h1>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h2>
-<p>While application distribution system can, and is encouraged, to be used for pretty much anything, Rankify main goal is to provide necessary infrastructure for <a href="https://www.rankify.it/research/paper/">Autonomous Competence identification (ACID) protocol</a> installation.</p>
-<p>In our implementation the asset is being decoupled from governing body to allow for more flexible and dynamic governance and to encourage experimentation without sacrificing for governance security. The representation of comptence is done via <a href="../#rank-nft">Rank NFTs</a>.</p>
-<p>Hence it is required that applications are able to mint and burn <a href="../#rank-nft">Rank NFTs</a> assets, they can do this by using installation proxy as their mint and burn target. When called, the proxy will mint or burn the asset on behalf of the application.</p>
-<!-- TODO: FIX LINK FOR RANK NFTS -->
-
-<p>This approach allows applications to be versioned, prevents outdated instances from being used.</p>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>You are welcome to write your own application, if it meets community standards, it can be included in the Rankify ecosystem, or used to create your own DAO ecosystem autonomously!</p>
+                <h1 id="creating-new-mao">Creating new MAO<a class="headerlink" href="#creating-new-mao" title="Permanent link">#</a></h1>
+<p>In order to instantiate the MAO distribution, you don't need to deploy a thing. You just need to call the <code>instantiate</code> function of the the <a href="./src/distributors/PeeramidLabsDistributor.sol">PeeramidLabsDistributor.sol</a> contract and specify proper distribution Id and arguments.
+<pre class="highlight"><code class="language-ts">import {  MAODistribution } from 'rankify-contracts/types';
+const distributorArguments: MAODistribution.DistributorArgumentsStruct = {
+        DAOSEttings: {
+          daoURI: 'https://example.com/dao',
+          subdomain: 'example',
+          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
+          tokenName: 'tokenName',
+          tokenSymbol: 'tokenSymbol',
+        },
+        ACIDSettings: {
+          RankTokenContractURI: 'https://example.com/rank',
+          gamePrice: 1,
+          joinGamePrice: 1,
+          maxPlayersSize: 16,
+          maxTurns: 1,
+          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
+          minPlayersSize: 4,
+          paymentToken: rankify.address,
+          rankTokenURI: 'https://example.com/rank',
+          timePerTurn: 1,
+          timeToJoin: 1,
+          voteCredits: 14,
+        },
+      };
+const data = ethers.utils.defaultAbiCoder.encode(
+        [
+          'tuple(tuple(string daoURI, string subdomain, bytes metadata, string tokenName, string tokenSymbol) DAOSEttings, tuple(uint256 timePerTurn, uint256 maxPlayersSize, uint256 minPlayersSize, uint256 timeToJoin, uint256 maxTurns, uint256 voteCredits, uint256 gamePrice, address paymentToken, uint256 joinGamePrice, string metadata, string rankTokenURI, string RankTokenContractURI) ACIDSettings)',
+        ],
+        [distributorArguments],
+      );
+      const distributorsDistId = process.env.DISTRIBUTOR_DIST_ID;
+      const tx = await distributorContract.instantiate(distributorsDistId, data);
+</code></pre></p>
+<h2 id="getting-distributorsdistid">Getting DistributorsDistId<a class="headerlink" href="#getting-distributorsdistid" title="Permanent link">#</a></h2>
+<p>While in development, simplest way to get <code>distributorsDistId</code> for MAO distribution is to call <code>getDistributions</code> at <code>PeeramidLabsDistributor</code> contract and look for. It's likely to be only one.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We will host a public API and upgrade our SDK to get the list of distributions soon.</p>
 </div>
-<h2 id="best-list-challenge">Best list challenge<a class="headerlink" href="#best-list-challenge" title="Permanent link">#</a></h2>
-<p>The best list challenge is a simple example of an application that can be built on top of the Rankify infrastructure. It allows users to submit their ideas and vote on them to create a ranked list of ideas.
-Protocol is designed in accordance to autonomous competence identification protocol: participation is anonymous, time continuous and results are verifiable.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../" class="btn btn-neutral float-left" title="Smart contract infrastructure"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../specifications/" class="btn btn-neutral float-right" title="Specifications [DRAFT]">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../Ethereum%20Distribution%20System/IDistribution/" class="btn btn-neutral float-right" title="IDistribution">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -166,14 +186,14 @@ Protocol is designed in accordance to autonomous competence identification proto
   <span class="rst-current-version" data-toggle="rst-current-version">
     
         <span>
-          <a href="https://github.com/rankify-it" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
         </span>
     
     
       <span><a href="../" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../specifications/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../Ethereum%20Distribution%20System/IDistribution/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

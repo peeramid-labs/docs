@@ -1,203 +1,203 @@
 <!DOCTYPE html>
-
-<html class="writer-html5" lang="en">
+<html class="writer-html5" lang="en" >
 <head>
-<meta charset="utf-8"/>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://rankify.it/governance/" rel="canonical"/>
-<link href="../img/favicon.ico" rel="shortcut icon"/>
-<title>Governance - Rankify Documentation</title>
-<link href="../css/theme.css" rel="stylesheet"/>
-<link href="../css/theme_extra.css" rel="stylesheet"/>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
-<link href="../css/custom.css" rel="stylesheet"/>
-<script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/governance/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Meritocratic Autonomous Organizations - Peeramid Labs Documentation</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+    
+      <script>
         // Current page data
-        var mkdocs_page_name = "Governance";
+        var mkdocs_page_name = "Meritocratic Autonomous Organizations";
         var mkdocs_page_input_path = "governance.md";
         var mkdocs_page_url = "/governance/";
       </script>
-<!--[if lt IE 9]>
+    
+    <!--[if lt IE 9]>
       <script src="../js/html5shiv.min.js"></script>
     <![endif]-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
-<script>hljs.highlightAll();</script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
 </head>
+
 <body class="wy-body-for-nav" role="document">
-<div class="wy-grid-for-nav">
-<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
-<div class="wy-side-scroll">
-<div class="wy-side-nav-search">
-<a class="icon icon-home" href=".."> Rankify Documentation
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Peeramid Labs Documentation
         </a><div role="search">
-<form action="../search.html" class="wy-form" id="rtd-search-form" method="get">
-<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
-</form>
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
 </div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Meritocratic Autonomous Organizations</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#why-maos">Why MAOs?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mao-structure">MAO structure</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#participant-vs-decision-maker">Participant vs Decision Maker</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#progressive-decentralization">Progressive decentralization</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tokens/">Tokenomics</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/create/">Creating new MAO</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">interfaces</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IVersionDistributor/">IVersionDistributor</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Peeramid Labs Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Welcome</li>
+      <li class="breadcrumb-item active">Meritocratic Autonomous Organizations</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/governance.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
 </div>
-<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
-<p class="caption"><span class="caption-text">Welcome</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="" href="../test.adoc">None</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
-</li>
-<li class="toctree-l1 current"><a class="reference internal current" href="#">Governance</a>
-<ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="#progressive-decentralization">Progressive decentralization</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#sub-daos-cells">Sub DAOs (Cells)</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#sub-dao-tokenomics">Sub DAO Tokenomics</a>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#decentralization-roadmap">Decentralization Roadmap</a>
-<ul>
-<li class="toctree-l3"><a class="reference internal" href="#rankify-arbitrum-multisig">Rankify Arbitrum Multisig</a>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#alpha-dao-arbitrum">Alpha DAO Arbitrum</a>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../tokens/">Token types</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Architecture</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../architecture/">Smart contract infrastructure</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../architecture/applications/">Applications</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../architecture/specifications/">Specifications [DRAFT]</a>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">interfaces</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal">Ethereum Distribution System</a>
-<ul>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IVersionDistributor/">IVersionDistributor</a>
-</li>
-</ul>
-</li>
-</ul>
-<p class="caption"><span class="caption-text">Support</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../support/">Community channels</a>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../support/faq/">Frequently asked questions</a>
-</li>
-</ul>
-</div>
-</div>
-</nav>
-<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
-<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
-<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
-<a href="..">Rankify Documentation</a>
-</nav>
-<div class="wy-nav-content">
-<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
-<ul class="wy-breadcrumbs">
-<li><a aria-label="Docs" class="icon icon-home" href=".."></a></li>
-<li class="breadcrumb-item">Welcome</li>
-<li class="breadcrumb-item active">Governance</li>
-<li class="wy-breadcrumbs-aside">
-<a class="icon icon-github" href="https://github.com/rankify-it/edit/master/docs/governance.md"> Edit on GitHub</a>
-</li>
-</ul>
-<hr/>
-</div>
-<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
-<div class="section" itemprop="articleBody">
-<h1 id="governance">Governance<a class="headerlink" href="#governance" title="Permanent link">#</a></h1>
-<p>Rankify governance is Rankify itself. We are pioneering the way by starting from a multi party controlled wallet, that was seeded by Gitcoin grants and it will gradually evolve into interlinked autonomous organizations infrastructure network.</p>
-<h2 id="progressive-decentralization">Progressive decentralization<a class="headerlink" href="#progressive-decentralization" title="Permanent link">#</a></h2>
-<p>Definition of progressive decentralization is given as ability for the system to evolve from centralized to decentralized state. Rankify as protocol allows establishing Peer-to-Peer communications on Entity level without sacrificing for security. This is achieved by using Multisignature wallet that represents decentralized organization branches.</p>
-<h3 id="sub-daos-cells">Sub DAOs (Cells)<a class="headerlink" href="#sub-daos-cells" title="Permanent link">#</a></h3>
-<p>Sub DAOs, or also referred as <a href="/architecure/#cells">Cells</a> are autonomous bodies that can act on their own. Sub DAOs are specifically fetched to service some narrowed specialty need of the organization and represent faster, more specialized units that can take decisions more promptly, have required permissions available from parent DAO as well as they have ability to recursively repeat decentralization process, breaking it down to atomic pieces.
-<img alt="two sub daos" src="../assets/two_sub_dao.png"/></p>
-<p>Linkage between parent organization and Cells is done by having a "tournament", each of whose is a <a href="/architecure/applications">Rankify Application</a></p>
-<h3 id="sub-dao-tokenomics">Sub DAO Tokenomics<a class="headerlink" href="#sub-dao-tokenomics" title="Permanent link">#</a></h3>
-<p>Under a protocol, as DAO-cell creates new and new cells, it actually does not delegate any of control over itself other rather than that it is connected to it's sub-ordinate DAOs only via multi-sig wallet, which only may be controlling some of the sub-dao governance token issuance parameters as well as pre-definitions.</p>
-<p>Such sub-ordinates have no value on it own, they do not change any of the parent DAO governance parameters and they are not able to issue any of the governance tokens on their own either completely, or until some internal growth stage. There are no initial coin offerings available to such <em>generated</em> DAOs, instead <a href="https://rankify.it/research/paper">ACID</a> games are applied to generate such fully autonomously.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>In short, outcome of using the <a href="https://rankify.it/research/paper">ACID</a> protocol is that participants willing to become DAO members must enter a tournament, which will take their bets and mint award tokens to the winners.</p>
-</div>
-<p>A sybil attack resistance as per ACID is expressed in contributions members must do in order to participate. Thus, a sybil attack analysis formula can be used to estimate equilibrium point between exchanging parent token directly versus exchanging it via sybil attack on children asset minting schema.</p>
-<p>Relation of these values can be estimated by sybil resistance of protocol, and in worst case is exponential: <code>f(n) = C * N^n</code>.
-Where <code>f(n)</code> is the value of the token, <code>C</code> is the constant, <code>N</code> is the quorum factor and <code>n</code> is the number of sub-dao governance votes obtained.</p>
-<h2 id="decentralization-roadmap">Decentralization Roadmap<a class="headerlink" href="#decentralization-roadmap" title="Permanent link">#</a></h2>
-<p>Approximate timeline is as follows:</p>
-<div class="mermaid">timeline
-    section 2024
-        Q2 : Multisig Arbitrum Seeded
-        Q3 : Arbitrum branch Governance token issuance
-           : Rankify DAO (Arbitrum branch)
-        Q4 : Base Multisig Seeded
-           : Ranking Application (Arbitrum branch)
-    section 2025
-        Q1 :  Alpha participation Airdrop
-        Q2+ : TBD</div>
-<p>More detail will be added as we flow through the process.</p>
-<h3 id="rankify-arbitrum-multisig">Rankify Arbitrum Multisig<a class="headerlink" href="#rankify-arbitrum-multisig" title="Permanent link">#</a></h3>
-<p>First Rankify DAO Multisig is deployed on the Arbitrum network, it's address is <code>ToDo: Add Address</code></p>
-<h3 id="alpha-dao-arbitrum">Alpha DAO Arbitrum<a class="headerlink" href="#alpha-dao-arbitrum" title="Permanent link">#</a></h3>
-<p>Alpha DAO Arbitrum is a first decentralization step. Right now governance process undergoes in the community to define the details of the upcoming setup.</p>
-</div>
-</div><footer>
-<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
-<a class="btn btn-neutral float-left" href=".." title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-<a class="btn btn-neutral float-right" href="../tokens/" title="Token types">Next <span class="icon icon-circle-arrow-right"></span></a>
-</div>
-<hr/>
-<div role="contentinfo">
-<!-- Copyright etc -->
-</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="meritocratic-autonomous-organizations">Meritocratic Autonomous Organizations<a class="headerlink" href="#meritocratic-autonomous-organizations" title="Permanent link">#</a></h1>
+<p>Meritocratic Autonomous Organizations (MAOs) are a new form of decentralized organization that is designed to be more efficient, transparent, and fair than traditional organizations. MAOs are built on blockchain technology, which allows them to operate without a central authority, similarly to <a href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization">DAOs</a>. However, MAOs are different from DAOs in that they are designed to be meritocratic, meaning that decisions are made based on the merit of the participants rather than on their wealth or power within the organization.</p>
+<p>Autonomously measuring merit is a complex task, and it is done trough a <a href="https://rankify.it/research/paper">Autonomous Competence Identification Protocol</a>.</p>
+<h3 id="why-maos">Why MAOs?<a class="headerlink" href="#why-maos" title="Permanent link">#</a></h3>
+<p>The traditional DAOs are often criticized for being plutocratic, meaning that decisions are made based on the amount of tokens that a participant holds. This can lead to situations where a small group of wealthy participants can control the organization and make decisions that are not in the best interest of the community.</p>
+<p>It's been analyzed in multiple research by now that the biggest DAOs out there are not able to make decisions in a timely manner, and that they are often stuck in a deadlock. This is because the quorum is set too high, and because the governance tokens are not distributed in a fair way. Alternatively, setting quorum threshold too low leads to governance quorum attacks and hence to a loss of value of the organization.</p>
+<p>MAOs are designed to address these issues by using a meritocratic system to distribute governance tokens. This means that decisions are made based on the merit of the participants, rather than on the amount of tokens that they hold. This ensures that decisions are made in the best interest of the community, and that the organization is able to adapt to changing circumstances in a timely manner.</p>
+<h3 id="mao-structure">MAO structure<a class="headerlink" href="#mao-structure" title="Permanent link">#</a></h3>
+<p>In a nutshell, a MAO is just a DAO smart account that is governed by a token that is minted by a competence identification protocol. Such competence identification protocol may be thought of as "tournament" that challenges participants to prove their competence in a specific area.</p>
+<p>The tournament itself can be pretty much anything, as long as it is able to fulfill basic requirements of the protocol. Such are: minimal participation time, and exponential sybil attack resistance.</p>
+<p>The produced asset is representation of the competence, yet it is not just ready for use in voting. This is used to ensure that exiting ranking ladder is important event for a participant, which designates his role change from a participant to a decision maker.</p>
+<h4 id="participant-vs-decision-maker">Participant vs Decision Maker<a class="headerlink" href="#participant-vs-decision-maker" title="Permanent link">#</a></h4>
+<p>In a MAO, there are two types of participants: participants and decision makers. Participants are those who compete in the competence identification games and earn rank tokens based on their performance.
+This mechanism allows other organizations to use rank tokens as merit-specific service utility. For example, a third-party DAO may purchase out the competence tokens from participants to use them as reward for performing merit-specific services for that organization. Alternatively they might require participants to stake their tokens in some mission critical service provided by participants to a third party.</p>
+<p>Decision makers are those who hold governance tokens and are able to vote on proposals and participate in the governance of the MAO. Decision makers obtain governance tokens by exchanging rank tokens for them. This ensures that the governance of the MAO is based on the merit of the participants, rather than on the amount of tokens that they bought during an ICO.
+By exchanging their rank tokens in to governance power, participants are able to take part in the governance of the MAO and to influence its decisions, this also means their <em>rank</em> gets reset, subjecting their governance power to inflation which acts as incentive for being active in governance.</p>
+<h3 id="progressive-decentralization">Progressive decentralization<a class="headerlink" href="#progressive-decentralization" title="Permanent link">#</a></h3>
+<p>As <em>decision makers</em> eventually lose the quorum their group might have, they are risking losing any assets that they have in the organization. While this is a good incentive for them to stay active in the governance, and prevents the organization from being stuck in a deadlock, its also a risk.</p>
+<p>In order to prevent this, a MAO can be decentralized further by creating a sub-organization that is derived from the parent organization. This creates a situation where there can be multiple sub-organizations that are all derived from the same parent organization, but that have different governance tokens and different quorums.</p>
+<p>In order to ensure that the parent organization stays in partial control over the sub-organization assets, the sub-organization is connected to the parent organization via a multi-sig wallet.</p>
+<p>In the diagram below, you can see one parent organization and two sub-organizations that are derived from it. While each organization is able to make decisions independently, the parent organization is able to stay in partial control over the sub-organizations simply by fact that minting sub-organization governance tokens requires parent governance token as an input.
+The multi-sig wallet is used to ensure that the parent organization is able to prevent any assets from being lost in the sub-organization. Any transaction from such a multi-signature wallet would require all governing bodies to agree on it.
+This design ensures parent organization may design the multi-sig wallet in a way that it is able to prevent any assets from being lost in the sub-organization, while still allowing the sub-organization to make decisions independently and promptly.</p>
+<p><img alt="two sub daos" src="../assets/two_sub_dao.png" /></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tokens/" class="btn btn-neutral float-right" title="Tokenomics">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
 
   Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
 </footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tokens/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
 </div>
-</div>
-</section>
-</div>
-<div aria-label="Versions" class="rst-versions" role="note">
-<span class="rst-current-version" data-toggle="rst-current-version">
-<span>
-<a class="fa fa-github" href="https://github.com/rankify-it" style="color: #fcfcfc"> GitHub</a>
-</span>
-<span><a href=".." style="color: #fcfcfc">« Previous</a></span>
-<span><a href="../tokens/" style="color: #fcfcfc">Next »</a></span>
-</span>
-</div>
-<script src="../js/jquery-3.6.0.min.js"></script>
-<script>var base_url = "..";</script>
-<script src="../js/theme_extra.js"></script>
-<script src="../js/theme.js"></script>
-<script src="../search/main.js"></script>
-<script>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
-<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script><script>mermaid.initialize({});</script></body>
+
+</body>
 </html>
