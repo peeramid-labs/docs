@@ -16,9 +16,9 @@ Specific address for distributor deployment can be found in the [deployments git
 
 This deployment will create following infrastructure:
 
--   [RankToken](https://github.com/peeramid-labs/contracts/blob/main//tokens/RankToken.sol) - ERC1155 token used to represent the ranks in the MAO.
--   [Governance token](https://github.com/peeramid-labs/contracts/blob/main//tokens/DistributableGovernanceERC20.sol) - ERC20 token used to represent the governance in the MAO.
--   [ACID Distribution](https://github.com/peeramid-labs/contracts/blob/main//distributions/ArguableVotingTournament.sol) - Arguable Voting Tournament contract used to distribute governance tokens.
+-   [RankToken](https://github.com/peeramid-labs/contracts/blob/main/tokens/RankToken.sol) - ERC1155 token used to represent the ranks in the MAO.
+-   [Governance token](https://github.com/peeramid-labs/contracts/blob/main/tokens/DistributableGovernanceERC20.sol) - ERC20 token used to represent the governance in the MAO.
+-   [ACID Distribution](https://github.com/peeramid-labs/contracts/blob/main/distributions/ArguableVotingTournament.sol) - Arguable Voting Tournament contract used to distribute governance tokens.
 -   [Aragon OSx DAO](https://aragon.org/) - Aragon DAO used as wrapped smart account that represents the MAO.
 -   [Aragon Token Voting Plugin](https://github.com/aragon/token-voting-plugin) - Aragon plugin used to vote on proposals within the DAO.
 
