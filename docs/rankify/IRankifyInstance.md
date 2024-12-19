@@ -1,6 +1,24 @@
 
 # 
 
+###  NoDivisionReminderAllowed
+
+```solidity
+error NoDivisionReminderAllowed(uint256 a, uint256 b)
+```
+
+###  invalidTurnCount
+
+```solidity
+error invalidTurnCount(uint256 nTurns)
+```
+
+###  RankNotSpecified
+
+```solidity
+error RankNotSpecified()
+```
+
 ###  RegistrationOpen
 
 ```solidity
@@ -37,5 +55,20 @@ event GameClosed(uint256 gameId)
 event PlayerLeft(uint256 gameId, address player)
 ```
 
+###  NewGameParamsInput
+
+```solidity
+struct NewGameParamsInput {
+  uint256 gameRank;
+  uint256 minPlayerCnt;
+  uint256 maxPlayerCnt;
+  uint96 nTurns;
+  uint256 voteCredits;
+  address gameMaster;
+  uint128 minGameTime;
+  uint128 timePerTurn;
+  uint128 timeToJoin;
+}
+```
 <!--CONTRACT_END-->
 

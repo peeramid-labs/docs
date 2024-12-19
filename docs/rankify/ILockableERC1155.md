@@ -69,5 +69,11 @@ function unlockedBalanceOf(address account, uint256 id) external view returns (u
 
 	- The unlocked balance of tokens.
 
+###  burn
+
+```solidity
+function burn(address account, uint256 id, uint256 value) external
+```
+
 <!--CONTRACT_END-->
 

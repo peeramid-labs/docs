@@ -8,4 +8,6 @@ mkdir -p "docs/Ethereum Distribution System"
 
 # Create symbolic links
 cp -r node_modules/rankify-contracts/docs/contracts/interfaces/* docs/rankify
+cp -r node_modules/rankify-contracts/docs/contracts/facets/* docs/rankify
+cp -r node_modules/rankify-contracts/docs/contracts/tokens/* docs/rankify
 cp -r node_modules/@peeramid-labs/eds/docs/contracts/interfaces/* "docs/Ethereum Distribution System"
