@@ -13,7 +13,7 @@ importers:
         version: 1.0.1(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
       rankify-contracts:
         specifier: ^0.9.4
-        version: link:../contracts
+        version: 0.9.4(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
       rankify-js:
         specifier: ^1.0.0
         version: 1.0.0(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
@@ -732,6 +732,7 @@ packages:
 
   ethereumjs-abi@0.6.8:
     resolution: {integrity: sha512-Tx0r/iXI6r+lRsdvkFDlut0N08jWMnKRZ6Gkq+Nmw75lZe4e6o3EkSnkaBP5NF6+m5PTGAr9JP43N3LyeoglsA==}
+    deprecated: This library has been deprecated and usage is discouraged.
 
   ethereumjs-util@6.2.1:
     resolution: {integrity: sha512-W2Ktez4L01Vexijrm5EB6w7dg4n/TgpoYU4avuT5T3Vmnw/eCRtiBrJfQYS/DCSvDIOLn2k57GcHdeBcgVxAqw==}
