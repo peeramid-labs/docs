@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -148,35 +150,50 @@
               
                 <h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
 <h3 id="invalidrepository">InvalidRepository<a class="headerlink" href="#invalidrepository" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error InvalidRepository(contract IRepository repository)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidRepository<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">)</span>
+</code></pre></div>
 <h3 id="repositoryalreadyexists">RepositoryAlreadyExists<a class="headerlink" href="#repositoryalreadyexists" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error RepositoryAlreadyExists(contract IRepository repository)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>RepositoryAlreadyExists<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">)</span>
+</code></pre></div>
 <h3 id="versionoutdated">VersionOutdated<a class="headerlink" href="#versionoutdated" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error VersionOutdated(contract IRepository repository, uint256 version)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>VersionOutdated<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="invalidinstance">InvalidInstance<a class="headerlink" href="#invalidinstance" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error InvalidInstance(address instance)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="versioneddistributionadded">VersionedDistributionAdded<a class="headerlink" href="#versioneddistributionadded" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event VersionedDistributionAdded(contract IRepository repository, uint256 version, enum LibSemver.requirements requirement, address initializer)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VersionedDistributionAdded</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>requirement<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="versionchanged">VersionChanged<a class="headerlink" href="#versionchanged" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event VersionChanged(address repository, uint256 oldVersion, uint256 newVersion)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VersionChanged</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">repository</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">oldVersion</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newVersion</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="requirementchanged">RequirementChanged<a class="headerlink" href="#requirementchanged" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event RequirementChanged(contract IRepository repository, enum LibSemver.requirements oldRequirement, enum LibSemver.requirements newRequirement)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">RequirementChanged</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>oldRequirement<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>newRequirement<span class="p">)</span>
+</code></pre></div>
 <h3 id="versioneddistributionremoved">VersionedDistributionRemoved<a class="headerlink" href="#versioneddistributionremoved" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event VersionedDistributionRemoved(contract IRepository repository)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VersionedDistributionRemoved</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">)</span>
+</code></pre></div>
 <h3 id="instantiated">Instantiated<a class="headerlink" href="#instantiated" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event Instantiated(address repository, bytes argsHash)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Instantiated</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">repository</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">argsHash</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="addversioneddistribution">addVersionedDistribution<a class="headerlink" href="#addversioneddistribution" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function addVersionedDistribution(contract IRepository repository, struct LibSemver.Version version, enum LibSemver.requirements requirement, address initializer) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addVersionedDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>requirement<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <h3 id="changerequirement">changeRequirement<a class="headerlink" href="#changerequirement" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function changeRequirement(contract IRepository repository, struct LibSemver.Version version, enum LibSemver.requirements requirement) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeRequirement</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>requirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <h3 id="getversioneddistributions">getVersionedDistributions<a class="headerlink" href="#getversioneddistributions" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function getVersionedDistributions() external view returns (address[] repositories)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getVersionedDistributions</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>repositories<span class="p">)</span>
+</code></pre></div>
 <h3 id="getversioneddistributionuri">getVersionedDistributionURI<a class="headerlink" href="#getversioneddistributionuri" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function getVersionedDistributionURI(contract IRepository repository) external view returns (string)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getVersionedDistributionURI</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function instantiate(contract IRepository repository, bytes args) external returns (address[], bytes32, uint256)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[],</span><span class="w"> </span><span class="kt">bytes32</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="removeversioneddistribution">removeVersionedDistribution<a class="headerlink" href="#removeversioneddistribution" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function removeVersionedDistribution(contract IRepository repository) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">removeVersionedDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <!--CONTRACT_END-->
               
             </div>
@@ -222,6 +239,9 @@
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

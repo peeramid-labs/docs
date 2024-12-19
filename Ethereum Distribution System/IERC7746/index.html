@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -127,7 +129,8 @@
 </div>
 <h3 id="beforecall">beforeCall<a class="headerlink" href="#beforecall" title="Permanent link">#</a></h3>
 <p>Validates a function call before execution.</p>
-<pre class="highlight"><code class="language-solidity">function beforeCall(bytes configuration, bytes4 selector, address sender, uint256 value, bytes data) external returns (bytes)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">beforeCall</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">configuration</span><span class="p">,</span><span class="w"> </span>bytes4<span class="w"> </span>selector<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">sender</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -180,7 +183,8 @@
 </div>
 <h3 id="aftercall">afterCall<a class="headerlink" href="#aftercall" title="Permanent link">#</a></h3>
 <p>Validates a function call after execution.</p>
-<pre class="highlight"><code class="language-solidity">function afterCall(bytes configuration, bytes4 selector, address sender, uint256 value, bytes data, bytes beforeCallResult) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">afterCall</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">configuration</span><span class="p">,</span><span class="w"> </span>bytes4<span class="w"> </span>selector<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">sender</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">beforeCallResult</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -271,6 +275,9 @@
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

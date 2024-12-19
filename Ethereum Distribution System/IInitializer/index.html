@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -126,12 +128,15 @@
 <p>Interface for the Initializer contract. This is intended to be used
 as distribution initializer within the Distributor contract.</p>
 <h3 id="initialized">Initialized<a class="headerlink" href="#initialized" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event Initialized(address container, bytes32 codeHash)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Initialized</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">container</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">codeHash</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="initializationfailed">initializationFailed<a class="headerlink" href="#initializationfailed" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error initializationFailed(bytes32 id, string reason)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>initializationFailed<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">reason</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="initialize">initialize<a class="headerlink" href="#initialize" title="Permanent link">#</a></h3>
 <p>Initializes the contract with necessary parameters.</p>
-<pre class="highlight"><code class="language-solidity">function initialize(bytes32 distributionId, address[] instances, bytes32 distributionName, uint256 distributionVersion, bytes args) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">initialize</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -217,6 +222,9 @@ as distribution initializer within the Distributor contract.</p>
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

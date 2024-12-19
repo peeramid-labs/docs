@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -119,39 +121,39 @@
               
                 <h1 id="creating-new-mao">Creating new MAO<a class="headerlink" href="#creating-new-mao" title="Permanent link">#</a></h1>
 <p>In order to instantiate the MAO distribution, you don't need to deploy a thing. You just need to call the <code>instantiate</code> function of the the <a href="./src/distributors/PeeramidLabsDistributor.sol">PeeramidLabsDistributor.sol</a> contract and specify proper distribution Id and arguments.
-<pre class="highlight"><code class="language-ts">import {  MAODistribution } from 'rankify-contracts/types';
-const distributorArguments: MAODistribution.DistributorArgumentsStruct = {
-        DAOSEttings: {
-          daoURI: 'https://example.com/dao',
-          subdomain: 'example',
-          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
-          tokenName: 'tokenName',
-          tokenSymbol: 'tokenSymbol',
-        },
-        ACIDSettings: {
-          RankTokenContractURI: 'https://example.com/rank',
-          gamePrice: 1,
-          joinGamePrice: 1,
-          maxPlayersSize: 16,
-          maxTurns: 1,
-          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
-          minPlayersSize: 4,
-          paymentToken: rankify.address,
-          rankTokenURI: 'https://example.com/rank',
-          timePerTurn: 1,
-          timeToJoin: 1,
-          voteCredits: 14,
-        },
-      };
-const data = ethers.utils.defaultAbiCoder.encode(
-        [
-          'tuple(tuple(string daoURI, string subdomain, bytes metadata, string tokenName, string tokenSymbol) DAOSEttings, tuple(uint256 timePerTurn, uint256 maxPlayersSize, uint256 minPlayersSize, uint256 timeToJoin, uint256 maxTurns, uint256 voteCredits, uint256 gamePrice, address paymentToken, uint256 joinGamePrice, string metadata, string rankTokenURI, string RankTokenContractURI) ACIDSettings)',
-        ],
-        [distributorArguments],
-      );
-      const distributorsDistId = process.env.DISTRIBUTOR_DIST_ID;
-      const tx = await distributorContract.instantiate(distributorsDistId, data);
-</code></pre></p>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="nx">MAODistribution</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rankify-contracts/types&#39;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">distributorArguments</span><span class="o">:</span><span class="w"> </span><span class="kt">MAODistribution.DistributorArgumentsStruct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">DAOSEttings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">daoURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/dao&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">subdomain</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;example&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">metadata</span><span class="o">:</span><span class="w"> </span><span class="kt">ethers.utils.hexlify</span><span class="p">(</span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toUtf8Bytes</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)),</span>
+<span class="w">          </span><span class="nx">tokenName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tokenName&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">tokenSymbol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tokenSymbol&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="nx">ACIDSettings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nx">RankTokenContractURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/rank&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">gamePrice</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">joinGamePrice</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">maxPlayersSize</span><span class="o">:</span><span class="w"> </span><span class="kt">16</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">maxTurns</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">metadata</span><span class="o">:</span><span class="w"> </span><span class="kt">ethers.utils.hexlify</span><span class="p">(</span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toUtf8Bytes</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)),</span>
+<span class="w">          </span><span class="nx">minPlayersSize</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">paymentToken</span><span class="o">:</span><span class="w"> </span><span class="kt">rankify.address</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">rankTokenURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/rank&#39;</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">timePerTurn</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">timeToJoin</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
+<span class="w">          </span><span class="nx">voteCredits</span><span class="o">:</span><span class="w"> </span><span class="kt">14</span><span class="p">,</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">      </span><span class="p">};</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">defaultAbiCoder</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span>
+<span class="w">        </span><span class="p">[</span>
+<span class="w">          </span><span class="s1">&#39;tuple(tuple(string daoURI, string subdomain, bytes metadata, string tokenName, string tokenSymbol) DAOSEttings, tuple(uint256 timePerTurn, uint256 maxPlayersSize, uint256 minPlayersSize, uint256 timeToJoin, uint256 maxTurns, uint256 voteCredits, uint256 gamePrice, address paymentToken, uint256 joinGamePrice, string metadata, string rankTokenURI, string RankTokenContractURI) ACIDSettings)&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="p">],</span>
+<span class="w">        </span><span class="p">[</span><span class="nx">distributorArguments</span><span class="p">],</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">distributorsDistId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DISTRIBUTOR_DIST_ID</span><span class="p">;</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">distributorContract</span><span class="p">.</span><span class="nx">instantiate</span><span class="p">(</span><span class="nx">distributorsDistId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
+</code></pre></div></p>
 <h2 id="getting-distributorsdistid">Getting DistributorsDistId<a class="headerlink" href="#getting-distributorsdistid" title="Permanent link">#</a></h2>
 <p>While in development, simplest way to get <code>distributorsDistId</code> for MAO distribution is to call <code>getDistributions</code> at <code>PeeramidLabsDistributor</code> contract and look for. It's likely to be only one.</p>
 <div class="admonition note">
@@ -202,6 +204,9 @@ const data = ethers.utils.defaultAbiCoder.encode(
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

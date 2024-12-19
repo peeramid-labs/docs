@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -152,7 +154,8 @@
 </div>
 <h3 id="distributionnotfound">DistributionNotFound<a class="headerlink" href="#distributionnotfound" title="Permanent link">#</a></h3>
 <p>Error indicating that the distribution with the specified ID was not found.</p>
-<pre class="highlight"><code class="language-solidity">error DistributionNotFound(bytes32 id)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DistributionNotFound<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -171,7 +174,8 @@
 </table>
 <h3 id="distributionexists">DistributionExists<a class="headerlink" href="#distributionexists" title="Permanent link">#</a></h3>
 <p>Error indicating that a distribution with the specified ID already exists.</p>
-<pre class="highlight"><code class="language-solidity">error DistributionExists(bytes32 id)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DistributionExists<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -190,7 +194,8 @@
 </table>
 <h3 id="initializernotfound">InitializerNotFound<a class="headerlink" href="#initializernotfound" title="Permanent link">#</a></h3>
 <p>Error indicating that the initializer for the distribution was not found.</p>
-<pre class="highlight"><code class="language-solidity">error InitializerNotFound(bytes32 id)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InitializerNotFound<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -209,7 +214,8 @@
 </table>
 <h3 id="invalidinstance">InvalidInstance<a class="headerlink" href="#invalidinstance" title="Permanent link">#</a></h3>
 <p>Error indicating that the instance is invalid.</p>
-<pre class="highlight"><code class="language-solidity">error InvalidInstance(address instance)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -228,7 +234,8 @@
 </table>
 <h3 id="instantiated">Instantiated<a class="headerlink" href="#instantiated" title="Permanent link">#</a></h3>
 <p>Event emitted when a new distribution is instantiated.</p>
-<pre class="highlight"><code class="language-solidity">event Instantiated(bytes32 distributionId, uint256 instanceId, bytes argsHash, address[] instances)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Instantiated</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">argsHash</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -266,7 +273,8 @@
 </div>
 <h3 id="distributionremoved">DistributionRemoved<a class="headerlink" href="#distributionremoved" title="Permanent link">#</a></h3>
 <p>Event emitted when a distribution is removed.</p>
-<pre class="highlight"><code class="language-solidity">event DistributionRemoved(bytes32 id)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionRemoved</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -289,7 +297,8 @@
 </div>
 <h3 id="distributionadded">DistributionAdded<a class="headerlink" href="#distributionadded" title="Permanent link">#</a></h3>
 <p>Event emitted when a distribution is added.</p>
-<pre class="highlight"><code class="language-solidity">event DistributionAdded(bytes32 id, address initializer)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionAdded</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -317,7 +326,8 @@
 </div>
 <h3 id="getdistributions">getDistributions<a class="headerlink" href="#getdistributions" title="Permanent link">#</a></h3>
 <p>Retrieves the unique identifiers of all distributions.</p>
-<pre class="highlight"><code class="language-solidity">function getDistributions() external view returns (bytes32[] distributorIds)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDistributions</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[]</span><span class="w"> </span>distributorIds<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -336,7 +346,8 @@
 </table>
 <h3 id="getdistributionuri">getDistributionURI<a class="headerlink" href="#getdistributionuri" title="Permanent link">#</a></h3>
 <p>Retrieves the URI of the distribution.</p>
-<pre class="highlight"><code class="language-solidity">function getDistributionURI(bytes32 distributorId) external view returns (string)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDistributionURI</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -365,7 +376,8 @@
 </table>
 <h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
 <p>Instantiates a new instance with the given distributor ID and arguments.</p>
-<pre class="highlight"><code class="language-solidity">function instantiate(bytes32 distributorId, bytes args) external returns (address[], bytes32 distributionName, uint256 distributionVersion)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[],</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -412,13 +424,17 @@
 <p>It MUST emit <a href=".././Instantiated">Instantiated</a> event.</p>
 </div>
 <h3 id="adddistribution">addDistribution<a class="headerlink" href="#adddistribution" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function addDistribution(bytes32 distributorId, address initializer) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <h3 id="removedistribution">removeDistribution<a class="headerlink" href="#removedistribution" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function removeDistribution(bytes32 distributorId) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">removeDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <h3 id="getdistributionid">getDistributionId<a class="headerlink" href="#getdistributionid" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function getDistributionId(address instance) external view returns (bytes32)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDistributionId</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="getinstanceid">getInstanceId<a class="headerlink" href="#getinstanceid" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function getInstanceId(address instance) external view returns (uint256)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstanceId</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
 <!--CONTRACT_END-->
               
             </div>
@@ -464,6 +480,9 @@
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

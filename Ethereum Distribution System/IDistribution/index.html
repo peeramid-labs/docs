@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -132,7 +134,8 @@
 </div>
 <h3 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">#</a></h3>
 <p>Emitted when a distribution occurs.</p>
-<pre class="highlight"><code class="language-solidity">event Distributed(address distributor, address[] instances)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Distributed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">distributor</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -156,7 +159,8 @@
 </table>
 <h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
 <p>Instantiates a new instance with the given parameters.</p>
-<pre class="highlight"><code class="language-solidity">function instantiate(bytes data) external returns (address[] instances, bytes32 distributionName, uint256 distributionVersion)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -199,7 +203,8 @@
 </div>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
 <p>Retrieves the current distribution sources.</p>
-<pre class="highlight"><code class="language-solidity">function get() external view returns (address[] sources, bytes32 distributionName, uint256 distributionVersion)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>sources<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -227,7 +232,8 @@
 </tbody>
 </table>
 <h3 id="getmetadata">getMetadata<a class="headerlink" href="#getmetadata" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">function getMetadata() external view returns (string)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getMetadata</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
+</code></pre></div>
 <!--CONTRACT_END-->
               
             </div>
@@ -273,6 +279,9 @@
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

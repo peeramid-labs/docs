@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -171,7 +173,8 @@
                 <h1 id="iinstaller-interface">IInstaller Interface<a class="headerlink" href="#iinstaller-interface" title="Permanent link">#</a></h1>
 <p>Enables target smart account to interact with Distributor contract ecosystem.</p>
 <h3 id="notaninstance">NotAnInstance<a class="headerlink" href="#notaninstance" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error NotAnInstance(address instance)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>NotAnInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -194,7 +197,8 @@
 </div>
 <h3 id="invaliddistributor">InvalidDistributor<a class="headerlink" href="#invaliddistributor" title="Permanent link">#</a></h3>
 <p>Error indicating that the provided distributor is invalid.</p>
-<pre class="highlight"><code class="language-solidity">error InvalidDistributor(contract IDistributor distributor)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidDistributor<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -212,7 +216,8 @@
 </tbody>
 </table>
 <h3 id="invalidtarget">InvalidTarget<a class="headerlink" href="#invalidtarget" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error InvalidTarget(address target)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidTarget<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">target</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -235,7 +240,8 @@
 </div>
 <h3 id="alreadyallowed">alreadyAllowed<a class="headerlink" href="#alreadyallowed" title="Permanent link">#</a></h3>
 <p>Error indicating that the specified distributor is already allowed.</p>
-<pre class="highlight"><code class="language-solidity">error alreadyAllowed(contract IDistributor distributor)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>alreadyAllowed<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -254,7 +260,8 @@
 </table>
 <h3 id="distributionisnotpermitted">DistributionIsNotPermitted<a class="headerlink" href="#distributionisnotpermitted" title="Permanent link">#</a></h3>
 <p>Error indicating that a distribution is not permitted (not installed).</p>
-<pre class="highlight"><code class="language-solidity">error DistributionIsNotPermitted(contract IDistributor distributor, bytes32 distributionId)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DistributionIsNotPermitted<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -278,7 +285,8 @@
 </table>
 <h3 id="dissalowdistonwhitelisteddistributor">DissalowDistOnWhitelistedDistributor<a class="headerlink" href="#dissalowdistonwhitelisteddistributor" title="Permanent link">#</a></h3>
 <p>Error indicating that distributor is whitelisted and hence it is not possible to selectively dissalow distriributions.</p>
-<pre class="highlight"><code class="language-solidity">error DissalowDistOnWhitelistedDistributor(contract IDistributor distributor, bytes32 distributionId)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>DissalowDistOnWhitelistedDistributor<span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -305,7 +313,8 @@
 <p>If getting this error: consider first removing distributor from whitelist, and then dissalowing the distribution.</p>
 </div>
 <h3 id="distributorwhitelisted">DistributorWhitelisted<a class="headerlink" href="#distributorwhitelisted" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event DistributorWhitelisted(contract IDistributor distributor)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributorWhitelisted</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -329,7 +338,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="distributorwhitelistrevoked">DistributorWhitelistRevoked<a class="headerlink" href="#distributorwhitelistrevoked" title="Permanent link">#</a></h3>
 <p>Emitted when a distributor is removed from the whitelist.</p>
-<pre class="highlight"><code class="language-solidity">event DistributorWhitelistRevoked(contract IDistributor distributor)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributorWhitelistRevoked</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -351,7 +361,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 <p>After removal, the distributions that were allowed by id are still allowed.</p>
 </div>
 <h3 id="distributionallowed">DistributionAllowed<a class="headerlink" href="#distributionallowed" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event DistributionAllowed(contract IDistributor distributor, bytes32 distributionId)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionAllowed</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -378,7 +389,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 <p>Emitted when a distribution is allowed by the installer.</p>
 </div>
 <h3 id="distributiondisallowed">DistributionDisallowed<a class="headerlink" href="#distributiondisallowed" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event DistributionDisallowed(contract IDistributor distributor, bytes32 distributionId)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionDisallowed</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -406,7 +418,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="allowdistribution">allowDistribution<a class="headerlink" href="#allowdistribution" title="Permanent link">#</a></h3>
 <p>Allows a specified distributor to distribute a given distribution ID.</p>
-<pre class="highlight"><code class="language-solidity">function allowDistribution(contract IDistributor distributor, bytes32 distributionId) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">allowDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -434,7 +447,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="disallowdistribution">disallowDistribution<a class="headerlink" href="#disallowdistribution" title="Permanent link">#</a></h3>
 <p>Disallows a specific distribution from a given distributor.</p>
-<pre class="highlight"><code class="language-solidity">function disallowDistribution(contract IDistributor distributor, bytes32 distributionId) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">disallowDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -462,7 +476,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="whitelisteddistributions">whitelistedDistributions<a class="headerlink" href="#whitelisteddistributions" title="Permanent link">#</a></h3>
 <p>Retrieves the list of whitelisted distributions for a given distributor.</p>
-<pre class="highlight"><code class="language-solidity">function whitelistedDistributions(contract IDistributor distributor) external view returns (bytes32[])</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">whitelistedDistributions</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[])</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -495,7 +510,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="whitelistdistributor">whitelistDistributor<a class="headerlink" href="#whitelistdistributor" title="Permanent link">#</a></h3>
 <p>Adds a distributor to the whitelist.</p>
-<pre class="highlight"><code class="language-solidity">function whitelistDistributor(contract IDistributor distributor) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">whitelistDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -518,7 +534,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="revokewhitelisteddistributor">revokeWhitelistedDistributor<a class="headerlink" href="#revokewhitelisteddistributor" title="Permanent link">#</a></h3>
 <p>Revokes the whitelisted status of a given distributor.</p>
-<pre class="highlight"><code class="language-solidity">function revokeWhitelistedDistributor(contract IDistributor distributor) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">revokeWhitelistedDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -541,7 +558,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </div>
 <h3 id="isdistributor">isDistributor<a class="headerlink" href="#isdistributor" title="Permanent link">#</a></h3>
 <p>Checks if the given address is a valid distributor.</p>
-<pre class="highlight"><code class="language-solidity">function isDistributor(contract IDistributor distributor) external view returns (bool)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isDistributor</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -570,7 +588,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </table>
 <h3 id="getwhitelisteddistributors">getWhitelistedDistributors<a class="headerlink" href="#getwhitelisteddistributors" title="Permanent link">#</a></h3>
 <p>Retrieves the list of whitelisted distributor addresses.</p>
-<pre class="highlight"><code class="language-solidity">function getWhitelistedDistributors() external view returns (address[])</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getWhitelistedDistributors</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[])</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -588,7 +607,8 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 </tbody>
 </table>
 <h3 id="installed">Installed<a class="headerlink" href="#installed" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event Installed(address instance, bytes32 distributionId, bytes32 permissions, bytes args)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Installed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">permissions</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -626,10 +646,12 @@ Any distribution of the whitelisted distributor MUST be allowed to be installed.
 MUST be emitted for every new instance installed via <code>install</code> function.</p>
 </div>
 <h3 id="uninstalled">Uninstalled<a class="headerlink" href="#uninstalled" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">event Uninstalled(address instance)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Uninstalled</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="install">install<a class="headerlink" href="#install" title="Permanent link">#</a></h3>
 <p>Installs a new instance with the given distributor, distribution ID, and arguments.</p>
-<pre class="highlight"><code class="language-solidity">function install(contract IDistributor distributor, bytes32 distributionId, bytes args) external payable returns (uint256 instanceId)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">install</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="w"> </span>distributor<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -673,7 +695,8 @@ After succesfull installation ERC77446 hooks SHALL NOT revert if called by targe
 </div>
 <h3 id="uninstall">uninstall<a class="headerlink" href="#uninstall" title="Permanent link">#</a></h3>
 <p>Uninstalls an instance with the given ID.</p>
-<pre class="highlight"><code class="language-solidity">function uninstall(uint256 instanceId) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">uninstall</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -697,7 +720,8 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
 </div>
 <h3 id="getinstance">getInstance<a class="headerlink" href="#getinstance" title="Permanent link">#</a></h3>
 <p>Retrieves the contracts associated with a specific instance.</p>
-<pre class="highlight"><code class="language-solidity">function getInstance(uint256 instanceId) external view returns (address[] instaneContracts)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstance</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instaneContracts<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -726,7 +750,8 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
 </table>
 <h3 id="getinstancesnum">getInstancesNum<a class="headerlink" href="#getinstancesnum" title="Permanent link">#</a></h3>
 <p>Retrieves the number of instances.</p>
-<pre class="highlight"><code class="language-solidity">function getInstancesNum() external view returns (uint256)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstancesNum</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -749,7 +774,8 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
 </div>
 <h3 id="isinstance">isInstance<a class="headerlink" href="#isinstance" title="Permanent link">#</a></h3>
 <p>Checks if the given address is an active instance.</p>
-<pre class="highlight"><code class="language-solidity">function isInstance(address instance) external view returns (bool)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isInstance</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -778,7 +804,8 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
 </table>
 <h3 id="distributorof">distributorOf<a class="headerlink" href="#distributorof" title="Permanent link">#</a></h3>
 <p>Returns the distributor associated with a given instance.</p>
-<pre class="highlight"><code class="language-solidity">function distributorOf(address instance) external view returns (contract IDistributor)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">distributorOf</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IDistributor</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -807,7 +834,8 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
 </table>
 <h3 id="target">target<a class="headerlink" href="#target" title="Permanent link">#</a></h3>
 <p>Retrieves the address of the target contract.</p>
-<pre class="highlight"><code class="language-solidity">function target() external view returns (address)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">target</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -869,6 +897,9 @@ After succesfull uninstallation ERC77446 hooks SHALL revert if called by target,
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
         <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
     
       <script>
         // Current page data
@@ -162,14 +164,16 @@
 </tr>
 </tbody>
 </table>
-<pre class="highlight"><code class="language-solidity">struct Source {
-  struct LibSemver.Version version;
-  bytes32 sourceId;
-  bytes metadata;
-}</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">struct</span><span class="w"> </span><span class="nv">Source</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">;</span>
+<span class="w">  </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">sourceId</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">metadata</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
 <h3 id="versiondoesnotexist">VersionDoesNotExist<a class="headerlink" href="#versiondoesnotexist" title="Permanent link">#</a></h3>
 <p>Error indicating that the specified version does not exist.</p>
-<pre class="highlight"><code class="language-solidity">error VersionDoesNotExist(uint256 version)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>VersionDoesNotExist<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -188,10 +192,12 @@
 </table>
 <h3 id="releasezeronotallowed">ReleaseZeroNotAllowed<a class="headerlink" href="#releasezeronotallowed" title="Permanent link">#</a></h3>
 <p>Error indicating that a release with a zero value is not allowed.</p>
-<pre class="highlight"><code class="language-solidity">error ReleaseZeroNotAllowed()</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>ReleaseZeroNotAllowed<span class="p">()</span>
+</code></pre></div>
 <h3 id="versionexists">VersionExists<a class="headerlink" href="#versionexists" title="Permanent link">#</a></h3>
 <p>Error indicating that the specified version already exists.</p>
-<pre class="highlight"><code class="language-solidity">error VersionExists(uint256 version)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>VersionExists<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -210,7 +216,8 @@
 </table>
 <h3 id="versionincrementinvalid">VersionIncrementInvalid<a class="headerlink" href="#versionincrementinvalid" title="Permanent link">#</a></h3>
 <p>Error indicating that the version increment is invalid.</p>
-<pre class="highlight"><code class="language-solidity">error VersionIncrementInvalid(uint256 version)</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>VersionIncrementInvalid<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -232,14 +239,16 @@
 <p>The version increment must be exactly one for either major, minor, or patch.</p>
 </div>
 <h3 id="emptyreleasemetadata">EmptyReleaseMetadata<a class="headerlink" href="#emptyreleasemetadata" title="Permanent link">#</a></h3>
-<pre class="highlight"><code class="language-solidity">error EmptyReleaseMetadata()</code></pre>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>EmptyReleaseMetadata<span class="p">()</span>
+</code></pre></div>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
 <p>Error indicating that the release metadata is empty.</p>
 </div>
 <h3 id="versionadded">VersionAdded<a class="headerlink" href="#versionadded" title="Permanent link">#</a></h3>
 <p>Emitted when a new version is added to the repository.</p>
-<pre class="highlight"><code class="language-solidity">event VersionAdded(uint256 version, bytes32 source, bytes buildMetadata)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VersionAdded</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">source</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">buildMetadata</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -268,7 +277,8 @@
 </table>
 <h3 id="releasemetadataupdated">ReleaseMetadataUpdated<a class="headerlink" href="#releasemetadataupdated" title="Permanent link">#</a></h3>
 <p>Emitted when the metadata of a release is updated.</p>
-<pre class="highlight"><code class="language-solidity">event ReleaseMetadataUpdated(uint256 version, bytes releaseMetadata)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">ReleaseMetadataUpdated</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">releaseMetadata</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -292,7 +302,8 @@
 </table>
 <h3 id="updatereleasemetadata">updateReleaseMetadata<a class="headerlink" href="#updatereleasemetadata" title="Permanent link">#</a></h3>
 <p>Updates the metadata for a specific release version.</p>
-<pre class="highlight"><code class="language-solidity">function updateReleaseMetadata(struct LibSemver.Version version, bytes releaseMetadata) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">updateReleaseMetadata</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">releaseMetadata</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -320,7 +331,8 @@
 </div>
 <h3 id="repositoryname">repositoryName<a class="headerlink" href="#repositoryname" title="Permanent link">#</a></h3>
 <p>Retrieves the name of the repository.</p>
-<pre class="highlight"><code class="language-solidity">function repositoryName() external view returns (bytes32)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">repositoryName</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -339,7 +351,8 @@
 </table>
 <h3 id="newrelease">newRelease<a class="headerlink" href="#newrelease" title="Permanent link">#</a></h3>
 <p>Creates a new release for the given source ID.</p>
-<pre class="highlight"><code class="language-solidity">function newRelease(bytes32 sourceId, bytes metadata, struct LibSemver.Version version) external</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">newRelease</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">sourceId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">metadata</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -372,7 +385,8 @@
 </div>
 <h3 id="getlatest">getLatest<a class="headerlink" href="#getlatest" title="Permanent link">#</a></h3>
 <p>Retrieves the latest source.</p>
-<pre class="highlight"><code class="language-solidity">function getLatest() external view returns (struct IRepository.Source)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getLatest</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRepository</span><span class="p">.</span>Source<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -391,7 +405,8 @@
 </table>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
 <p>Retrieves a specific item from the repository.</p>
-<pre class="highlight"><code class="language-solidity">function get(struct LibSemver.Version baseVersion, enum LibSemver.requirements requirement) external view returns (struct IRepository.Source)</code></pre>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>baseVersion<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>requirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRepository</span><span class="p">.</span>Source<span class="p">)</span>
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -468,6 +483,9 @@
     <script src="../../js/theme_extra.js"></script>
     <script src="../../js/theme.js"></script>
       <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
