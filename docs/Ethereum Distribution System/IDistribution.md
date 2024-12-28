@@ -53,11 +53,5 @@ function get() external view returns (address[] sources, bytes32 distributionNam
 |  `distributionName`  | `bytes32` | The name of the distribution. |
 |  `distributionVersion`  | `uint256` | The version of the distribution. |
 
-###  getMetadata
-
-```solidity
-function getMetadata() external view returns (string)
-```
-
 <!--CONTRACT_END-->
 

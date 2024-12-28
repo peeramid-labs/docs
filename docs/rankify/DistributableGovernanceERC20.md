@@ -37,7 +37,7 @@ function mint(address _to, uint256 _amount) external
 
 <!--CONTRACT_END-->
 
-# GovernanceERC20
+# DistributableGovernanceERC20
 An [OpenZeppelin `Votes`](https://docs.openzeppelin.com/contracts/4.x/api/governance#Votes) compatible [ERC-20](https://eips.ethereum.org/EIPS/eip-20) token that can be used for voting and is managed by a DAO.
 
 ###  MintSettingsArrayLengthMismatch
@@ -58,12 +58,11 @@ error MintSettingsArrayLengthMismatch(uint256 receiversArrayLength, uint256 amou
 Calls the initialize function.
 
 ```solidity
-constructor(contract IDAO _dao, string _name, string _symbol, struct MintSettings _mintSettings, address _accessManager) public
+constructor(string _name, string _symbol, struct MintSettings _mintSettings, address _accessManager) public
 ```
 
 | Input | Type | Description |
 |:----- | ---- | ----------- |
-| `_dao` | `contract IDAO` | The managing DAO. |
 | `_name` | `string` | The name of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) governance token. |
 | `_symbol` | `string` | The symbol of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) governance token. |
 | `_mintSettings` | `struct MintSettings` | The token mint settings struct containing the `receivers` and `amounts`. |
@@ -74,12 +73,11 @@ constructor(contract IDAO _dao, string _name, string _symbol, struct MintSetting
 Initializes the contract and mints tokens to a list of receivers.
 
 ```solidity
-function initialize(contract IDAO _dao, string _name, string _symbol, struct MintSettings _mintSettings, address accessManager) public
+function initialize(string _name, string _symbol, struct MintSettings _mintSettings, address accessManager) public
 ```
 
 | Input | Type | Description |
 |:----- | ---- | ----------- |
-| `_dao` | `contract IDAO` | The managing DAO. |
 | `_name` | `string` | The name of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) governance token. |
 | `_symbol` | `string` | The symbol of the [ERC-20](https://eips.ethereum.org/EIPS/eip-20) governance token. |
 | `_mintSettings` | `struct MintSettings` | The token mint settings struct containing the `receivers` and `amounts`. |

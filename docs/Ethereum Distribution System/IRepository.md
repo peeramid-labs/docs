@@ -166,13 +166,12 @@ function getLatest() external view returns (struct IRepository.Source)
 Retrieves a specific item from the repository.
 
 ```solidity
-function get(struct LibSemver.Version baseVersion, enum LibSemver.requirements requirement) external view returns (struct IRepository.Source)
+function get(struct LibSemver.VersionRequirement required) external view returns (struct IRepository.Source)
 ```
 
 | Input | Type | Description |
 |:----- | ---- | ----------- |
-| `baseVersion` | `struct LibSemver.Version` | the base of required version |
-| `requirement` | `enum LibSemver.requirements` | the requirement of the version |
+| `required` | `struct LibSemver.VersionRequirement` | the required version |
 | **Output** | |
 |  `0`  | `struct IRepository.Source` | The requested `Source`. |
 

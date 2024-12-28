@@ -1,7 +1,7 @@
-site_name: Peeramid Labs Documentation
+site_name: Peeramid Network Docs
 site_url: https://rankify.it
 repo_url: https://github.com/peeramid-labs
-site_description: Rankify documentation portal
+site_description: Peeramid Network Documentation
 nav:
     - Welcome:
           - "index.md"
@@ -11,7 +11,7 @@ nav:
           - "architecture/index.md"
           - "architecture/create.md"
         #   - "architecture/specifications.md"
-    - interfaces:
+    - Contract API:
           - ...
     - Support:
           - "support/index.md"
@@ -43,7 +43,7 @@ plugins:
     - plantuml:
         #   theme: cyborg
           puml_url: https://www.plantuml.com/plantuml/
-          num_workers: 8
+        #   num_workers: 8
 markdown_extensions:
     - admonition
     - mkautodoc

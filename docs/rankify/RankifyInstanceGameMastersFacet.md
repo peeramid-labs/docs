@@ -1,5 +1,10 @@
 
-# 
+# RankifyInstanceGameMastersFacet
+Facet handling game master functionality for Rankify instances
+
+!!! NOTICE
+
+	Implements game master specific operations like vote submission and game management
 
 ###  OverTime
 

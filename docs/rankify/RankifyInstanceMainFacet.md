@@ -426,5 +426,17 @@ function getPlayersMoved(uint256 gameId) public view returns (bool[], uint256)
 
 	Returns the players who have moved in the game with the specified ID
 
+###  isActive
+
+```solidity
+function isActive(uint256 gameId, address player) public view returns (bool)
+```
+
+###  getGameState
+
+```solidity
+function getGameState(uint256 gameId) public view returns (struct IRankifyInstance.GameStateOutput state)
+```
+
 <!--CONTRACT_END-->
 
