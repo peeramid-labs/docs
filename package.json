@@ -14,8 +14,9 @@
     "license": "ISC",
     "description": "",
     "dependencies": {
-        "rankify-contracts": "^0.9.4",
-        "@peeramid-labs/eds": "^1.0.1",
-        "rankify-js": "^1.0.0"
+        "rankify-contracts": "^0.10.1",
+        "@peeramid-labs/eds": "^2.2.3",
+        "@peeramid-labs/sdk": "^2.0.3",
+        "@peeramid-labs/multipass": "0.3.2"
     }
 }

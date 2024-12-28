@@ -9,16 +9,22 @@ importers:
   .:
     dependencies:
       '@peeramid-labs/eds':
-        specifier: ^1.0.1
-        version: 1.0.1(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+        specifier: ^2.2.3
+        version: 2.2.3(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      '@peeramid-labs/multipass':
+        specifier: 0.3.2
+        version: 0.3.2(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      '@peeramid-labs/sdk':
+        specifier: ^2.0.3
+        version: 2.0.3(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)
       rankify-contracts:
-        specifier: ^0.9.4
-        version: 0.9.4(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
-      rankify-js:
-        specifier: ^1.0.0
-        version: 1.0.0(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+        specifier: ^0.10.1
+        version: 0.10.2(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
 
 packages:
+
+  '@adraffy/ens-normalize@1.11.0':
+    resolution: {integrity: sha512-/3DDPKHqqIqxUULp8yP4zODUY1i+2xvVWsv8A79xGWdCAG+8sb0hRh0Rk2QyOJUnnbyPUAZYcpBuRe3nS2OIUg==}
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -132,8 +138,20 @@ packages:
     resolution: {integrity: sha512-tghyZKLHZjcdlDqCA3gNZmLeR0XvOE9U1qoQO9ohyAZT6Pya+H9vkBPcsyXytmYLNgVoin7CKCmweo/R43V+tQ==}
     engines: {node: '>=12.0.0'}
 
+  '@noble/curves@1.7.0':
+    resolution: {integrity: sha512-UTMhXK9SeDhFJVrHeUJ5uZlI6ajXg10O6Ddocf9S6GjbSBVZsJo88HzKwXznNfGpMTRDyJkqMjNDPYgf0qFWnw==}
+    engines: {node: ^14.21.3 || >=16}
+
   '@noble/hashes@1.2.0':
     resolution: {integrity: sha512-FZfhjEDbT5GRswV3C6uvLPHMiVD6lQBmpoX5+eSiPaMTXte/IKqI5dykDxzZB/WBeK/CDuQRBWarPdi3FNY2zQ==}
+
+  '@noble/hashes@1.6.0':
+    resolution: {integrity: sha512-YUULf0Uk4/mAA89w+k3+yUYh6NrEvxZa5T6SY3wlMvE2chHkxFUUIDI8/XW1QSC357iA5pSnqt7XEhvFOqmDyQ==}
+    engines: {node: ^14.21.3 || >=16}
+
+  '@noble/hashes@1.6.1':
+    resolution: {integrity: sha512-pq5D8h10hHBjyqX+cfBm0i8JUXJ0UhczFc4r74zbuT9XgewFo2E3J1cOaGtdZynILNmQ685YWGzGE1Zv6io50w==}
+    engines: {node: ^14.21.3 || >=16}
 
   '@noble/secp256k1@1.7.1':
     resolution: {integrity: sha512-hOUk6AyBFmqVrv7k5WAw/LpszxVbj9gGN4JRkIX52fdFAj1UA61KXmZDvqVEm+pOyec3+fIeZB02LYa/pWOArw==}
@@ -260,40 +278,45 @@ packages:
     resolution: {integrity: sha512-1LMtXj1puAxyFusBgUIy5pZk3073cNXYnXUpuNKFghHbIit/xZgbk0AokpUADbNm3gyD6bFWl3LRFh3dhVdREg==}
     engines: {node: '>= 12'}
 
-  '@nomiclabs/hardhat-ethers@2.2.3':
-    resolution: {integrity: sha512-YhzPdzb612X591FOe68q+qXVXGG2ANZRvDo0RRUtimev85rCrAlv/TLMEZw5c+kq9AbzocLTVX/h2jVIFPL9Xg==}
-    peerDependencies:
-      ethers: ^5.0.0
-      hardhat: ^2.0.0
-
-  '@openzeppelin/contracts-upgradeable@4.9.6':
-    resolution: {integrity: sha512-m4iHazOsOCv1DgM7eD7GupTJ+NFVujRZt1wzddDPSVGpWdKq1SKkla5htKG7+IS4d2XOCtzkUNwRZ7Vq5aEUMA==}
-
   '@openzeppelin/contracts-upgradeable@5.0.2':
     resolution: {integrity: sha512-0MmkHSHiW2NRFiT9/r5Lu4eJq5UJ4/tzlOgYXNAIj/ONkQTVnz22pLxDvp4C4uZ9he7ZFvGn3Driptn1/iU7tQ==}
     peerDependencies:
       '@openzeppelin/contracts': 5.0.2
 
-  '@openzeppelin/contracts@4.9.6':
-    resolution: {integrity: sha512-xSmezSupL+y9VkHZJGDoCBpmnB2ogM13ccaYDWqJTfS3dbuHkgjuwDFUmaFauBCboQMGB/S5UqUl2y54X99BmA==}
-
   '@openzeppelin/contracts@5.0.2':
     resolution: {integrity: sha512-ytPc6eLGcHHnapAZ9S+5qsdomhjo6QBHTDRRBFfTxXIpsicMhVPouPgmUPebZZZGX7vt9USA+Z+0M0dSVtSUEA==}
 
-  '@peeramid-labs/eds@1.0.1':
-    resolution: {integrity: sha512-vtkpSrAvCHSglFaFvNpIgZnb4BJqFKOtXGWvzSc9sMZmSvXXDHQISvr3TWUWs//1VPEcmxjBkc57bUMJ+uQH5Q==}
+  '@peeramid-labs/eds@2.2.3':
+    resolution: {integrity: sha512-371T2M/7k285LHIydaojJtOXOuD2sGK3Obzpx5AzFhOtkEuOgbF/aSgotnbBlD/K0QcGCMTOZfHFM9JBaV48bg==}
 
-  '@peersky/eth-auth@2.1.1':
-    resolution: {integrity: sha512-vhz2IoSsYyiEL/wBtP250LGj1gwB4zsKelq4pAGG4woqb7EREM6V1lHG5kWIwtepGygAo/SwHK8DC5tEMXcWVQ==}
+  '@peeramid-labs/multipass@0.3.2':
+    resolution: {integrity: sha512-pux+6crTfTxxyTTtIXbw9m+5aK7+yHWKhFVCBB2ETh9W+yhJW53VKqlxxiav1nANn+WXV6rWGjCKl+R23OiSkA==}
+
+  '@peeramid-labs/sdk@2.0.3':
+    resolution: {integrity: sha512-v9Sd1u2qb144+et6okKWyzMnqlIKsJ9b1NFd5r9oMQh8XskcthLR0pKKjZ/WzgCIs3IPnGDRwL9i7uoMb7g0QQ==}
+
+  '@safe-global/safe-contracts@1.4.1-build.0':
+    resolution: {integrity: sha512-TIpoKJtMqLcLFoid0cvpxo8YTcnRUj95MHvxzwgPbJPRONOckNS6ebgGyBBRDmnpxFh34IBpPUZ7JD+z2Cfbbg==}
+    peerDependencies:
+      ethers: 5.4.0
 
   '@scure/base@1.1.6':
     resolution: {integrity: sha512-ok9AWwhcgYuGG3Zfhyqg+zwl+Wn5uE+dwC0NV/2qQkx4dABbb/bx96vWu8NSj+BNjjSjno+JRYRjle1jV08k3g==}
 
+  '@scure/base@1.2.1':
+    resolution: {integrity: sha512-DGmGtC8Tt63J5GfHgfl5CuAXh96VF/LD8K9Hr/Gv0J2lAoRGlPOMpqMpMbCTOoOJMZCk2Xt+DskdDyn6dEFdzQ==}
+
   '@scure/bip32@1.1.5':
     resolution: {integrity: sha512-XyNh1rB0SkEqd3tXcXMi+Xe1fvg+kUIcoRIEujP1Jgv7DqW2r9lg3Ah0NkFaCs9sTkQAQA8kw7xiRXzENi9Rtw==}
 
+  '@scure/bip32@1.6.0':
+    resolution: {integrity: sha512-82q1QfklrUUdXJzjuRU7iG7D7XiFx5PHYVS0+oeNKhyDLT7WPqs6pBcM2W5ZdwOwKCwoE1Vy1se+DHjcXwCYnA==}
+
   '@scure/bip39@1.1.1':
     resolution: {integrity: sha512-t+wDck2rVkh65Hmv280fYdVdY25J9YeEUIgn2LG1WM6gxFkGzcksoDiUkWVpVp3Oex9xGC68JU2dSbUfwZ2jPg==}
+
+  '@scure/bip39@1.5.0':
+    resolution: {integrity: sha512-Dop+ASYhnrwm9+HA/HwXg7j2ZqM6yk2fyLWb5znexjctFY3+E+eU8cIWI0Pql0Qx4hPZCijlGq4OL71g+Uz30A==}
 
   '@sentry/core@5.30.0':
     resolution: {integrity: sha512-TmfrII8w1PQZSZgPpUESqjB+jC6MvZJZdLtE/0hZ+SrnKhW3x5WlYLvTXZpcWePYBku7rl2wn1RZu6uT0qCTeg==}
@@ -379,6 +402,17 @@ packages:
 
   '@types/secp256k1@4.0.6':
     resolution: {integrity: sha512-hHxJU6PAEUn0TP4S/ZOzuTUvJWuZ6eIKeNKb5RBpODvSl6hp1Wrw4s7ATY50rklRCScUDpHzVA/DQdSjJ3UoYQ==}
+
+  abitype@1.0.7:
+    resolution: {integrity: sha512-ZfYYSktDQUwc2eduYu8C4wOs+RDPmnRYMh7zNfzeMtGGgb0U+6tLGjixUic6mXf5xKKCcgT5Qp6cv39tOARVFw==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+      zod: ^3 >=3.22.0
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+      zod:
+        optional: true
 
   acorn-walk@8.3.2:
     resolution: {integrity: sha512-cjkyv4OtNCIeqhHrfS81QWXoCBPExR/J62oyEqepVw8WaQeSqpW2uhuLPh1m9eWhDuOo/jUXVTlifvesOWp/4A==}
@@ -744,6 +778,9 @@ packages:
     resolution: {integrity: sha512-CUnVOQq7gSpDHZVVrQW8ExxUETWrnrvXYvYz55wOU8Uj4VCgw56XC2B/fVqQN+f7gmrnRHSLVnFAwsCuNwji8w==}
     engines: {node: '>=6.5.0', npm: '>=3'}
 
+  eventemitter3@5.0.1:
+    resolution: {integrity: sha512-GWkBvjiSZK87ELrYOSESUYeVIc9mvLLf/nXalMOS5dYrgZq9o5OVkbZAVM06CVxYsCwH9BDZFPlQTlPA1j4ahA==}
+
   evp_bytestokey@1.0.3:
     resolution: {integrity: sha512-/f2Go4TognH/KvCISP7OUsHn85hT9nUkxxA9BEWxFn+Oj9o8ZNLm/40hdlgSLyuOimsrTKLUMEorQexp/aPQeA==}
 
@@ -964,6 +1001,11 @@ packages:
   isarray@1.0.0:
     resolution: {integrity: sha512-VLghIWNM6ELQzo7zwmcg0NmTVyWKYjvIeM83yjp0wRDTmUnrM678fQbcKBo6n2CJEF0szoG//ytg+TKla89ALQ==}
 
+  isows@1.0.6:
+    resolution: {integrity: sha512-lPHCayd40oW98/I0uvgaHKWCSvkzY27LjWLbtzOm64yQ+G3Q5npjjbdppU65iZXkK1Zt+kH9pfegli0AYfwYYw==}
+    peerDependencies:
+      ws: '*'
+
   js-sha3@0.8.0:
     resolution: {integrity: sha512-gF1cRrHhIzNfToc802P800N8PpXS+evLLXfsVpowqmAFR9uwbi89WvXg2QspOmXL8QL86J4T1EpFu+yUkwJY3Q==}
 
@@ -1078,6 +1120,14 @@ packages:
     resolution: {integrity: sha512-D2FR03Vir7FIu45XBY20mTb+/ZSWB00sjU9jdQXt83gDrI4Ztz5Fs7/yy74g2N5SVQY4xY1qDr4rNddwYRVX0g==}
     engines: {node: '>=0.10.0'}
 
+  ox@0.1.2:
+    resolution: {integrity: sha512-ak/8K0Rtphg9vnRJlbOdaX9R7cmxD2MiSthjWGaQdMk3D7hrAlDoM+6Lxn7hN52Za3vrXfZ7enfke/5WjolDww==}
+    peerDependencies:
+      typescript: '>=5.4.0'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   p-limit@1.3.0:
     resolution: {integrity: sha512-vvcXsLAJ9Dr5rQOPk7toZQZJApBl2K4J6dANSsEuh6QI41JYcsS/qhTGa9ErIUUgK3WNQoJYvylxvjqmiqEA9Q==}
     engines: {node: '>=4'}
@@ -1144,11 +1194,8 @@ packages:
   randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
 
-  rankify-contracts@0.9.4:
-    resolution: {integrity: sha512-kdbEwtShHh84CWw8lUYYJY4eOiCZU4rNdZ5qAR+zuFqXjYB0yiLCx/tPsxjSAwB7ysM97WKLmEBQbikfnJBOfw==}
-
-  rankify-js@1.0.0:
-    resolution: {integrity: sha512-9kg6iwQXUoy7EyLNfZW4oAqS7zJnifDQkpzzHSqCKZW5FgzpL0mB1GMCTLaD0Puzm2xpovQOGdy4HKOYaPWUlQ==}
+  rankify-contracts@0.10.2:
+    resolution: {integrity: sha512-pUtrrqo1RqBYJU2oYpDHkGgCgjWSHzDJha4KX7Qk9KOwFwqHeiL603eeQtKlHYw6CFLGDd1Y/a1MaFPb7LeXLw==}
 
   raw-body@2.5.2:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
@@ -1404,6 +1451,17 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
+  viem@2.21.55:
+    resolution: {integrity: sha512-PgXew7C11cAuEtOSgRyQx2kJxEOPUwIwZA9dMglRByqJuFVA7wSGZZOOo/93iylAA8E15bEdqy9xulU3oKZ70Q==}
+    peerDependencies:
+      typescript: '>=5.0.4'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
+  webauthn-p256@0.0.10:
+    resolution: {integrity: sha512-EeYD+gmIT80YkSIDb2iWq0lq2zbHo1CxHlQTeJ+KkCILWpVy3zASH3ByD4bopzfk0uCwXxLqKGLqp2W4O28VFA==}
+
   widest-line@3.1.0:
     resolution: {integrity: sha512-NsmoXalsWVDMGupxZ5R08ka9flZjjiLvHVAWYOKtiKM8ujtZWr9cRffak+uSE48+Ob8ObalXpwyeUiyDD6QFgg==}
     engines: {node: '>=8'}
@@ -1442,6 +1500,18 @@ packages:
       utf-8-validate:
         optional: true
 
+  ws@8.18.0:
+    resolution: {integrity: sha512-8VbfWfHLbbwu3+N6OKsOMpBdT4kXPDDB9cJk2bJ6mh9ucxdlnNvH1e+roYkKmN9Nxw2yjz7VzeO9oOz2zJ04Pw==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      bufferutil: ^4.0.1
+      utf-8-validate: '>=5.0.2'
+    peerDependenciesMeta:
+      bufferutil:
+        optional: true
+      utf-8-validate:
+        optional: true
+
   y18n@5.0.8:
     resolution: {integrity: sha512-0pfFzegeDWJHJIAmTLRP2DwHjdF5s7jo9tuztdQxAhINCdvS+3nGINqPd00AphqJR/0LhANUS6/+7SCb98YOfA==}
     engines: {node: '>=10'}
@@ -1467,6 +1537,8 @@ packages:
     engines: {node: '>=10'}
 
 snapshots:
+
+  '@adraffy/ens-normalize@1.11.0': {}
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -1746,7 +1818,15 @@ snapshots:
       tweetnacl: 1.0.3
       tweetnacl-util: 0.15.1
 
+  '@noble/curves@1.7.0':
+    dependencies:
+      '@noble/hashes': 1.6.0
+
   '@noble/hashes@1.2.0': {}
+
+  '@noble/hashes@1.6.0': {}
+
+  '@noble/hashes@1.6.1': {}
 
   '@noble/secp256k1@1.7.1': {}
 
@@ -1837,22 +1917,13 @@ snapshots:
       '@nomicfoundation/solidity-analyzer-win32-ia32-msvc': 0.1.1
       '@nomicfoundation/solidity-analyzer-win32-x64-msvc': 0.1.1
 
-  '@nomiclabs/hardhat-ethers@2.2.3(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))':
-    dependencies:
-      ethers: 5.7.2
-      hardhat: 2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5)
-
-  '@openzeppelin/contracts-upgradeable@4.9.6': {}
-
   '@openzeppelin/contracts-upgradeable@5.0.2(@openzeppelin/contracts@5.0.2)':
     dependencies:
       '@openzeppelin/contracts': 5.0.2
 
-  '@openzeppelin/contracts@4.9.6': {}
-
   '@openzeppelin/contracts@5.0.2': {}
 
-  '@peeramid-labs/eds@1.0.1(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))':
+  '@peeramid-labs/eds@2.2.3(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))':
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@openzeppelin/contracts': 5.0.2
@@ -1874,9 +1945,56 @@ snapshots:
       - hardhat
       - utf-8-validate
 
-  '@peersky/eth-auth@2.1.1': {}
+  '@peeramid-labs/multipass@0.3.2(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))':
+    dependencies:
+      '@ethersproject/abi': 5.7.0
+      '@ethersproject/providers': 5.7.2
+      '@openzeppelin/contracts': 5.0.2
+      '@openzeppelin/contracts-upgradeable': 5.0.2(@openzeppelin/contracts@5.0.2)
+      '@types/chai': 4.3.16
+      '@types/mocha': 9.1.1
+      '@types/node': 17.0.45
+      chalk: 4.1.2
+      cli-table: 0.3.11
+      hardhat-gas-reporter: 1.0.10(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      ts-node: 10.9.2(@types/node@17.0.45)(typescript@5.4.5)
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - '@codechecks/client'
+      - '@swc/core'
+      - '@swc/wasm'
+      - bufferutil
+      - debug
+      - hardhat
+      - utf-8-validate
+
+  '@peeramid-labs/sdk@2.0.3(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))(typescript@5.4.5)':
+    dependencies:
+      '@peeramid-labs/eds': 2.2.3(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      '@peeramid-labs/multipass': 0.3.2(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      crypto-js: 4.2.0
+      lodash: 4.17.21
+      rankify-contracts: 0.10.2(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
+      viem: 2.21.55(typescript@5.4.5)
+    transitivePeerDependencies:
+      - '@codechecks/client'
+      - '@swc/core'
+      - '@swc/wasm'
+      - bufferutil
+      - debug
+      - ethers
+      - hardhat
+      - typescript
+      - utf-8-validate
+      - zod
+
+  '@safe-global/safe-contracts@1.4.1-build.0(ethers@5.7.2)':
+    dependencies:
+      ethers: 5.7.2
 
   '@scure/base@1.1.6': {}
+
+  '@scure/base@1.2.1': {}
 
   '@scure/bip32@1.1.5':
     dependencies:
@@ -1884,10 +2002,21 @@ snapshots:
       '@noble/secp256k1': 1.7.1
       '@scure/base': 1.1.6
 
+  '@scure/bip32@1.6.0':
+    dependencies:
+      '@noble/curves': 1.7.0
+      '@noble/hashes': 1.6.1
+      '@scure/base': 1.2.1
+
   '@scure/bip39@1.1.1':
     dependencies:
       '@noble/hashes': 1.2.0
       '@scure/base': 1.1.6
+
+  '@scure/bip39@1.5.0':
+    dependencies:
+      '@noble/hashes': 1.6.1
+      '@scure/base': 1.2.1
 
   '@sentry/core@5.30.0':
     dependencies:
@@ -1991,6 +2120,10 @@ snapshots:
   '@types/secp256k1@4.0.6':
     dependencies:
       '@types/node': 20.13.0
+
+  abitype@1.0.7(typescript@5.4.5):
+    optionalDependencies:
+      typescript: 5.4.5
 
   acorn-walk@8.3.2: {}
 
@@ -2434,6 +2567,8 @@ snapshots:
       is-hex-prefixed: 1.0.0
       strip-hex-prefix: 1.0.0
 
+  eventemitter3@5.0.1: {}
+
   evp_bytestokey@1.0.3:
     dependencies:
       md5.js: 1.3.5
@@ -2704,6 +2839,10 @@ snapshots:
 
   isarray@1.0.0: {}
 
+  isows@1.0.6(ws@8.18.0):
+    dependencies:
+      ws: 8.18.0
+
   js-sha3@0.8.0: {}
 
   js-yaml@4.1.0:
@@ -2825,6 +2964,20 @@ snapshots:
 
   os-tmpdir@1.0.2: {}
 
+  ox@0.1.2(typescript@5.4.5):
+    dependencies:
+      '@adraffy/ens-normalize': 1.11.0
+      '@noble/curves': 1.7.0
+      '@noble/hashes': 1.6.1
+      '@scure/bip32': 1.6.0
+      '@scure/bip39': 1.5.0
+      abitype: 1.0.7(typescript@5.4.5)
+      eventemitter3: 5.0.1
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - zod
+
   p-limit@1.3.0:
     dependencies:
       p-try: 1.0.0
@@ -2883,12 +3036,13 @@ snapshots:
     dependencies:
       safe-buffer: 5.2.1
 
-  rankify-contracts@0.9.4(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5)):
+  rankify-contracts@0.10.2(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5)):
     dependencies:
       '@ethersproject/abi': 5.7.0
       '@ethersproject/providers': 5.7.2
-      '@openzeppelin/contracts': 4.9.6
-      '@openzeppelin/contracts-upgradeable': 4.9.6
+      '@openzeppelin/contracts': 5.0.2
+      '@openzeppelin/contracts-upgradeable': 5.0.2(@openzeppelin/contracts@5.0.2)
+      '@safe-global/safe-contracts': 1.4.1-build.0(ethers@5.7.2)
       '@types/chai': 4.3.16
       '@types/mocha': 9.1.1
       '@types/node': 17.0.45
@@ -2903,25 +3057,7 @@ snapshots:
       - '@swc/wasm'
       - bufferutil
       - debug
-      - hardhat
-      - utf-8-validate
-
-  rankify-js@1.0.0(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5)):
-    dependencies:
-      '@ethersproject/abi': 5.7.0
-      '@nomiclabs/hardhat-ethers': 2.2.3(ethers@5.7.2)(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
-      '@peersky/eth-auth': 2.1.1
-      crypto-js: 4.2.0
-      ethers: 5.7.2
-      lodash: 4.17.21
-      rankify-contracts: 0.9.4(hardhat@2.22.4(ts-node@10.9.2(@types/node@17.0.45)(typescript@5.4.5))(typescript@5.4.5))
-      typescript: 5.4.5
-    transitivePeerDependencies:
-      - '@codechecks/client'
-      - '@swc/core'
-      - '@swc/wasm'
-      - bufferutil
-      - debug
+      - ethers
       - hardhat
       - utf-8-validate
 
@@ -3193,6 +3329,29 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
+  viem@2.21.55(typescript@5.4.5):
+    dependencies:
+      '@noble/curves': 1.7.0
+      '@noble/hashes': 1.6.1
+      '@scure/bip32': 1.6.0
+      '@scure/bip39': 1.5.0
+      abitype: 1.0.7(typescript@5.4.5)
+      isows: 1.0.6(ws@8.18.0)
+      ox: 0.1.2(typescript@5.4.5)
+      webauthn-p256: 0.0.10
+      ws: 8.18.0
+    optionalDependencies:
+      typescript: 5.4.5
+    transitivePeerDependencies:
+      - bufferutil
+      - utf-8-validate
+      - zod
+
+  webauthn-p256@0.0.10:
+    dependencies:
+      '@noble/curves': 1.7.0
+      '@noble/hashes': 1.6.1
+
   widest-line@3.1.0:
     dependencies:
       string-width: 4.2.3
@@ -3210,6 +3369,8 @@ snapshots:
   ws@7.4.6: {}
 
   ws@7.5.9: {}
+
+  ws@8.18.0: {}
 
   y18n@5.0.8: {}
 

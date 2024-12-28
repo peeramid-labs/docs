@@ -1,5 +1,11 @@
 
-# 
+# RankifyInstanceRequirementsFacet
+Facet handling game requirements and conditions for Rankify instances
+
+!!! NOTICE
+
+	Implements functionality for setting and checking join requirements for games,
+	utilizing the LibCoinVending library for configuration management
 
 ###  RequirementsConfigured
 

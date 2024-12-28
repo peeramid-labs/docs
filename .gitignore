@@ -4,3 +4,4 @@ lib
 include
 site
 .venv
+.DS_Store
