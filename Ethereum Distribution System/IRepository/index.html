@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IRepository/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IRepository Interface - Peeramid Labs Documentation</title>
+    <title>IRepository Interface - Peeramid Network Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Labs Documentation
+          <a href="../.." class="icon icon-home"> Peeramid Network Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -62,10 +62,12 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">interfaces</span></p>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" >Ethereum Distribution System</a>
     <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../IContractURI/">IContractURI</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IDistribution/">IDistribution</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IDistributor/">IDistributor Interface</a>
@@ -106,7 +108,43 @@
     </li>
     </ul>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IVersionDistributor/">IVersionDistributor</a>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rankify</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
                 </li>
     </ul>
                   </li>
@@ -125,14 +163,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Labs Documentation</a>
+          <a href="../..">Peeramid Network Docs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">interfaces</li>
+          <li class="breadcrumb-item">Contract API</li>
           <li class="breadcrumb-item">Ethereum Distribution System</li>
       <li class="breadcrumb-item active">IRepository Interface</li>
     <li class="wy-breadcrumbs-aside">
@@ -405,7 +443,7 @@
 </table>
 <h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
 <p>Retrieves a specific item from the repository.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>baseVersion<span class="p">,</span><span class="w"> </span><span class="kt">enum</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>requirements<span class="w"> </span>requirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRepository</span><span class="p">.</span>Source<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>required<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRepository</span><span class="p">.</span>Source<span class="p">)</span>
 </code></pre></div>
 <table>
 <thead>
@@ -417,14 +455,9 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><code>baseVersion</code></td>
-<td><code>struct LibSemver.Version</code></td>
-<td>the base of required version</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>requirement</code></td>
-<td><code>enum LibSemver.requirements</code></td>
-<td>the requirement of the version</td>
+<td style="text-align: left;"><code>required</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>the required version</td>
 </tr>
 <tr>
 <td style="text-align: left;"><strong>Output</strong></td>
@@ -444,7 +477,7 @@
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../IInstaller/" class="btn btn-neutral float-left" title="IInstaller Interface"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../IVersionDistributor/" class="btn btn-neutral float-right" title="IVersionDistributor">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../rankify/ArguableVotingTournament/" class="btn btn-neutral float-right" title="ArguableVotingTournament Distribution">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -474,7 +507,7 @@
       <span><a href="../IInstaller/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../IVersionDistributor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../rankify/ArguableVotingTournament/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

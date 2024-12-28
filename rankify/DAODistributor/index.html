@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/rankify/DAODistributor/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>DAODistributor - Peeramid Network Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "DAODistributor";
+        var mkdocs_page_input_path = "rankify/DAODistributor.md";
+        var mkdocs_page_url = "/rankify/DAODistributor/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../governance/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tokens/">Tokenomics</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Rankify</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">DAODistributor</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#constructor">constructor</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adddistribution">addDistribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setinstantiationcost">setInstantiationCost</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#instantiate">instantiate</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#removedistribution">removeDistribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#supportsinterface">supportsInterface</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#changeversion">changeVersion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adddistribution_1">addDistribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addnameddistribution">addNamedDistribution</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Peeramid Network Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Contract API</li>
+          <li class="breadcrumb-item">Rankify</li>
+      <li class="breadcrumb-item active">DAODistributor</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/rankify/DAODistributor.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="daodistributor">DAODistributor<a class="headerlink" href="#daodistributor" title="Permanent link">#</a></h1>
+<p>This contract is a distributor for Peeramid Labs.
+It is designed to handle the distribution logic specific to Peeramid Labs.
+The contract leverages access control mechanisms to ensure that only authorized
+users can perform certain actions.</p>
+<h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">constructor</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">defaultAdmin</span><span class="p">,</span><span class="w"> </span><span class="k">contract</span><span class="w"> </span><span class="ni">IERC20</span><span class="w"> </span>token<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">defaultCost</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<h3 id="adddistribution">addDistribution<a class="headerlink" href="#adddistribution" title="Permanent link">#</a></h3>
+<p>Adds a new distribution with the given identifier and initializer address.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier for the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address that initializes the distribution.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>This function can only be called by an account with the <code>DEFAULT_ADMIN_ROLE</code>.</p>
+</div>
+<h3 id="setinstantiationcost">setInstantiationCost<a class="headerlink" href="#setinstantiationcost" title="Permanent link">#</a></h3>
+<p>Sets instantiation cost on a specific instantiation id</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">setInstantiationCost</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">cost</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>distributors id</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>cost</code></td>
+<td><code>uint256</code></td>
+<td>cost of instantiation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
+<p>Instantiates a new contract with the given identifier and arguments.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>srcs<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier for the contract to be instantiated.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>args</code></td>
+<td><code>bytes</code></td>
+<td>The calldata arguments required for the instantiation process.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>srcs</code></td>
+<td><code>address[]</code></td>
+<td>An array of instantiated infrastructure</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the instantiated distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>version</code></td>
+<td><code>uint256</code></td>
+<td>The version number of the instantiated distribution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="removedistribution">removeDistribution<a class="headerlink" href="#removedistribution" title="Permanent link">#</a></h3>
+<p>Removes a distribution entry identified by the given ID.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">removeDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution entry to be removed.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>This function can only be called by an account with the <code>DEFAULT_ADMIN_ROLE</code>.</p>
+</div>
+<h3 id="supportsinterface">supportsInterface<a class="headerlink" href="#supportsinterface" title="Permanent link">#</a></h3>
+<p>This function checks if the contract implements the interface defined by ERC165</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">supportsInterface</span><span class="p">(</span>bytes4<span class="w"> </span>interfaceId<span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span>virtual<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>interfaceId</code></td>
+<td><code>bytes4</code></td>
+<td>The interface identifier, as specified in ERC-165.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td><code>true</code> if the contract implements <code>interfaceId</code> and <code>interfaceId</code> is not 0xffffffff, <code>false</code> otherwise.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="changeversion">changeVersion<a class="headerlink" href="#changeversion" title="Permanent link">#</a></h3>
+<p>Changes the version requirement for a specific distribution.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeVersion</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>newRequirement<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution whose version requirement is to be changed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRequirement</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The new version requirement to be set for the distribution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adddistribution_1">addDistribution<a class="headerlink" href="#adddistribution_1" title="Permanent link">#</a></h3>
+<p>Adds a new versioned distribution to the repository.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>requirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>repository</code></td>
+<td><code>contract IRepository</code></td>
+<td>The repository to which the distribution will be added.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address that initializes the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>requirement</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The version requirements for the distribution.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If initializer is provided, it will DELEGATECALL to the initializer. Otherwise, instantiation arguments will be passed to the distribution for self-initialization. Initializer contract MUST be trusted by the distributor.</p>
+</div>
+<h3 id="addnameddistribution">addNamedDistribution<a class="headerlink" href="#addnameddistribution" title="Permanent link">#</a></h3>
+<p>Adds a new versioned distribution to the repository.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addNamedDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributorId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distributor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address that initializes the distribution.</td>
+</tr>
+</tbody>
+</table>
+<!--CONTRACT_END-->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ArguableVotingTournament/" class="btn btn-neutral float-left" title="ArguableVotingTournament Distribution"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../DiamondDistribution/" class="btn btn-neutral float-right" title="Diamond Proxy Distribution">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../ArguableVotingTournament/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../DiamondDistribution/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

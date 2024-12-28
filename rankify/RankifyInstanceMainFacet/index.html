@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/rankify/RankifyInstanceMainFacet/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>RankifyInstanceMainFacet - Peeramid Network Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../css/custom.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "RankifyInstanceMainFacet";
+        var mkdocs_page_input_path = "rankify/RankifyInstanceMainFacet.md";
+        var mkdocs_page_url = "/rankify/RankifyInstanceMainFacet/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../governance/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tokens/">Tokenomics</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" >Rankify</a>
+    <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">RankifyInstanceMainFacet</a>
+    <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#creategame">createGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cancelgame">cancelGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#leavegame">leaveGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#openregistration">openRegistration</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#joingame">joinGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#startgame">startGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#onerc1155received">onERC1155Received</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#onerc1155batchreceived">onERC1155BatchReceived</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#onerc721received">onERC721Received</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getcontractstate">getContractState</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getturn">getTurn</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getgm">getGM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getscores">getScores</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isovertime">isOvertime</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isgameover">isGameOver</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getplayersgame">getPlayersGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#islastturn">isLastTurn</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isregistrationopen">isRegistrationOpen</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gamecreator">gameCreator</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getgamerank">getGameRank</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#estimategameprice">estimateGamePrice</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getplayers">getPlayers</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#canstartgame">canStartGame</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#canendturn">canEndTurn</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isplayerturncomplete">isPlayerTurnComplete</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getplayervotedarray">getPlayerVotedArray</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getplayersmoved">getPlayersMoved</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#isactive">isActive</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#getgamestate">getGameState</a>
+    </li>
+    </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Peeramid Network Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Contract API</li>
+          <li class="breadcrumb-item">Rankify</li>
+      <li class="breadcrumb-item active">RankifyInstanceMainFacet</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/rankify/RankifyInstanceMainFacet.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="rankifyinstancemainfacet">RankifyInstanceMainFacet<a class="headerlink" href="#rankifyinstancemainfacet" title="Permanent link">#</a></h1>
+<p>Main facet for the Rankify protocol that handles game creation and management</p>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Implements core game functionality, ERC token receivers, and reentrancy protection</p>
+</div>
+<h3 id="creategame">createGame<a class="headerlink" href="#creategame" title="Permanent link">#</a></h3>
+<p>This function:
+        - Validates the contract is initialized
+        - Processes input parameters
+        - Creates a new game with specified settings</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">createGame</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRankifyInstance</span><span class="p">.</span>NewGameParamsInput<span class="w"> </span>params<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>params</code></td>
+<td><code>struct IRankifyInstance.NewGameParamsInput</code></td>
+<td>Input parameters for creating a new game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>External function to create a new game</p>
+</div>
+<h3 id="cancelgame">cancelGame<a class="headerlink" href="#cancelgame" title="Permanent link">#</a></h3>
+<p>This function:
+        - Calls the &#x60;enforceIsGameCreator&#x60; function with &#x60;msg.sender&#x60;.
+        - Cancels the game.
+        - Emits a <em>GameClosed</em> event.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">cancelGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Cancels a game with the provided game ID. <code>gameId</code> is the ID of the game.</p>
+</div>
+<h3 id="leavegame">leaveGame<a class="headerlink" href="#leavegame" title="Permanent link">#</a></h3>
+<p>This function:
+        - Calls the &#x60;quitGame&#x60; function with &#x60;msg.sender&#x60;, &#x60;true&#x60;, and &#x60;onPlayerQuit&#x60;.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">leaveGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Allows a player to leave a game with the provided game ID. <code>gameId</code> is the ID of the game.</p>
+</div>
+<h3 id="openregistration">openRegistration<a class="headerlink" href="#openregistration" title="Permanent link">#</a></h3>
+<p>This function:
+        - Calls the &#x60;enforceIsGameCreator&#x60; function with &#x60;msg.sender&#x60;.
+        - Calls the &#x60;enforceIsPreRegistrationStage&#x60; function.
+        - Calls the &#x60;openRegistration&#x60; function.
+        - Emits a <em>RegistrationOpen</em> event.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">openRegistration</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Opens registration for a game with the provided game ID. <code>gameId</code> is the ID of the game.</p>
+</div>
+<h3 id="joingame">joinGame<a class="headerlink" href="#joingame" title="Permanent link">#</a></h3>
+<p>This function:
+        - Calls the &#x60;joinGame&#x60; function with &#x60;msg.sender&#x60;.
+        - Calls the &#x60;fund&#x60; function with &#x60;bytes32(gameId)&#x60;.
+        - Emits a <em>PlayerJoined</em> event.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">joinGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Allows a player to join a game with the provided game ID. <code>gameId</code> is the ID of the game.</p>
+</div>
+<h3 id="startgame">startGame<a class="headerlink" href="#startgame" title="Permanent link">#</a></h3>
+<p>This function:
+        - Calls the &#x60;enforceGameExists&#x60; function.
+        - Calls the &#x60;startGameEarly&#x60; function.
+        - Emits a <em>GameStarted</em> event.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">startGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Starts a game with the provided game ID early. <code>gameId</code> is the ID of the game.</p>
+</div>
+<h3 id="onerc1155received">onERC1155Received<a class="headerlink" href="#onerc1155received" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">onERC1155Received</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">operator</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span>bytes4<span class="p">)</span>
+</code></pre></div>
+<h3 id="onerc1155batchreceived">onERC1155BatchReceived<a class="headerlink" href="#onerc1155batchreceived" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">onERC1155BatchReceived</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">operator</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[],</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[],</span><span class="w"> </span><span class="kt">bytes</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span>bytes4<span class="p">)</span>
+</code></pre></div>
+<h3 id="onerc721received">onERC721Received<a class="headerlink" href="#onerc721received" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">onERC721Received</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">operator</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span>bytes4<span class="p">)</span>
+</code></pre></div>
+<h3 id="getcontractstate">getContractState<a class="headerlink" href="#getcontractstate" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getContractState</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>pure<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibRankify</span><span class="p">.</span>InstanceState<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>struct LibRankify.InstanceState</code></td>
+<td>LibRankify.InstanceState The current state of the contract</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the current state of the contract</p>
+</div>
+<h3 id="getturn">getTurn<a class="headerlink" href="#getturn" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getTurn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>uint256</code></td>
+<td>uint256 The current turn of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the current turn of the game with the specified ID</p>
+</div>
+<h3 id="getgm">getGM<a class="headerlink" href="#getgm" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getGM</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>address</code></td>
+<td>address The game master of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the game master of the game with the specified ID</p>
+</div>
+<h3 id="getscores">getScores<a class="headerlink" href="#getscores" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getScores</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[],</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[])</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>address[]</code></td>
+<td>address[] The players in the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1</code></td>
+<td><code>uint256[]</code></td>
+<td>uint256[] The scores of the players</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the scores of the game with the specified ID</p>
+</div>
+<h3 id="isovertime">isOvertime<a class="headerlink" href="#isovertime" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isOvertime</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the game is in overtime</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the game with the specified ID is in overtime</p>
+</div>
+<h3 id="isgameover">isGameOver<a class="headerlink" href="#isgameover" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isGameOver</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the game is over</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the game with the specified ID is over</p>
+</div>
+<h3 id="getplayersgame">getPlayersGame<a class="headerlink" href="#getplayersgame" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getPlayersGame</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>player</code></td>
+<td><code>address</code></td>
+<td>The address of the player</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>uint256</code></td>
+<td>uint256 The ID of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the game ID of the game that the specified player is in</p>
+</div>
+<h3 id="islastturn">isLastTurn<a class="headerlink" href="#islastturn" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isLastTurn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the game is in the last turn</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the game with the specified ID is in the last turn</p>
+</div>
+<h3 id="isregistrationopen">isRegistrationOpen<a class="headerlink" href="#isregistrationopen" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isRegistrationOpen</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether registration is open</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether registration is open for the game with the specified ID</p>
+</div>
+<h3 id="gamecreator">gameCreator<a class="headerlink" href="#gamecreator" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">gameCreator</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>address</code></td>
+<td>address The creator of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the creator of the game with the specified ID</p>
+</div>
+<h3 id="getgamerank">getGameRank<a class="headerlink" href="#getgamerank" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getGameRank</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>uint256</code></td>
+<td>uint256 The rank of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the rank of the game with the specified ID</p>
+</div>
+<h3 id="estimategameprice">estimateGamePrice<a class="headerlink" href="#estimategameprice" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">estimateGamePrice</span><span class="p">(</span><span class="kt">uint128</span><span class="w"> </span><span class="nv">minGameTime</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>pure<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>minGameTime</code></td>
+<td><code>uint128</code></td>
+<td>The minimum game time</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>uint256</code></td>
+<td>uint256 The estimated price of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Estimates the price of a game with the specified minimum game time</p>
+</div>
+<h3 id="getplayers">getPlayers<a class="headerlink" href="#getplayers" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getPlayers</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[])</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>address[]</code></td>
+<td>address[] The players in the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the players in the game with the specified ID</p>
+</div>
+<h3 id="canstartgame">canStartGame<a class="headerlink" href="#canstartgame" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">canStartGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the game can be started early</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the game with the specified ID can be started early</p>
+</div>
+<h3 id="canendturn">canEndTurn<a class="headerlink" href="#canendturn" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">canEndTurn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the turn can be ended early</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the turn can be ended early for the game with the specified ID</p>
+</div>
+<h3 id="isplayerturncomplete">isPlayerTurnComplete<a class="headerlink" href="#isplayerturncomplete" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isPlayerTurnComplete</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>player</code></td>
+<td><code>address</code></td>
+<td>The address of the player</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>bool Whether the player has completed their turn</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns whether the player has completed their turn in the game with the specified ID</p>
+</div>
+<h3 id="getplayervotedarray">getPlayerVotedArray<a class="headerlink" href="#getplayervotedarray" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getPlayerVotedArray</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">[])</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool[]</code></td>
+<td>bool[] The voted array</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the voted array for the game with the specified ID</p>
+</div>
+<h3 id="getplayersmoved">getPlayersMoved<a class="headerlink" href="#getplayersmoved" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getPlayersMoved</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">[],</span><span class="w"> </span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool[]</code></td>
+<td>bool[] The players who have moved</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1</code></td>
+<td><code>uint256</code></td>
+<td>uint256 The number of players who have moved</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the players who have moved in the game with the specified ID</p>
+</div>
+<h3 id="isactive">isActive<a class="headerlink" href="#isactive" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isActive</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="getgamestate">getGameState<a class="headerlink" href="#getgamestate" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getGameState</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRankifyInstance</span><span class="p">.</span>GameStateOutput<span class="w"> </span>state<span class="p">)</span>
+</code></pre></div>
+<!--CONTRACT_END-->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../RankifyInstanceGameMastersFacet/" class="btn btn-neutral float-left" title="RankifyInstanceGameMastersFacet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../RankifyInstanceRequirementsFacet/" class="btn btn-neutral float-right" title="RankifyInstanceRequirementsFacet">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../RankifyInstanceGameMastersFacet/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../RankifyInstanceRequirementsFacet/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+      <script src="../../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

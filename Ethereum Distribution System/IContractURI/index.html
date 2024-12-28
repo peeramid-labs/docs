@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IDistribution/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IContractURI/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IDistribution - Peeramid Network Docs</title>
+    <title>IContractURI - Peeramid Network Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,9 +15,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IDistribution";
-        var mkdocs_page_input_path = "Ethereum Distribution System/IDistribution.md";
-        var mkdocs_page_url = "/Ethereum%20Distribution%20System/IDistribution/";
+        var mkdocs_page_name = "IContractURI";
+        var mkdocs_page_input_path = "Ethereum Distribution System/IContractURI.md";
+        var mkdocs_page_url = "/Ethereum%20Distribution%20System/IContractURI/";
       </script>
     
     <!--[if lt IE 9]>
@@ -66,17 +66,13 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" >Ethereum Distribution System</a>
     <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../IContractURI/">IContractURI</a>
-                </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">IDistribution</a>
+                <li class="toctree-l2 current"><a class="reference internal current" href="#">IContractURI</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#distributed">Distributed</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#instantiate">instantiate</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#get">get</a>
+    <li class="toctree-l3"><a class="reference internal" href="#contracturi">contractURI</a>
     </li>
     </ul>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../IDistribution/">IDistribution</a>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IDistributor/">IDistributor Interface</a>
                 </li>
@@ -152,9 +148,9 @@
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Contract API</li>
           <li class="breadcrumb-item">Ethereum Distribution System</li>
-      <li class="breadcrumb-item active">IDistribution</li>
+      <li class="breadcrumb-item active">IContractURI</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/peeramid-labs/edit/master/docs/Ethereum Distribution System/IDistribution.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/Ethereum Distribution System/IContractURI.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -162,118 +158,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="idistribution">IDistribution<a class="headerlink" href="#idistribution" title="Permanent link">#</a></h1>
-<p>Interface for distribution-related functionalities. It can get sources and produce a new instances out from them. It also provides metadata about the distribution.</p>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>It is highly recommended to keep implementation stateless, and use <code>immutable</code> variables for any state. This allows your code to be referred in distributor and respositories via ERC7744. It's also easier to reason about, and more gas efficient.</p>
-</div>
-<h3 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">#</a></h3>
-<p>Emitted when a distribution occurs.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Distributed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">distributor</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
+                <h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h3 id="contracturi">contractURI<a class="headerlink" href="#contracturi" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">contractURI</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">string</span><span class="p">)</span>
 </code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>distributor</code></td>
-<td><code>address</code></td>
-<td>The address of the entity that performed the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
-<p>Instantiates a new instance with the given parameters.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>data</code></td>
-<td><code>bytes</code></td>
-<td>The data to be used for instantiation.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Output</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It MUST emit Distributed event.</p>
-</div>
-<h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
-<p>Retrieves the current distribution sources.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>sources<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Output</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sources</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that are used for instantiation.</td>
-</tr>
-<tr>
-<td><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
 <!--CONTRACT_END-->
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../IContractURI/" class="btn btn-neutral float-left" title="IContractURI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../IDistributor/" class="btn btn-neutral float-right" title="IDistributor Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../architecture/create/" class="btn btn-neutral float-left" title="Creating new MAO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../IDistribution/" class="btn btn-neutral float-right" title="IDistribution">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -300,10 +195,10 @@
         </span>
     
     
-      <span><a href="../IContractURI/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../../architecture/create/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../IDistributor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../IDistribution/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

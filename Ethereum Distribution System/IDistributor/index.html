@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IDistributor/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IDistributor Interface - Peeramid Labs Documentation</title>
+    <title>IDistributor Interface - Peeramid Network Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Labs Documentation
+          <a href="../.." class="icon icon-home"> Peeramid Network Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -62,21 +62,35 @@
                   <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
                   </li>
               </ul>
-              <p class="caption"><span class="caption-text">interfaces</span></p>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" >Ethereum Distribution System</a>
     <ul class="current">
+                <li class="toctree-l2"><a class="reference internal" href="../IContractURI/">IContractURI</a>
+                </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IDistribution/">IDistribution</a>
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">IDistributor Interface</a>
     <ul class="current">
+    <li class="toctree-l3"><a class="reference internal" href="#invalidversionrequested">InvalidVersionRequested</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#invalidrepository">InvalidRepository</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#repositoryalreadyexists">RepositoryAlreadyExists</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#versionoutdated">VersionOutdated</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#invalidinstance">InvalidInstance</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#unversioneddistribution">UnversionedDistribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#versionchanged">VersionChanged</a>
+    </li>
     <li class="toctree-l3"><a class="reference internal" href="#distributionnotfound">DistributionNotFound</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#distributionexists">DistributionExists</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#initializernotfound">InitializerNotFound</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#invalidinstance">InvalidInstance</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#instantiated">Instantiated</a>
     </li>
@@ -98,6 +112,12 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#getinstanceid">getInstanceId</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#adddistribution_1">addDistribution</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#changeversion">changeVersion</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#addnameddistribution">addNamedDistribution</a>
+    </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IERC7746/">IERC7746 Interface</a>
@@ -108,7 +128,43 @@
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../IRepository/">IRepository Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IVersionDistributor/">IVersionDistributor</a>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rankify</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
                 </li>
     </ul>
                   </li>
@@ -127,14 +183,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Labs Documentation</a>
+          <a href="../..">Peeramid Network Docs</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">interfaces</li>
+          <li class="breadcrumb-item">Contract API</li>
           <li class="breadcrumb-item">Ethereum Distribution System</li>
       <li class="breadcrumb-item active">IDistributor Interface</li>
     <li class="wy-breadcrumbs-aside">
@@ -152,6 +208,54 @@
 <p class="admonition-title">Notice</p>
 <p>If you want to use <a href=".././IRepository">IRepository</a> for versioned distributions, use <a href=".././IVersionDistributor">IVersionDistributor</a> interface.</p>
 </div>
+<h3 id="invalidversionrequested">InvalidVersionRequested<a class="headerlink" href="#invalidversionrequested" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidVersionRequested<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidrepository">InvalidRepository<a class="headerlink" href="#invalidrepository" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidRepository<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">repository</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="repositoryalreadyexists">RepositoryAlreadyExists<a class="headerlink" href="#repositoryalreadyexists" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>RepositoryAlreadyExists<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">repository</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="versionoutdated">VersionOutdated<a class="headerlink" href="#versionoutdated" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>VersionOutdated<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">version</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidinstance">InvalidInstance<a class="headerlink" href="#invalidinstance" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="unversioneddistribution">UnversionedDistribution<a class="headerlink" href="#unversioneddistribution" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>UnversionedDistribution<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="versionchanged">VersionChanged<a class="headerlink" href="#versionchanged" title="Permanent link">#</a></h3>
+<p>Emitted when the version of the distributor is changed.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VersionChanged</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>newRequirement<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>newRequirementData<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRequirement</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The new version requirement (hashed for indexing).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRequirementData</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The new version requirement data.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="distributionnotfound">DistributionNotFound<a class="headerlink" href="#distributionnotfound" title="Permanent link">#</a></h3>
 <p>Error indicating that the distribution with the specified ID was not found.</p>
 <div class="highlight"><pre><span></span><code>error<span class="w"> </span>DistributionNotFound<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span>
@@ -212,29 +316,9 @@
 </tr>
 </tbody>
 </table>
-<h3 id="invalidinstance">InvalidInstance<a class="headerlink" href="#invalidinstance" title="Permanent link">#</a></h3>
-<p>Error indicating that the instance is invalid.</p>
-<div class="highlight"><pre><span></span><code>error<span class="w"> </span>InvalidInstance<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>instance</code></td>
-<td><code>address</code></td>
-<td>The address of the instance that is considered invalid.</td>
-</tr>
-</tbody>
-</table>
 <h3 id="instantiated">Instantiated<a class="headerlink" href="#instantiated" title="Permanent link">#</a></h3>
 <p>Event emitted when a new distribution is instantiated.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Instantiated</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">instanceId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">argsHash</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Instantiated</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newInstanceId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">version</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">args</span><span class="p">)</span>
 </code></pre></div>
 <table>
 <thead>
@@ -251,19 +335,24 @@
 <td>The unique identifier of the distribution.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>instanceId</code></td>
+<td style="text-align: left;"><code>newInstanceId</code></td>
 <td><code>uint256</code></td>
 <td>The unique identifier of the instance.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code>argsHash</code></td>
-<td><code>bytes</code></td>
-<td>The hash of the arguments used to instantiate the distribution.</td>
+<td style="text-align: left;"><code>version</code></td>
+<td><code>uint256</code></td>
+<td>The version of the distribution, taken either from IDistribution or from IRepository.</td>
 </tr>
 <tr>
 <td style="text-align: left;"><code>instances</code></td>
 <td><code>address[]</code></td>
 <td>The addresses of the instances that were created.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>args</code></td>
+<td><code>bytes</code></td>
+<td>The arguments that were used for instantiation.</td>
 </tr>
 </tbody>
 </table>
@@ -297,7 +386,7 @@
 </div>
 <h3 id="distributionadded">DistributionAdded<a class="headerlink" href="#distributionadded" title="Permanent link">#</a></h3>
 <p>Event emitted when a distribution is added.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionAdded</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DistributionAdded</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">distribution</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span>
 </code></pre></div>
 <table>
 <thead>
@@ -314,9 +403,14 @@
 <td>The unique identifier of the distribution that was added.</td>
 </tr>
 <tr>
+<td style="text-align: left;"><code>distribution</code></td>
+<td><code>address</code></td>
+<td>The address of the distribution that was added.</td>
+</tr>
+<tr>
 <td style="text-align: left;"><code>initializer</code></td>
 <td><code>address</code></td>
-<td>The address of the initializer that was added.</td>
+<td>The address of the initializer for the distribution.</td>
 </tr>
 </tbody>
 </table>
@@ -424,17 +518,203 @@
 <p>It MUST emit <a href=".././Instantiated">Instantiated</a> event.</p>
 </div>
 <h3 id="adddistribution">addDistribution<a class="headerlink" href="#adddistribution" title="Permanent link">#</a></h3>
+<p>Adds a new distribution with the specified distributor ID and initializer address.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributorId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier for the distributor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address of the initializer for the distribution.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If initializer is provided, it will DELEGATECALL to the initializer. Otherwise, instantiation arguments will be passed to the distribution for self-initialization. Initializer contract MUST be trusted by the distributor.</p>
+</div>
 <h3 id="removedistribution">removeDistribution<a class="headerlink" href="#removedistribution" title="Permanent link">#</a></h3>
+<p>Removes a distribution identified by the given distributorId.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">removeDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributorId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution to be removed.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="getdistributionid">getDistributionId<a class="headerlink" href="#getdistributionid" title="Permanent link">#</a></h3>
+<p>Retrieves the distribution ID associated with a given instance address.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDistributionId</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address of the instance for which the distribution ID is being requested.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bytes32</code></td>
+<td>The distribution ID as a bytes32 value.</td>
+</tr>
+</tbody>
+</table>
 <h3 id="getinstanceid">getInstanceId<a class="headerlink" href="#getinstanceid" title="Permanent link">#</a></h3>
+<p>Retrieves the unique identifier for a given instance address.</p>
 <div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getInstanceId</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">instance</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>instance</code></td>
+<td><code>address</code></td>
+<td>The address of the instance whose ID is to be retrieved.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>uint256</code></td>
+<td>The unique identifier (uint256) associated with the specified instance address.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="adddistribution_1">addDistribution<a class="headerlink" href="#adddistribution_1" title="Permanent link">#</a></h3>
+<p>Adds a new versioned distribution to the repository.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addDistribution</span><span class="p">(</span><span class="k">contract</span><span class="w"> </span><span class="ni">IRepository</span><span class="w"> </span>repository<span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>requirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>repository</code></td>
+<td><code>contract IRepository</code></td>
+<td>The repository to which the distribution will be added.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address that initializes the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>requirement</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The version requirements for the distribution.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If initializer is provided, it will DELEGATECALL to the initializer. Otherwise, instantiation arguments will be passed to the distribution for self-initialization. Initializer contract MUST be trusted by the distributor.</p>
+</div>
+<h3 id="changeversion">changeVersion<a class="headerlink" href="#changeversion" title="Permanent link">#</a></h3>
+<p>Changes the version requirement for a specific distribution.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeVersion</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionId</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>VersionRequirement<span class="w"> </span>newRequirement<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>distributionId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distribution whose version requirement is to be changed.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRequirement</code></td>
+<td><code>struct LibSemver.VersionRequirement</code></td>
+<td>The new version requirement to be set for the distribution.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="addnameddistribution">addNamedDistribution<a class="headerlink" href="#addnameddistribution" title="Permanent link">#</a></h3>
+<p>Adds a new versioned distribution to the repository.</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">addNamedDistribution</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributorId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>distributorId</code></td>
+<td><code>bytes32</code></td>
+<td>The unique identifier of the distributor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>initializer</code></td>
+<td><code>address</code></td>
+<td>The address that initializes the distribution.</td>
+</tr>
+</tbody>
+</table>
 <!--CONTRACT_END-->
               
             </div>

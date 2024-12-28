@@ -2,58 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rankify.it/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/governance/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/tokens/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/Ethereum%20Distribution%20System/IContractURI/</loc>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IDistribution/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IDistributor/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IERC7746/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IInitializer/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IInstaller/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/Ethereum%20Distribution%20System/IRepository/</loc>
-         <lastmod>2024-12-19</lastmod>
-    </url>
-    <url>
-         <loc>https://rankify.it/Ethereum%20Distribution%20System/IVersionDistributor/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/architecture/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/architecture/create/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/ArguableVotingTournament/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/DAODistributor/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/DiamondDistribution/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/DistributableGovernanceERC20/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/EIP712InspectorFacet/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/IERC1155Receiver/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/IErrors/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/ILockableERC1155/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/IRankToken/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/IRankifyInstance/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/InitializedDiamondDistribution/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/MAODistribution/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/RankToken/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/Rankify/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/RankifyInstanceGameMastersFacet/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/RankifyInstanceMainFacet/</loc>
+         <lastmod>2024-12-28</lastmod>
+    </url>
+    <url>
+         <loc>https://rankify.it/rankify/RankifyInstanceRequirementsFacet/</loc>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/support/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
     <url>
          <loc>https://rankify.it/support/faq/</loc>
-         <lastmod>2024-12-19</lastmod>
+         <lastmod>2024-12-28</lastmod>
     </url>
 </urlset>
