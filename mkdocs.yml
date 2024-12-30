@@ -5,12 +5,11 @@ site_description: Peeramid Network Documentation
 nav:
     - Welcome:
           - "index.md"
-          - "governance.md"
-          - "tokens.md"
+    - Core Concepts:
+         - "cvpp.md"
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"
-        #   - "architecture/specifications.md"
     - Contract API:
           - ...
     - Support:
