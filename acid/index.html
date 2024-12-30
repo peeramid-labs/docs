@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/governance/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/acid/" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Meritocratic Autonomous Organizations - Peeramid Network Docs</title>
+    <title>Autonomous Competence Identification Protocol - Peeramid Network Docs</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,9 +15,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Meritocratic Autonomous Organizations";
-        var mkdocs_page_input_path = "governance.md";
-        var mkdocs_page_url = "/governance/";
+        var mkdocs_page_name = "Autonomous Competence Identification Protocol";
+        var mkdocs_page_input_path = "acid.md";
+        var mkdocs_page_url = "/acid/";
       </script>
     
     <!--[if lt IE 9]>
@@ -52,8 +52,14 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Core Concepts</span></p>
-              <ul>
+              <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../cvpp/">Continuous Voting Proposing Protocol</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Autonomous Competence Identification Protocol</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#whitepaper">Whitepaper</a>
+    </li>
+    </ul>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Developing</span></p>
@@ -64,23 +70,7 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Meritocratic Autonomous Organizations</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#why-maos">Why MAOs?</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mao-structure">MAO structure</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#participant-vs-decision-maker">Participant vs Decision Maker</a>
-    </li>
-        </ul>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#progressive-decentralization">Progressive decentralization</a>
-    </li>
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../tokens/">Tokenomics</a>
-                  </li>
+              <ul>
                   <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
@@ -159,10 +149,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Contract API</li>
-      <li class="breadcrumb-item active">Meritocratic Autonomous Organizations</li>
+          <li class="breadcrumb-item">Core Concepts</li>
+      <li class="breadcrumb-item active">Autonomous Competence Identification Protocol</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/peeramid-labs/edit/master/docs/governance.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/acid.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -170,36 +160,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="meritocratic-autonomous-organizations">Meritocratic Autonomous Organizations<a class="headerlink" href="#meritocratic-autonomous-organizations" title="Permanent link">#</a></h1>
-<p>Meritocratic Autonomous Organizations (MAOs) are a new form of decentralized organization that is designed to be more efficient, transparent, and fair than traditional organizations. MAOs are built on blockchain technology, which allows them to operate without a central authority, similarly to <a href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization">DAOs</a>. However, MAOs are different from DAOs in that they are designed to be meritocratic, meaning that decisions are made based on the merit of the participants rather than on their wealth or power within the organization.</p>
-<p>Autonomously measuring merit is a complex task, and it is done trough a <a href="https://rankify.it/research/paper">Autonomous Competence Identification Protocol</a>.</p>
-<h3 id="why-maos">Why MAOs?<a class="headerlink" href="#why-maos" title="Permanent link">#</a></h3>
-<p>The traditional DAOs are often criticized for being plutocratic, meaning that decisions are made based on the amount of tokens that a participant holds. This can lead to situations where a small group of wealthy participants can control the organization and make decisions that are not in the best interest of the community.</p>
-<p>It's been analyzed in multiple research by now that the biggest DAOs out there are not able to make decisions in a timely manner, and that they are often stuck in a deadlock. This is because the quorum is set too high, and because the governance tokens are not distributed in a fair way. Alternatively, setting quorum threshold too low leads to governance quorum attacks and hence to a loss of value of the organization.</p>
-<p>MAOs are designed to address these issues by using a meritocratic system to distribute governance tokens. This means that decisions are made based on the merit of the participants, rather than on the amount of tokens that they hold. This ensures that decisions are made in the best interest of the community, and that the organization is able to adapt to changing circumstances in a timely manner.</p>
-<h3 id="mao-structure">MAO structure<a class="headerlink" href="#mao-structure" title="Permanent link">#</a></h3>
-<p>In a nutshell, a MAO is just a DAO smart account that is governed by a token that is minted by a competence identification protocol. Such competence identification protocol may be thought of as "tournament" that challenges participants to prove their competence in a specific area.</p>
-<p>The tournament itself can be pretty much anything, as long as it is able to fulfill basic requirements of the protocol. Such are: minimal participation time, and exponential sybil attack resistance.</p>
-<p>The produced asset is representation of the competence, yet it is not just ready for use in voting. This is used to ensure that exiting ranking ladder is important event for a participant, which designates his role change from a participant to a decision maker.</p>
-<h4 id="participant-vs-decision-maker">Participant vs Decision Maker<a class="headerlink" href="#participant-vs-decision-maker" title="Permanent link">#</a></h4>
-<p>In a MAO, there are two types of participants: participants and decision makers. Participants are those who compete in the competence identification games and earn rank tokens based on their performance.
-This mechanism allows other organizations to use rank tokens as merit-specific service utility. For example, a third-party DAO may purchase out the competence tokens from participants to use them as reward for performing merit-specific services for that organization. Alternatively they might require participants to stake their tokens in some mission critical service provided by participants to a third party.</p>
-<p>Decision makers are those who hold governance tokens and are able to vote on proposals and participate in the governance of the MAO. Decision makers obtain governance tokens by exchanging rank tokens for them. This ensures that the governance of the MAO is based on the merit of the participants, rather than on the amount of tokens that they bought during an ICO.
-By exchanging their rank tokens in to governance power, participants are able to take part in the governance of the MAO and to influence its decisions, this also means their <em>rank</em> gets reset, subjecting their governance power to inflation which acts as incentive for being active in governance.</p>
-<h3 id="progressive-decentralization">Progressive decentralization<a class="headerlink" href="#progressive-decentralization" title="Permanent link">#</a></h3>
-<p>As <em>decision makers</em> eventually lose the quorum their group might have, they are risking losing any assets that they have in the organization. While this is a good incentive for them to stay active in the governance, and prevents the organization from being stuck in a deadlock, its also a risk.</p>
-<p>In order to prevent this, a MAO can be decentralized further by creating a sub-organization that is derived from the parent organization. This creates a situation where there can be multiple sub-organizations that are all derived from the same parent organization, but that have different governance tokens and different quorums.</p>
-<p>In order to ensure that the parent organization stays in partial control over the sub-organization assets, the sub-organization is connected to the parent organization via a multi-sig wallet.</p>
-<p>In the diagram below, you can see one parent organization and two sub-organizations that are derived from it. While each organization is able to make decisions independently, the parent organization is able to stay in partial control over the sub-organizations simply by fact that minting sub-organization governance tokens requires parent governance token as an input.
-The multi-sig wallet is used to ensure that the parent organization is able to prevent any assets from being lost in the sub-organization. Any transaction from such a multi-signature wallet would require all governing bodies to agree on it.
-This design ensures parent organization may design the multi-sig wallet in a way that it is able to prevent any assets from being lost in the sub-organization, while still allowing the sub-organization to make decisions independently and promptly.</p>
-<p><img alt="two sub daos" src="../assets/two_sub_dao.png" /></p>
+                <h1 id="autonomous-competence-identification-protocol">Autonomous Competence Identification Protocol<a class="headerlink" href="#autonomous-competence-identification-protocol" title="Permanent link">#</a></h1>
+<p>This protocol describes way of creating a dynamic ranking ladder system in blockchain applications. The protocol is designed to be used in trustless environments where it is difficult to objectively identify and reward competence.</p>
+<p>The core values of the protocol are:</p>
+<ul>
+<li><strong>Meritocracy:</strong> The ranking system is based on the demonstrated competence of participants, rather than their computational or financial power.</li>
+<li><strong>Security:</strong> The protocol is resistant to Sybil attacks, which are attempts to manipulate the ranking system by creating multiple fake accounts.</li>
+<li><strong>Decentralization:</strong> The protocol can be used in a variety of decentralized systems, including blockchain consensus mechanisms, decentralized social networks, and DAO governance.</li>
+</ul>
+<p>The key parameters of the protocol are:</p>
+<ul>
+<li><strong>Time constant (Pt):</strong> This parameter determines the minimum amount of time that must pass between elections in a group.</li>
+<li><strong>Asset cost (Pc):</strong> This parameter determines the cost of participating in an election.</li>
+<li><strong>Minimum number of participants (Nmin):</strong> This parameter determines the minimum number of participants required to form a group.</li>
+</ul>
+<p>The protocol also allows each group to have its own properties, such as the number of participants, the minimum time agreed by members to finalize an election, and the rank.</p>
+<p>It is important to note that the protocol is a theoretical construct that relies on established consensus mechanisms to operate.</p>
+<h2 id="whitepaper">Whitepaper<a class="headerlink" href="#whitepaper" title="Permanent link">#</a></h2>
+<p>For more details we invite you to read the <a href="https://peeramid.infura-ipfs.io/ipfs/QmfZmHBPtenP3pcuQy7xwyrA6RtnPfRWUDi5iV1pgUtr2b">paper</a></p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../architecture/create/" class="btn btn-neutral float-left" title="Creating new MAO"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../tokens/" class="btn btn-neutral float-right" title="Tokenomics">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../cvpp/" class="btn btn-neutral float-left" title="Continuous Voting Proposing Protocol"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../architecture/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -226,10 +210,10 @@ This design ensures parent organization may design the multi-sig wallet in a way
         </span>
     
     
-      <span><a href="../architecture/create/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../cvpp/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../tokens/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
