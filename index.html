@@ -50,19 +50,18 @@
               <ul class="current">
                   <li class="toctree-l1 current"><a class="reference internal current" href="#">Getting started</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#project-overview">Project Overview</a>
+    <li class="toctree-l2"><a class="reference internal" href="#problem-statement">Problem Statement</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#what-is-a-mao">What is a MAO?</a>
-        <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#measuring-competences">Measuring competences</a>
+    <li class="toctree-l2"><a class="reference internal" href="#rankify-overview">Rankify overview</a>
     </li>
-        </ul>
+    <li class="toctree-l2"><a class="reference internal" href="#who-is-rankify-for">Who is Rankify for?</a>
     </li>
     </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="governance/">Meritocratic Autonomous Organizations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="tokens/">Tokenomics</a>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="cvpp.md">None</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Developing</span></p>
@@ -74,6 +73,10 @@
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="governance/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="tokens/">Tokenomics</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
     <ul>
                 <li class="toctree-l2"><a class="reference internal" href="Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
@@ -164,19 +167,39 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">#</a></h1>
-<h2 id="project-overview">Project Overview<a class="headerlink" href="#project-overview" title="Permanent link">#</a></h2>
-<p>You are visiting Peeramid Labs documentation portal. This portal is designed to help you get started with meritocratic autonomous organizations (MAOs) and its components.</p>
-<h2 id="what-is-a-mao">What is a MAO?<a class="headerlink" href="#what-is-a-mao" title="Permanent link">#</a></h2>
-<p>Meritocratic Autonomous Organizations (MAOs) are a new form of decentralized organization that is designed to be more efficient, transparent, and fair than traditional organizations. MAOs are built on blockchain technology, which allows them to operate without a central authority, similarly to <a href="https://en.wikipedia.org/wiki/Decentralized_autonomous_organization">DAOs</a>. However, MAOs are different from DAOs in that they are designed to be meritocratic, meaning that decisions are made based on the merit of the participants rather than on their pure wealth or power within the organization.</p>
-<h3 id="measuring-competences">Measuring competences<a class="headerlink" href="#measuring-competences" title="Permanent link">#</a></h3>
-<p>Autonomously measuring merit is a complex task, and it is done trough a <a href="https://www.rankify.it/papers/">Autonomous Competence Identification Protocol</a>.</p>
-<p>In a nutshell, it is a continuous process of proposing and voting in semi-anonymous way which allows to measure the competence of the participants relative to their group corresponding intention.
-By adding a participation time constant, participation cost and a tokenized ranking ladder, it is possible to create a system that will <em>lift</em> the most competent participants to the top of the ladder while exponentially more complex for a sybil group to attack the system.</p>
+<p>The Rankify App, developed on the Peeramid Network, is a decentralized application interface that streamlines the user experience of Distributed Ledger Technology. It provides a user-friendly interface for discussions and decision-making using <a href="./cvpp.md">continuous voting proposing protocol (CVPP)</a>. For any kind of application that involves measuring knowledge work contribution, including project management, gaming, and community engagement. Users do not need to interact directly with Distributed Ledger Technology and can be abstracted from it through any interface provider.</p>
+<h2 id="problem-statement"><strong>Problem Statement</strong><a class="headerlink" href="#problem-statement" title="Permanent link">#</a></h2>
+<blockquote>
+<p>“<em>Quot homines tot sententiae</em>” — so many men, so many opinions.</p>
+</blockquote>
+<p>Social coordination is one of the greatest challenges for organizations and communities today. While success depends on effective collaboration, many groups struggle to channel diverse opinions into unified, productive action.</p>
+<p>Studies from Gallup[<a href="https://www.gallup.com/workplace/349484/state-of-the-global-workplace.aspx">1</a>] and McKinsey[<a href="https://www.mckinsey.com/~/media/mckinsey/mckinsey%20global%20institute/our%20research/performance%20through%20people%20transforming%20human%20capital%20into%20competitive%20advantage/mgi-performance-through-people-full-report-vf.pdf">2</a>][<a href="https://www.mckinsey.com/~/media/mckinsey/business%20functions/people%20and%20organizational%20performance/our%20insights/the%20state%20of%20organizations%202023/the-state-of-organizations-2023.pdf">3</a>] show that poor leadership and lack of trust lead to low morale, disengagement, and high turnover. Similar challenges appear in decentralized systems like DAOs,[<a href="https://arxiv.org/abs/2204.01176">4</a>][<a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4441178">5</a>] where low participation rates, misaligned incentives, and governance risks like quorum attacks hinder progress.</p>
+<p>Existing solutions, whether organizational structures or AI tools, fall short. Organizations relying on human-led systems face biases and inefficiency, while purely AI-driven approaches lack the trust and adaptability needed for real-time decision-making. These gaps reveal the need for a new approach that balances transparency, trust, and collaboration.</p>
+<h2 id="rankify-overview">Rankify overview<a class="headerlink" href="#rankify-overview" title="Permanent link">#</a></h2>
+<p>Rankify combines blockchain, gamified decision-making, and AI agents to create a trust-driven and merit-based collaboration environment. By leveraging distributed ledger technology, it ensures all contributions are securely recorded and transparent, fostering trust between participants.</p>
+<p>The platform facilitates collaboration through structured discussions and a gamified scoring system. Facilitators start by asking a question or problem (e.g., "What should our sprint priorities be?" or "How do we improve team engagement?" or "What's the best Spotify music?"). Participants form groups for discussion rounds. Each may send a proposal evaluated anonymously by others, who score the suggestions.</p>
+<p>Discussions are broken into rounds, allowing participants to refine ideas and improve proposals based on feedback. The scoring process is anonymous during voting to minimize bias but fully disclosed after each round to encourage learning and collaboration via <a href="https://peeramid.infura-ipfs.io/ipfs/QmVY86rL3Y5bJfLDkbeb2EUa4TfcEiZbHe186DquDmJXQJ">CVPP</a>.</p>
+<p>Rankify’s issues rewards based on <a href="https://peeramid.infura-ipfs.io/ipfs/QmfZmHBPtenP3pcuQy7xwyrA6RtnPfRWUDi5iV1pgUtr2b">ranking ladder system via Autonomous Competence Identification</a> to recognize active participation and merit. Contributors who propose strong ideas or provide constructive feedback are recognized, creating a leaderboard of high-performing solutions and participants. This system fosters a meritocratic culture where efforts are rewarded transparently.</p>
+<p>When a group adds AI agents, it creates a benchmark for whether the model represents group opinions. After discussion comes to its end, decisions can be based on the highest-scoring solution, expertise authority, or an AI summary refining the top quartile of proposals.</p>
+<p>Rankify ensures fair recognition of contributions and transparent decisions by using blockchain to secure records. This combination of gamification, feedback, and trust-building technology makes it ideal for organizations seeking to improve coordination, engagement, and decision-making.</p>
+<h2 id="who-is-rankify-for">Who is Rankify for?<a class="headerlink" href="#who-is-rankify-for" title="Permanent link">#</a></h2>
+<p>Rankify creates measurable value by enhancing community engagement, streamlining decision-making, and fostering a meritocratic culture where contributions are recognized. By reducing employee turnover and increasing job satisfaction, it builds trust and cohesion within teams and communities.</p>
+<p>The platform’s ability to integrate AI agents into decision-making processes opens new possibilities for automated, efficient governance in organizations. This makes Rankify impactful for:</p>
+<ul>
+<li>Companies and collectives looking to strengthen their team cooperation</li>
+<li>DAOs</li>
+<li>non-profits</li>
+<li>corporate governance</li>
+<li>and industries exploring GameFi</li>
+<li>Multiplayer gaming</li>
+<li>SocialFi.</li>
+</ul>
+<p>With Rankify, teams achieve smarter, more inclusive outcomes while fostering strong, collaborative relationships.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="governance/" class="btn btn-neutral float-right" title="Meritocratic Autonomous Organizations">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="architecture/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -204,7 +227,7 @@ By adding a participation time constant, participation cost and a tokenized rank
     
     
     
-      <span><a href="governance/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
