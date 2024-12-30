@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/cvpp/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Continuous Voting Proposing Protocol - Peeramid Network Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Continuous Voting Proposing Protocol";
+        var mkdocs_page_input_path = "cvpp.md";
+        var mkdocs_page_url = "/cvpp/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Peeramid Network Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Continuous Voting Proposing Protocol</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cvpp-nodes">CVPP Nodes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#possible-applications">Possible Applications</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#traditional-voting">Traditional voting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conviction-voting">Conviction voting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#conviction-election">Conviction election</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#non-private-proposing-andor-voting">Non-private proposing and/or voting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#academic-research-and-peer-review">Academic Research and Peer Review:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#online-education-and-skill-assessment-the">Online Education and Skill Assessment: The</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decentralized-charts">Decentralized charts</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#early-conflict-prediction">Early conflict prediction</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#decentralized-autonomous-organizations">Decentralized Autonomous Organizations</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/create/">Creating new MAO</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../governance/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tokens/">Tokenomics</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rankify</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+                </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Peeramid Network Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Core Concepts</li>
+      <li class="breadcrumb-item active">Continuous Voting Proposing Protocol</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/cvpp.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="continuous-voting-proposing-protocol">Continuous Voting Proposing Protocol<a class="headerlink" href="#continuous-voting-proposing-protocol" title="Permanent link">#</a></h1>
+<p>This protocol is a superset of all known voting systems and advances in traditional governance systems.</p>
+<p>In brief, CVPP protocol functions as follows:</p>
+<ul>
+<li><strong>Proposal Submission</strong>: Proposers submit their proposals with the content encrypted while their identities remain visible. This approach ensures transparency in knowing who is submitting, but removes bias based on proposal content.</li>
+<li><strong>Proposal Shuffle and Reveal</strong>: After the submission deadline, proposals are decrypted and revealed without disclosing proposers' identities. This ensures voting is based purely on the merit of the proposals, eliminating bias towards proposers.</li>
+<li><strong>Voting</strong>: During the voting phase, votes remain private. Both the voter and the multi-party protocol managing the votes can identify which proposal belongs to which voter, ensuring voters cannot vote for themselves.</li>
+<li><strong>Final Reveal</strong>: Once the voting period concludes, the proposers' identities are revealed together with all of the votes, the proposer of the winning proposal may be awarded.</li>
+<li>P<strong>rocess repeats</strong>: Until finalization condition is met, process repeats or just holds in case of finalization requirement is time spending constraint.
+<img alt="image" src="https://github.com/user-attachments/assets/5ff6bdc8-d83f-4f24-861d-725426942243" /></li>
+</ul>
+<h2 id="cvpp-nodes">CVPP Nodes<a class="headerlink" href="#cvpp-nodes" title="Permanent link">#</a></h2>
+<p>CVPP nodes' purpose is ensuring Unbiased Proposal Evaluation and Voting facilitated through Rankify interfaces. They ensure a Secure Protocol for Transparent and Fair Decision-Making in Collaborative Environments</p>
+<p>These nodes are to be implemented as TEE and MPC technology combination and are seen as most secure to ensure this communication in the most secure manner.
+Specific network segments may require game master signatures, allowing fully autonomously manage the game master technology selection.</p>
+<h2 id="possible-applications">Possible Applications<a class="headerlink" href="#possible-applications" title="Permanent link">#</a></h2>
+<h3 id="traditional-voting">Traditional voting<a class="headerlink" href="#traditional-voting" title="Permanent link">#</a></h3>
+<p>The protocol accommodates various voting setups. It can handle traditional voting cases of few agenda items and many voters by allowing only X of N to submit proposals.</p>
+<h3 id="conviction-voting">Conviction voting<a class="headerlink" href="#conviction-voting" title="Permanent link">#</a></h3>
+<p>In conviction voting system weights increase over multiple rounds if voted for the same proposal.</p>
+<h3 id="conviction-election">Conviction election<a class="headerlink" href="#conviction-election" title="Permanent link">#</a></h3>
+<p>A leader can continuously propose something chosen by the group may be seen as a competent delegate. It allows extending ”conviction” with a quadratic voting system.</p>
+<h3 id="non-private-proposing-andor-voting">Non-private proposing and/or voting<a class="headerlink" href="#non-private-proposing-andor-voting" title="Permanent link">#</a></h3>
+<p>Implementing non-private voting is straightforward as agents (or moderators) may announce their proposal or vote contents at any time thyself. However if larger consensus is about keeping this data private, the social judegement is expected to downvote such an actor.</p>
+<h3 id="academic-research-and-peer-review">Academic Research and Peer Review:<a class="headerlink" href="#academic-research-and-peer-review" title="Permanent link">#</a></h3>
+<p>The traditional peer-review process often suffers from biases, delays, and lack of transparency. Protocol can address these issues by creating a decentralized system.
+Researchers can submit their work, review others’ submissions, and receive ratings based on the quality and thoroughness of their reviews. This approach
+leads to faster, more objective, and transparent peer review, improving the quality and credibility of academic research.</p>
+<h3 id="online-education-and-skill-assessment-the">Online Education and Skill Assessment: The<a class="headerlink" href="#online-education-and-skill-assessment-the" title="Permanent link">#</a></h3>
+<p>Protocol may be applied to online education platforms to assess and certify learners’ skills. They can demonstrate their knowledge and proficiency by participating in competence tournaments or challenges. The ranking system provides a verifiable and transparent way to assess skills, enabling learners to showcase
+their expertise to potential employers or educational institutions.
+Agent empathy training protocol establishes a
+framework for rating participants and ideas, decoupling evaluation from personal biases. Its continuous
+feedback loop, utilizing previous round results, fosters deeper alignment among participants and cultivates empathy as they refine their understanding of
+collective preferences.
+This property holds significant value for CyberPhysical-Social Systems (CPSS)[13]. Beyond interpersonal empathy, the protocol generates feedback
+and historical data to create robust, personalized
+machine learning frameworks by benchmarking AI
+agents in these tournaments.</p>
+<h3 id="decentralized-charts">Decentralized charts<a class="headerlink" href="#decentralized-charts" title="Permanent link">#</a></h3>
+<p>The first use case of the Protocol is to create a community-managed intents list that is a useful asset.
+Just-in-time decision management. This protocol facilitates streamlined decision-making by obtaining the top-rated proposer and proposal just-intime through the protocol design. Collaborative Writing. Developers submit pull requests, vote on solutions, and iteratively refine the codebase and documentation by treating each round as a work cycle. The fixed cycle length ensures a strict deadline, promoting efficiency and focus. Assigning extra weight multipliers to later rounds acknowledges the cumulative improvement of code over time, enabling automatic merging of best solutions. It encourages participants to contribute new code and solutions rather than just reviewing, fostering a proactive and collaborative development environment.</p>
+<h3 id="early-conflict-prediction">Early conflict prediction<a class="headerlink" href="#early-conflict-prediction" title="Permanent link">#</a></h3>
+<p>By observing participant voting in a setup abstracting ideas from personalities, agent opinion misalignment can be detected early. This serves as a conflict prediction flag.</p>
+<h3 id="decentralized-autonomous-organizations">Decentralized Autonomous Organizations<a class="headerlink" href="#decentralized-autonomous-organizations" title="Permanent link">#</a></h3>
+<p>DAOs can facilitate subject-specific discussions, countering low participation rates and
+turnover. Delegate finding Groups can facilitate a protocol to find a fair delegate with a framework that avoids halo effect problems and provides unbiased recognition to the successful member.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Getting started"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../architecture/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../architecture/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
