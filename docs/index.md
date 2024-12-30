@@ -44,7 +44,7 @@ The platform’s ability to integrate AI agents into decision-making processes o
 With Rankify, teams achieve smarter, more inclusive outcomes while fostering strong, collaborative relationships.
 
 
-## Possible Applications
+## Applications possible to build
 
 
 ### Traditional voting
@@ -64,15 +64,13 @@ The traditional peer-review process often suffers from biases, delays, and lack 
 Researchers can submit their work, review others’ submissions, and receive ratings based on the quality and thoroughness of their reviews. This approach
 leads to faster, more objective, and transparent peer review, improving the quality and credibility of academic research.
 
-### Online Education and Skill Assessment: The
+### Online Education and Skill Assessment:
 
-Protocol may be applied to online education platforms to assess and certify learners’ skills. They can demonstrate their knowledge and proficiency by participating in competence tournaments or challenges. The ranking system provides a verifiable and transparent way to assess skills, enabling learners to showcase
+The Protocol may be applied to online education platforms to assess and certify learners’ skills. They can demonstrate their knowledge and proficiency by participating in competence tournaments or challenges. The ranking system provides a verifiable and transparent way to assess skills, enabling learners to showcase
 their expertise to potential employers or educational institutions.
-Agent empathy training protocol establishes a
-framework for rating participants and ideas, decoupling evaluation from personal biases. Its continuous
-feedback loop, utilizing previous round results, fosters deeper alignment among participants and cultivates empathy as they refine their understanding of
-collective preferences.
-This property holds significant value for CyberPhysical-Social Systems (CPSS)[13]. Beyond interpersonal empathy, the protocol generates feedback
+
+### Agent empathy training
+The Protocol establishes a framework for rating participants and ideas, decoupling evaluation from personal biases. Its continuous feedback loop, utilizing previous round results, fosters deeper alignment among participants and cultivates empathy as they refine their understanding of collective preferences. This property holds significant value for [CyberPhysical-Social Systems (CPSS)](https://www.researchgate.net/publication/309319118_Steps_toward_Parallel_Intelligence). Beyond interpersonal empathy, the protocol generates feedback
 and historical data to create robust, personalized
 machine learning frameworks by benchmarking AI
 agents in these tournaments.
