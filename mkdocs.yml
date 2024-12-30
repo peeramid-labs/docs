@@ -7,6 +7,7 @@ nav:
           - "index.md"
     - Core Concepts:
          - "cvpp.md"
+         - "acid.md"
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"
