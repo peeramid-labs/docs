@@ -8,6 +8,9 @@ nav:
     - Core Concepts:
          - "cvpp.md"
          - "acid.md"
+    - Peeramid Network:
+        - "peeramid/introduction.md"
+        - "peeramid/miao.md"
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"
