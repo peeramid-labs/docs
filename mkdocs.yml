@@ -11,6 +11,7 @@ nav:
     - Peeramid Network:
         - "peeramid/introduction.md"
         - "peeramid/miao.md"
+        - "peeramid/cvpp_nodes.md"
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"

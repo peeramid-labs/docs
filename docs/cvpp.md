@@ -11,6 +11,11 @@ In brief, CVPP protocol functions as follows:
 * P**rocess repeats**: Until finalization condition is met, process repeats or just holds in case of finalization requirement is time spending constraint.
 ![image](https://github.com/user-attachments/assets/5ff6bdc8-d83f-4f24-861d-725426942243)
 
+
+## Whitepaper
+
+For more details please see [CVPP whitepaper](https://peeramid.infura-ipfs.io/ipfs/QmVY86rL3Y5bJfLDkbeb2EUa4TfcEiZbHe186DquDmJXQJ   )
+
 ## CVPP Nodes
 
 CVPP nodes' purpose is ensuring Unbiased Proposal Evaluation and Voting facilitated through Rankify interfaces. They ensure a Secure Protocol for Transparent and Fair Decision-Making in Collaborative Environments
@@ -18,6 +23,4 @@ CVPP nodes' purpose is ensuring Unbiased Proposal Evaluation and Voting facilita
 These nodes are to be implemented as TEE and MPC technology combination and are seen as most secure to ensure this communication in the most secure manner.
 Specific network segments may require game master signatures, allowing fully autonomously manage the game master technology selection.
 
-## Whitepaper
-
-For more details please see [CVPP whitepaper](https://peeramid.infura-ipfs.io/ipfs/QmVY86rL3Y5bJfLDkbeb2EUa4TfcEiZbHe186DquDmJXQJ   )
+For further reading about CVPP Nodes refer to [Peeramid Network](./peeramid/cvpp_nodes.md)
