@@ -12,7 +12,6 @@ The contract is responsible for creating and managing DAOs and Rankify distribut
 struct UserRankifySettings {
   uint256 principalCost;
   uint96 principalTimeConstant;
-  string metadata;
   string rankTokenURI;
   string rankTokenContractURI;
 }
@@ -41,7 +40,7 @@ struct DistributorArguments {
 Initializes the contract with the provided parameters and performs necessary checks.
 
 ```solidity
-constructor(address trustedForwarder, address paymentToken, address beneficiary, bytes32 rankTokenCodeId, bytes32 RankifyDIistributionId, bytes32 accessManagerId, bytes32 governanceERC20BaseId, bytes32 distributionName, struct LibSemver.Version distributionVersion) public
+constructor(address trustedForwarder, address paymentToken, address beneficiary, address[] zkpVerifier, bytes32 rankTokenCodeId, bytes32 RankifyDIistributionId, bytes32 accessManagerId, bytes32 governanceERC20BaseId, string distributionName, struct LibSemver.Version distributionVersion, uint256 minParticipantsInCircle) public
 ```
 
 | Input | Type | Description |
@@ -49,17 +48,23 @@ constructor(address trustedForwarder, address paymentToken, address beneficiary,
 | `trustedForwarder` | `address` | Address of the trusted forwarder for meta-transactions (WARNING: Not yet reviewed) |
 | `paymentToken` | `address` | Address of the token used for payments in the system |
 | `beneficiary` | `address` | Address that receives payments and fees |
+| `zkpVerifier` | `address[]` |  |
 | `rankTokenCodeId` | `bytes32` | Identifier for the rank token implementation in CodeIndex |
 | `RankifyDIistributionId` | `bytes32` | Identifier for the Rankify distribution implementation |
 | `accessManagerId` | `bytes32` | Identifier for the access manager implementation |
 | `governanceERC20BaseId` | `bytes32` | Identifier for the governance token implementation |
-| `distributionName` | `bytes32` | Name identifier for this distribution |
+| `distributionName` | `string` | Name identifier for this distribution |
 | `distributionVersion` | `struct LibSemver.Version` | Semantic version information as LibSemver.Version struct |
+| `minParticipantsInCircle` | `uint256` | Minimum number of participants in a circle |
 
 !!! NOTICE
 
 	Retrieves contract addresses from a contract index using the provided identifiers
 	and initializes the distribution system.
+
+!!! WARNING
+
+	distributionName must be less then 31 bytes long to comply with ShortStrings immutable format
 
 ###  instantiate
 
@@ -79,7 +84,7 @@ function instantiate(bytes data) public returns (address[] instances, bytes32 di
 
 !!! NOTICE
 
-	`instances` array contents: DAO, GovernanceToken, Gov Token AccessManager, Rankify Diamond, 8x Rankify Diamond facets, RankTokenAccessManager, RankToken
+	`instances` array contents: GovernanceToken, Gov Token AccessManager, Rankify Diamond, 8x Rankify Diamond facets, RankTokenAccessManager, RankToken
 
 ###  contractURI
 

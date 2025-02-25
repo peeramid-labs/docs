@@ -89,12 +89,16 @@ This function:
         - Emits a _PlayerJoined_ event.
 
 ```solidity
-function joinGame(uint256 gameId) public payable
+function joinGame(uint256 gameId, bytes gameMasterSignature, bytes32 gmCommitment, uint256 deadline, string voterPubKey) public payable
 ```
 
 | Input | Type | Description |
 |:----- | ---- | ----------- |
 | `gameId` | `uint256` | The ID of the game. |
+| `gameMasterSignature` | `bytes` | The ECDSA signature of the game master. |
+| `gmCommitment` | `bytes32` | The gmCommitment to the player signed by the game master. |
+| `deadline` | `uint256` | The deadline for the player to sign the gmCommitment. |
+| `voterPubKey` | `string` |  |
 
 !!! NOTICE
 
@@ -108,12 +112,13 @@ This function:
         - Emits a _GameStarted_ event.
 
 ```solidity
-function startGame(uint256 gameId) public
+function startGame(uint256 gameId, uint256 permutationCommitment) public
 ```
 
 | Input | Type | Description |
 |:----- | ---- | ----------- |
 | `gameId` | `uint256` | The ID of the game. |
+| `permutationCommitment` | `uint256` | The commitment to the permutation issued by the game master. |
 
 !!! NOTICE
 
@@ -432,11 +437,27 @@ function getPlayersMoved(uint256 gameId) public view returns (bool[], uint256)
 function isActive(uint256 gameId, address player) public view returns (bool)
 ```
 
-###  getGameState
+###  exitRankToken
 
 ```solidity
-function getGameState(uint256 gameId) public view returns (struct IRankifyInstance.GameStateOutput state)
+function exitRankToken(uint256 rankId, uint256 amount) external
 ```
+
+###  gameWinner
+
+```solidity
+function gameWinner(uint256 gameId) public view returns (address)
+```
+
+| Input | Type | Description |
+|:----- | ---- | ----------- |
+| `gameId` | `uint256` | The ID of the game |
+| **Output** | |
+|  `0`  | `address` | address The winner of the game |
+
+!!! NOTICE
+
+	Returns the winner of the game with the specified ID
 
 <!--CONTRACT_END-->
 

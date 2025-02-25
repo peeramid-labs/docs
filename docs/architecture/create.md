@@ -1,48 +1,55 @@
-# Creating new MAO
+# SDK
 
-In order to instantiate the MAO distribution, you don't need to deploy a thing. You just need to call the `instantiate` function of the the [PeeramidLabsDistributor.sol](./src/distributors/PeeramidLabsDistributor.sol) contract and specify proper distribution Id and arguments.
-```ts
-import {  MAODistribution } from 'rankify-contracts/types';
-const distributorArguments: MAODistribution.DistributorArgumentsStruct = {
-        DAOSEttings: {
-          daoURI: 'https://example.com/dao',
-          subdomain: 'example',
-          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
-          tokenName: 'tokenName',
-          tokenSymbol: 'tokenSymbol',
-        },
-        ACIDSettings: {
-          RankTokenContractURI: 'https://example.com/rank',
-          gamePrice: 1,
-          joinGamePrice: 1,
-          maxPlayersSize: 16,
-          maxTurns: 1,
-          metadata: ethers.utils.hexlify(ethers.utils.toUtf8Bytes('metadata')),
-          minPlayersSize: 4,
-          paymentToken: rankify.address,
-          rankTokenURI: 'https://example.com/rank',
-          timePerTurn: 1,
-          timeToJoin: 1,
-          voteCredits: 14,
-        },
-      };
-const data = ethers.utils.defaultAbiCoder.encode(
-        [
-          'tuple(tuple(string daoURI, string subdomain, bytes metadata, string tokenName, string tokenSymbol) DAOSEttings, tuple(uint256 timePerTurn, uint256 maxPlayersSize, uint256 minPlayersSize, uint256 timeToJoin, uint256 maxTurns, uint256 voteCredits, uint256 gamePrice, address paymentToken, uint256 joinGamePrice, string metadata, string rankTokenURI, string RankTokenContractURI) ACIDSettings)',
-        ],
-        [distributorArguments],
-      );
-      const distributorsDistId = process.env.DISTRIBUTOR_DIST_ID;
-      const tx = await distributorContract.instantiate(distributorsDistId, data);
+In order to ease development and client side operations we provide sdk:
 
+## Pre-requisites:
+
+- Node `v22.12.0` or higher
+- `viem=^2.22.8"`
+
+## Installation
+
+```bash
+# Using npm
+npm install @peeramid-labs/sdk
+
+# Using yarn
+yarn add @peeramid-labs/sdk
+
+# Using pnpm
+pnpm add @peeramid-labs/sdk
 ```
 
+## CLI Usage
 
-## Getting DistributorsDistId
+The SDK includes a command-line interface for interacting with Peeramid contracts:
 
-While in development, simplest way to get `distributorsDistId` for MAO distribution is to call `getDistributions` at `PeeramidLabsDistributor` contract and look for. It's likely to be only one.
+```bash
+# Set up environment variables
+export RPC_URL="your-rpc-url"
+export PRIVATE_KEY="your-private-key"
+
+# List available commands
+peeramid --help
+
+# Examples:
+peeramid distributions list
+peeramid fellowship create
+peeramid instances list
+peeramid multipass domains create
+```
+
+## Using PlayerClass
 
 
-!!! NOTE
+```typescript
+import { RankifyPlayer } from "@peeramid-labs/sdk"
 
-    We will host a public API and upgrade our SDK to get the list of distributions soon.
+const player = new RankifyPlayer({
+    publicClient,
+    walletClient,
+    chainId,
+    instanceAddress,
+    account
+    })
+```
