@@ -33,12 +33,16 @@ struct ArguableTournamentAddresses {
 Sets up the diamond proxy system with all required facets and initializes core components
 
 ```solidity
-constructor(address initializer, bytes4 initializerSelector, bytes32 _distributionName, struct LibSemver.Version version, struct ArguableVotingTournament.ArguableTournamentAddresses addresses) public
+constructor(address initializer, bytes4 initializerSelector, string _distributionName, struct LibSemver.Version version, struct ArguableVotingTournament.ArguableTournamentAddresses addresses) public
 ```
 
 !!! NOTICE
 
 	Constructor for the ArguableVotingTournament contract
+
+!!! WARNING
+
+	distributionName must be less then 31 bytes long to comply with ShortStrings immutable format
 	The initializer function is added as a regular facet to the Diamond Proxy.
 	Since initialization is handled by the distributor contract, it's expected that
 	the distributor will remove this facet after successful initialization.

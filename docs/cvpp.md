@@ -23,4 +23,4 @@ CVPP nodes' purpose is ensuring Unbiased Proposal Evaluation and Voting facilita
 These nodes are to be implemented as TEE and MPC technology combination and are seen as most secure to ensure this communication in the most secure manner.
 Specific network segments may require game master signatures, allowing fully autonomously manage the game master technology selection.
 
-For further reading about CVPP Nodes refer to [Peeramid Network](./peeramid-network.md)
+For further reading about CVPP Nodes refer to [Peeramid Network](./peeramid/cvpp_nodes.md)

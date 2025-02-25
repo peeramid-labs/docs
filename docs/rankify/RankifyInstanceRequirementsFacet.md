@@ -65,5 +65,17 @@ function getJoinRequirementsByToken(uint256 gameId, address contractAddress, uin
 
 	Retrieves the join requirements for a specific token in a game.
 
+###  getCommonParams
+
+```solidity
+function getCommonParams() public view returns (struct LibRankify.CommonParams)
+```
+
+###  getGameState
+
+```solidity
+function getGameState(uint256 gameId) public view returns (struct IRankifyInstance.GameStateOutput state)
+```
+
 <!--CONTRACT_END-->
 

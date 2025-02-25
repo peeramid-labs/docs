@@ -13,5 +13,11 @@ error invalidConfiguration(string message)
 error zeroValue()
 ```
 
+###  invalidECDSARecoverSigner
+
+```solidity
+error invalidECDSARecoverSigner(bytes32 digest, string message)
+```
+
 <!--CONTRACT_END-->
 

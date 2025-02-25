@@ -1,18 +1,27 @@
-site_name: Peeramid Network Docs
+site_name: Rankify Docs
 site_url: https://rankify.it
 repo_url: https://github.com/peeramid-labs
-site_description: Peeramid Network Documentation
+site_description: Rankify Documentation
 nav:
     - Welcome:
           - "index.md"
-    - Core Concepts:
+          - "concepts.md"
+          - "usecases.md"
+    - Architecture:
+         - "architecture/overview.md"
+         - "architecture/poc.md"
+         - "architecture/fellowship.md"
+         - "architecture/MAO.md"
+         - "architecture/staking.md"
          - "cvpp.md"
          - "acid.md"
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"
+    # - SDK: "sdk"
     - Contract API:
           - ...
+          - "Multipass.md"
     - Support:
           - "support/index.md"
           - "support/faq.md"
@@ -27,18 +36,19 @@ theme:
         - rust
         - bash
 plugins:
+    - include_dir_to_nav
     - awesome-pages
     - mermaid2:
           version: "9.4.3" # only works with version < 10
-          #   arguments:
-          #       theme: "dark"
-          #       themeVariables:
-          #           primaryColor: "#BB2528"
-          #           primaryTextColor: "#fff"
-          #           primaryBorderColor: "#7C0000"
-          #           lineColor: "#F8B229"
-          #           secondaryColor: "#20000F"
-          #           tertiaryColor: "#fff"
+          arguments:
+            theme: "light"
+            # themeVariables:
+            #     primaryColor: "#BB2528"
+            #     primaryTextColor: "#fff"
+            #     primaryBorderColor: "#7C0000"
+            #     lineColor: "#F8B229"
+            #     secondaryColor: "#20000F"
+            #     tertiaryColor: "#fff"
     - search
     - plantuml:
         #   theme: cyborg
@@ -48,7 +58,11 @@ markdown_extensions:
     - admonition
     - mkautodoc
     - pymdownx.details
-    - pymdownx.superfences
+    - pymdownx.superfences:
+        custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
     - attr_list
     - toc:
           permalink: "#"

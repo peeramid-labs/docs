@@ -28,7 +28,7 @@ event RegistrationOpen(uint256 gameId)
 ###  PlayerJoined
 
 ```solidity
-event PlayerJoined(uint256 gameId, address participant)
+event PlayerJoined(uint256 gameId, address participant, bytes32 gmCommitment, string voterPubKey)
 ```
 
 ###  GameStarted
@@ -55,6 +55,12 @@ event GameClosed(uint256 gameId)
 event PlayerLeft(uint256 gameId, address player)
 ```
 
+###  RankTokenExited
+
+```solidity
+event RankTokenExited(address player, uint256 rankId, uint256 amount, uint256 _toMint)
+```
+
 ###  NewGameParamsInput
 
 ```solidity
@@ -68,6 +74,7 @@ struct NewGameParamsInput {
   uint128 minGameTime;
   uint128 timePerTurn;
   uint128 timeToJoin;
+  string metadata;
 }
 ```
 
@@ -100,6 +107,7 @@ struct GameStateOutput {
   uint256 maxTurns;
   uint256 voteCredits;
   address gameMaster;
+  string metadata;
 }
 ```
 <!--CONTRACT_END-->
