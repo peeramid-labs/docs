@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/usecases/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Use Cases - Rankify Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Use Cases";
+        var mkdocs_page_input_path = "usecases.md";
+        var mkdocs_page_url = "/usecases/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Rankify Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Use Cases</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#decentralized-autonomous-organizations-daos">Decentralized Autonomous Organizations (DAOs)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-management">Project Management</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#community-engagement">Community Engagement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#education">Education</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#open-source-development">Open Source Development</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ai-workforce-integration">AI Workforce Integration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tokenized-knowledge-economies">Tokenized Knowledge Economies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#decentralized-marketplaces">Decentralized Marketplaces</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ai-workforce-migration">AI Workforce Migration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-based-learning">Project-Based Learning</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#team-empathy-conflict-mediation">Team Empathy &amp; Conflict Mediation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#token-launches">Token Launches</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#academic-research-and-peer-review">Academic Research and Peer Review</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#voting-systems">Voting systems</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cyber-physical-social-systems-cpss">Cyber-physical-social systems (CPSS)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#just-in-time-decision-management">Just-in-time decision management.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#early-conflict-prediction">Early conflict prediction</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/staking/">Staking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cvpp/">Continuous Voting Proposing Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../acid/">Autonomous Competence Identification Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/create/">SDK</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rankify</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Multipass/">IMultipass</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Rankify Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Welcome</li>
+      <li class="breadcrumb-item active">Use Cases</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/usecases.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="use-cases">Use Cases<a class="headerlink" href="#use-cases" title="Permanent link">#</a></h1>
+<h2 id="decentralized-autonomous-organizations-daos">Decentralized Autonomous Organizations (DAOs)<a class="headerlink" href="#decentralized-autonomous-organizations-daos" title="Permanent link">#</a></h2>
+<p>Rankify can help DAOs streamline governance, increase participation, and foster a meritocratic culture. By using Rankify, DAOs can ensure that all members have a voice and that the best ideas are brought to the forefront. This can help DAOs make better decisions and achieve their goals more effectively.</p>
+<h2 id="project-management">Project Management<a class="headerlink" href="#project-management" title="Permanent link">#</a></h2>
+<p>Rankify can be used to improve team collaboration, decision-making, and project outcomes. By providing a clear framework for discussion and decision-making, Rankify can help teams work together more effectively. The platform's scoring system can also help to identify the best ideas and ensure that they are implemented.</p>
+<h2 id="community-engagement">Community Engagement<a class="headerlink" href="#community-engagement" title="Permanent link">#</a></h2>
+<p>Rankify can be used to facilitate discussions, gather feedback, and build consensus within communities. The platform's decentralized and trustless nature makes it ideal for engaging with communities on sensitive topics. Rankify can also be used to gather feedback on proposals and ideas, and to build consensus around important decisions.</p>
+<h2 id="education">Education<a class="headerlink" href="#education" title="Permanent link">#</a></h2>
+<p>Rankify can enhance project-based learning, assess skills, and encourage collaboration among students. The platform's gamified approach can make learning more engaging and fun. Rankify can also be used to assess students' skills and provide them with feedback on their performance.</p>
+<h2 id="open-source-development">Open Source Development<a class="headerlink" href="#open-source-development" title="Permanent link">#</a></h2>
+<p>Rankify can help capitalize on open-source contributions and promote collaboration among developers. By providing a platform for discussion and feedback, Rankify can help ensure that open-source projects are developed in a transparent and collaborative manner. The platform's scoring system can also help to identify the best contributions and ensure that they are recognized.</p>
+<h2 id="ai-workforce-integration">AI Workforce Integration<a class="headerlink" href="#ai-workforce-integration" title="Permanent link">#</a></h2>
+<p>Rankify can help organizations optimize workflows by integrating AI agents and upskilling employees. The platform's AI agents can automate tasks and provide insights, freeing up employees to focus on more strategic work. Rankify can also be used to train employees on how to work with AI agents, ensuring a smooth transition to an AI-powered workforce.</p>
+<h2 id="tokenized-knowledge-economies">Tokenized Knowledge Economies<a class="headerlink" href="#tokenized-knowledge-economies" title="Permanent link">#</a></h2>
+<p>Rankify can be used to create and manage tokenized ecosystems for knowledge sharing and collaboration. The platform's tokenized scoring system can incentivize users to contribute their knowledge and expertise. Rankify can also be used to create semi-open source communities, where access to knowledge is restricted to members who have earned a certain rank.</p>
+<h2 id="decentralized-marketplaces">Decentralized Marketplaces<a class="headerlink" href="#decentralized-marketplaces" title="Permanent link">#</a></h2>
+<p>Rankify can be used to create decentralized marketplaces, where users can earn tokens for their contributions. These tokens can then be used to govern the marketplace, ensuring that it is run in a democratic and transparent manner. Rankify can also be used to create marketplaces for specific niches, such as open-source software or educational content.</p>
+<h2 id="ai-workforce-migration">AI Workforce Migration<a class="headerlink" href="#ai-workforce-migration" title="Permanent link">#</a></h2>
+<p>Rankify can help organizations reduce repetitive tasks by 40-60% with AI delegation while upskilling employees as mentors. This can free up employees to focus on more strategic work, and it can help organizations to adopt AI technologies more quickly.</p>
+<h2 id="project-based-learning">Project-Based Learning<a class="headerlink" href="#project-based-learning" title="Permanent link">#</a></h2>
+<p>Rankify can facilitate engaging project-based learning experiences, fostering collaboration and rewarding contributions within student groups. This can help students to develop important skills such as critical thinking, problem-solving, and communication.</p>
+<h2 id="team-empathy-conflict-mediation">Team Empathy &amp; Conflict Mediation<a class="headerlink" href="#team-empathy-conflict-mediation" title="Permanent link">#</a></h2>
+<p>Rankify can help teams to identify and address potential conflicts early on, promoting understanding and alignment through transparent engagement metrics. This can help to improve team cohesion and productivity.</p>
+<h2 id="token-launches">Token Launches<a class="headerlink" href="#token-launches" title="Permanent link">#</a></h2>
+<p>Rankify can be used to launch community-driven tokens, disrupting centralized marketplaces. This can help to create more equitable and democratic marketplaces, where users have more control over their data and their economic activity.</p>
+<h2 id="academic-research-and-peer-review">Academic Research and Peer Review<a class="headerlink" href="#academic-research-and-peer-review" title="Permanent link">#</a></h2>
+<p>The traditional peer-review process often suffers from biases, delays, and lack of transparency. Protocol can address these issues by creating a decentralized system.
+Researchers can submit their work, review others’ submissions, and receive ratings based on the quality and thoroughness of their reviews. This approach
+leads to faster, more objective, and transparent peer review, improving the quality and credibility of academic research.</p>
+<h2 id="voting-systems">Voting systems<a class="headerlink" href="#voting-systems" title="Permanent link">#</a></h2>
+<ul>
+<li>
+<p><strong>Simple majority voting</strong>: The protocol accommodates various voting setups. It can handle traditional voting cases of few agenda items and many voters by allowing only X of N to submit proposals.</p>
+</li>
+<li>
+<p><strong>Conviction voting</strong>: In conviction voting system weights increase over multiple rounds if voted for the same proposal.</p>
+</li>
+<li>
+<p><strong>Conviction election</strong>: A leader can continuously propose something chosen by the group may be seen as a competent delegate. It allows extending ”conviction” with a quadratic voting system.</p>
+</li>
+</ul>
+<h2 id="cyber-physical-social-systems-cpss">Cyber-physical-social systems (CPSS)<a class="headerlink" href="#cyber-physical-social-systems-cpss" title="Permanent link">#</a></h2>
+<p>Rankify's continuous feedback loop, utilizing previous round results, fosters deeper alignment among participants and cultivates empathy as they refine their understanding of collective preferences. This property holds significant value for <a href="https://www.researchgate.net/publication/309319118_Steps_toward_Parallel_Intelligence">CyberPhysical-Social Systems (CPSS)</a>. Beyond interpersonal empathy, the protocol generates feedback and historical data to create robust, personalized machine learning frameworks by benchmarking AI.</p>
+<p>All this eventually means that Rankify is provisioned to enable <strong>Parallel execution</strong> methodology, which is a key ingredient for secure AI-controlled physical infrastructure systems.</p>
+<h2 id="just-in-time-decision-management">Just-in-time decision management.<a class="headerlink" href="#just-in-time-decision-management" title="Permanent link">#</a></h2>
+<p>This protocol facilitates streamlined decision-making by obtaining the top-rated proposer and proposal just-intime through the protocol design.</p>
+<p>The fixed cycle length ensures a strict deadline, promoting efficiency and focus. Assigning extra weight multipliers to later rounds acknowledges the cumulative improvement of code over time, enabling automatic merging of best solutions. It encourages participants to contribute new code and solutions rather than just reviewing, fostering a proactive and collaborative development environment.</p>
+<h2 id="early-conflict-prediction">Early conflict prediction<a class="headerlink" href="#early-conflict-prediction" title="Permanent link">#</a></h2>
+<p>By observing participant voting in a setup abstracting ideas from personalities, agent opinion misalignment can be detected early. This serves as a conflict prediction flag.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../concepts/" class="btn btn-neutral float-left" title="Key Concepts"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../architecture/overview/" class="btn btn-neutral float-right" title="Overview">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../concepts/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../architecture/overview/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

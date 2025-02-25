@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/rankify/RankifyInstanceGameMastersFacet/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>RankifyInstanceGameMastersFacet - Peeramid Network Docs</title>
+    <title>RankifyInstanceGameMastersFacet - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+          <a href="../.." class="icon icon-home"> Rankify Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -50,9 +50,23 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../usecases/">Use Cases</a>
+                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/staking/">Staking</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../acid/">Autonomous Competence Identification Protocol</a>
@@ -62,7 +76,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">SDK</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
@@ -117,27 +131,7 @@
                 </li>
                 <li class="toctree-l2 current"><a class="reference internal current" href="#">RankifyInstanceGameMastersFacet</a>
     <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#overtime">OverTime</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#proposalscore">ProposalScore</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#turnended">TurnEnded</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#lastturn">LastTurn</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#gameover">GameOver</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#proposalsubmitted">ProposalSubmitted</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#proposalparams">ProposalParams</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#votesubmitted">VoteSubmitted</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#submitvote">submitVote</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#submitproposal">submitProposal</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#endturn">endTurn</a>
+    <li class="toctree-l3"><a class="reference internal" href="#poseidon">poseidon</a>
     </li>
     </ul>
                 </li>
@@ -146,6 +140,8 @@
                 <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
                 </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Multipass/">IMultipass</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Support</span></p>
@@ -162,7 +158,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Network Docs</a>
+          <a href="../..">Rankify Docs</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -181,12 +177,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="rankifyinstancegamemastersfacet">RankifyInstanceGameMastersFacet<a class="headerlink" href="#rankifyinstancegamemastersfacet" title="Permanent link">#</a></h1>
+                <h1 id="_1"><a class="headerlink" href="#_1" title="Permanent link">#</a></h1>
+<h3 id="poseidon">poseidon<a class="headerlink" href="#poseidon" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">poseidon</span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[</span><span class="m m-Decimal">5</span><span class="p">]</span><span class="w"> </span>inputs<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
+</code></pre></div>
+<!--CONTRACT_END-->
+
+<h1 id="_2"><a class="headerlink" href="#_2" title="Permanent link">#</a></h1>
+<h3 id="poseidon_1">poseidon<a class="headerlink" href="#poseidon_1" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">poseidon</span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[</span><span class="m m-Decimal">6</span><span class="p">]</span><span class="w"> </span>inputs<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
+</code></pre></div>
+<!--CONTRACT_END-->
+
+<h1 id="_3"><a class="headerlink" href="#_3" title="Permanent link">#</a></h1>
+<h3 id="poseidon_2">poseidon<a class="headerlink" href="#poseidon_2" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">poseidon</span><span class="p">(</span><span class="kt">bytes32</span><span class="p">[</span><span class="m m-Decimal">2</span><span class="p">]</span><span class="w"> </span>inputs<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="p">)</span>
+</code></pre></div>
+<!--CONTRACT_END-->
+
+<h1 id="rankifyinstancegamemastersfacet">RankifyInstanceGameMastersFacet<a class="headerlink" href="#rankifyinstancegamemastersfacet" title="Permanent link">#</a></h1>
 <p>Facet handling game master functionality for Rankify instances</p>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
 <p>Implements game master specific operations like vote submission and game management</p>
 </div>
+<h3 id="ballotintegritycheckfailed">ballotIntegrityCheckFailed<a class="headerlink" href="#ballotintegritycheckfailed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>ballotIntegrityCheckFailed<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">ballotHash</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">ballotHashFromVotes</span><span class="p">)</span>
+</code></pre></div>
 <h3 id="overtime">OverTime<a class="headerlink" href="#overtime" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">OverTime</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span>
 </code></pre></div>
@@ -203,21 +220,74 @@
 <div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">GameOver</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>players<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[]</span><span class="w"> </span>scores<span class="p">)</span>
 </code></pre></div>
 <h3 id="proposalsubmitted">ProposalSubmitted<a class="headerlink" href="#proposalsubmitted" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">ProposalSubmitted</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">turn</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">proposer</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">commitmentHash</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">proposalEncryptedByGM</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">ProposalSubmitted</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">turn</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">proposer</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">commitment</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">encryptedProposal</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">gmSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">proposerSignature</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="proposalparams">ProposalParams<a class="headerlink" href="#proposalparams" title="Permanent link">#</a></h3>
+<p>gmSignature and voterSignature are ECDSA signatures for verification</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Represents a proposal for a game.</p>
+</div>
 <div class="highlight"><pre><span></span><code><span class="kt">struct</span><span class="w"> </span><span class="nv">ProposalParams</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">;</span>
 <span class="w">  </span><span class="kt">string</span><span class="w"> </span><span class="nv">encryptedProposal</span><span class="p">;</span>
-<span class="w">  </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">commitmentHash</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">commitment</span><span class="p">;</span>
 <span class="w">  </span><span class="kt">address</span><span class="w"> </span><span class="nv">proposer</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">gmSignature</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">proposerSignature</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div>
 <h3 id="votesubmitted">VoteSubmitted<a class="headerlink" href="#votesubmitted" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VoteSubmitted</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">turn</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">votesHidden</span><span class="p">)</span>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">VoteSubmitted</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">turn</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">sealedBallotId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">gmSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">voterSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">ballotHash</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="batchproposalreveal">BatchProposalReveal<a class="headerlink" href="#batchproposalreveal" title="Permanent link">#</a></h3>
+<p>permutationCommitment must be poseidon(sponge(nextTurnPermutation), nullifier). For sponge implementation see poseidonSpongeT3</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Represents a batch of proposal reveals for a game.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="kt">struct</span><span class="w"> </span><span class="nv">BatchProposalReveal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span>proposals<span class="p">;</span>
+<span class="w">  </span><span class="kt">uint256</span><span class="p">[</span><span class="m m-Decimal">2</span><span class="p">]</span><span class="w"> </span>a<span class="p">;</span>
+<span class="w">  </span><span class="kt">uint256</span><span class="p">[</span><span class="m m-Decimal">2</span><span class="p">][</span><span class="m m-Decimal">2</span><span class="p">]</span><span class="w"> </span>b<span class="p">;</span>
+<span class="w">  </span><span class="kt">uint256</span><span class="p">[</span><span class="m m-Decimal">2</span><span class="p">]</span><span class="w"> </span>c<span class="p">;</span>
+<span class="w">  </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">permutationCommitment</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="submitvote">submitVote<a class="headerlink" href="#submitvote" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">submitVote</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">encryptedVotes</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">voter</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">submitVote</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">sealedBallotId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">voter</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">gmSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">voterSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">ballotHash</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
 </code></pre></div>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
@@ -243,63 +313,113 @@
 </ul>
 </div>
 <h3 id="submitproposal">submitProposal<a class="headerlink" href="#submitproposal" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">submitProposal</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">RankifyInstanceGameMastersFacet</span><span class="p">.</span>ProposalParams<span class="w"> </span>proposalData<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+<p>this can be submitted by either player or game master, params contain ECDSA signatures for verification</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">submitProposal</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">RankifyInstanceGameMastersFacet</span><span class="p">.</span>ProposalParams<span class="w"> </span>params<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
 </code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>params</code></td>
+<td><code>struct RankifyInstanceGameMastersFacet.ProposalParams</code></td>
+<td>ProposalParams</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
-<p>Submits a proposal for a game. <code>proposalData</code> is the proposal data.</p>
+<p>submits a proposal for a game. <code>params</code> is the proposal data.</p>
 </div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>inputs</code></td>
+<td><code>uint256[]</code></td>
+<td>Array of inputs to hash</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>size</code></td>
+<td><code>uint256</code></td>
+<td>Size of the inputs array</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poseidon5</code></td>
+<td><code>address</code></td>
+<td>Address of Poseidon5 contract</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>poseidon6</code></td>
+<td><code>address</code></td>
+<td>Address of Poseidon6 contract</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bytes32</code></td>
+<td>hash3 The final hash</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
-<p>Requirements:</p>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<ul>
-<li>The game with <code>proposalData.gameId</code> must exist.</li>
-<li>The caller must be a game master of the game with <code>proposalData.gameId</code>.</li>
-</ul>
+<p>Hashes the inputs using Poseidon sponge function.</p>
 </div>
 <h3 id="endturn">endTurn<a class="headerlink" href="#endturn" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">endTurn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[][]</span><span class="w"> </span>votes<span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="p">[]</span><span class="w"> </span>newProposals<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[]</span><span class="w"> </span>proposerIndices<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">endTurn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[][]</span><span class="w"> </span>votes<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">RankifyInstanceGameMastersFacet</span><span class="p">.</span>BatchProposalReveal<span class="w"> </span>newProposals<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="p">[]</span><span class="w"> </span>permutation<span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">shuffleSalt</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
 </code></pre></div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>Ends the current turn of a game with the provided game ID. <code>gameId</code> is the ID of the game. <code>votes</code> is the array of votes.
-<code>newProposals</code> is the array of new proposals for the upcoming voting round.
-<code>proposerIndices</code> is the array of indices of the proposers in the previous voting round.</p>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>emits a <em>ProposalScore</em> event for each player if the turn is not the first.
-emits a <em>TurnEnded</em> event.</p>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>Modifies:</p>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<ul>
-<li>Calls the <code>_nextTurn</code> function with <code>gameId</code> and <code>newProposals</code>.</li>
-<li>Resets the number of commitments of the game with <code>gameId</code> to 0.</li>
-<li>Resets the proposal commitment hash and ongoing proposal of each player in the game with <code>gameId</code>.</li>
-</ul>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>Requirements:</p>
-</div>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<ul>
-<li>The caller must be a game master of the game with <code>gameId</code>.</li>
-<li>The game with <code>gameId</code> must have started.</li>
-<li>The game with <code>gameId</code> must not be over.</li>
-<li>newProposals array MUST be sorted randomly to ensure privacy
-votes and proposerIndices MUST correspond to players array from game.getPlayers()</li>
-</ul>
-</div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>Id of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>votes</code></td>
+<td><code>uint256[][]</code></td>
+<td>votes revealed for the previous turn</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newProposals</code></td>
+<td><code>struct RankifyInstanceGameMastersFacet.BatchProposalReveal</code></td>
+<td>The new proposals for the current turn, see BatchProposalReveal</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>permutation</code></td>
+<td><code>uint256[]</code></td>
+<td>The permutation of the players</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>shuffleSalt</code></td>
+<td><code>uint256</code></td>
+<td>The shuffle salt</td>
+</tr>
+</tbody>
+</table>
 <!--CONTRACT_END-->
               
             </div>

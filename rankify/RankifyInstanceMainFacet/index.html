@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/rankify/RankifyInstanceMainFacet/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>RankifyInstanceMainFacet - Peeramid Network Docs</title>
+    <title>RankifyInstanceMainFacet - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+          <a href="../.." class="icon icon-home"> Rankify Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -50,9 +50,23 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../usecases/">Use Cases</a>
+                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/staking/">Staking</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../acid/">Autonomous Competence Identification Protocol</a>
@@ -62,7 +76,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">SDK</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
@@ -175,13 +189,17 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#isactive">isActive</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#getgamestate">getGameState</a>
+    <li class="toctree-l3"><a class="reference internal" href="#exitranktoken">exitRankToken</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#gamewinner">gameWinner</a>
     </li>
     </ul>
                 </li>
                 <li class="toctree-l2"><a class="reference internal" href="../RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
                 </li>
     </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Multipass/">IMultipass</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Support</span></p>
@@ -198,7 +216,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Network Docs</a>
+          <a href="../..">Rankify Docs</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -335,7 +353,7 @@
         - Calls the &#x60;joinGame&#x60; function with &#x60;msg.sender&#x60;.
         - Calls the &#x60;fund&#x60; function with &#x60;bytes32(gameId)&#x60;.
         - Emits a <em>PlayerJoined</em> event.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">joinGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">joinGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">gameMasterSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">gmCommitment</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">deadline</span><span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">voterPubKey</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="kt">payable</span>
 </code></pre></div>
 <table>
 <thead>
@@ -350,6 +368,26 @@
 <td style="text-align: left;"><code>gameId</code></td>
 <td><code>uint256</code></td>
 <td>The ID of the game.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gameMasterSignature</code></td>
+<td><code>bytes</code></td>
+<td>The ECDSA signature of the game master.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>gmCommitment</code></td>
+<td><code>bytes32</code></td>
+<td>The gmCommitment to the player signed by the game master.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>deadline</code></td>
+<td><code>uint256</code></td>
+<td>The deadline for the player to sign the gmCommitment.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>voterPubKey</code></td>
+<td><code>string</code></td>
+<td></td>
 </tr>
 </tbody>
 </table>
@@ -362,7 +400,7 @@
         - Calls the &#x60;enforceGameExists&#x60; function.
         - Calls the &#x60;startGameEarly&#x60; function.
         - Emits a <em>GameStarted</em> event.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">startGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">startGame</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">permutationCommitment</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span>
 </code></pre></div>
 <table>
 <thead>
@@ -377,6 +415,11 @@
 <td style="text-align: left;"><code>gameId</code></td>
 <td><code>uint256</code></td>
 <td>The ID of the game.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>permutationCommitment</code></td>
+<td><code>uint256</code></td>
+<td>The commitment to the permutation issued by the game master.</td>
 </tr>
 </tbody>
 </table>
@@ -995,9 +1038,42 @@
 <h3 id="isactive">isActive<a class="headerlink" href="#isactive" title="Permanent link">#</a></h3>
 <div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">isActive</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">player</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span>
 </code></pre></div>
-<h3 id="getgamestate">getGameState<a class="headerlink" href="#getgamestate" title="Permanent link">#</a></h3>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getGameState</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">IRankifyInstance</span><span class="p">.</span>GameStateOutput<span class="w"> </span>state<span class="p">)</span>
+<h3 id="exitranktoken">exitRankToken<a class="headerlink" href="#exitranktoken" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">exitRankToken</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">rankId</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">amount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
 </code></pre></div>
+<h3 id="gamewinner">gameWinner<a class="headerlink" href="#gamewinner" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">gameWinner</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">gameId</span><span class="p">)</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>gameId</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the game</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>address</code></td>
+<td>address The winner of the game</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Returns the winner of the game with the specified ID</p>
+</div>
 <!--CONTRACT_END-->
               
             </div>

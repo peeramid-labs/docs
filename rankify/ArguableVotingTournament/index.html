@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/rankify/ArguableVotingTournament/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>ArguableVotingTournament Distribution - Peeramid Network Docs</title>
+    <title>ArguableVotingTournament Distribution - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+          <a href="../.." class="icon icon-home"> Rankify Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -50,9 +50,23 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../usecases/">Use Cases</a>
+                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/staking/">Staking</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../acid/">Autonomous Competence Identification Protocol</a>
@@ -62,7 +76,7 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">Creating new MAO</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">SDK</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
@@ -133,6 +147,8 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Multipass/">IMultipass</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Support</span></p>
               <ul>
@@ -148,7 +164,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Network Docs</a>
+          <a href="../..">Rankify Docs</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -193,11 +209,15 @@ Distributor contract. It manages facets for tournament operations, voting, and g
 </code></pre></div>
 <h3 id="constructor">constructor<a class="headerlink" href="#constructor" title="Permanent link">#</a></h3>
 <p>Sets up the diamond proxy system with all required facets and initializes core components</p>
-<div class="highlight"><pre><span></span><code><span class="kt">constructor</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">,</span><span class="w"> </span>bytes4<span class="w"> </span>initializerSelector<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">ArguableVotingTournament</span><span class="p">.</span>ArguableTournamentAddresses<span class="w"> </span>addresses<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
+<div class="highlight"><pre><span></span><code><span class="kt">constructor</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">initializer</span><span class="p">,</span><span class="w"> </span>bytes4<span class="w"> </span>initializerSelector<span class="p">,</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nv">_distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibSemver</span><span class="p">.</span>Version<span class="w"> </span>version<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">ArguableVotingTournament</span><span class="p">.</span>ArguableTournamentAddresses<span class="w"> </span>addresses<span class="p">)</span><span class="w"> </span><span class="kt">public</span>
 </code></pre></div>
 <div class="admonition notice">
 <p class="admonition-title">Notice</p>
-<p>Constructor for the ArguableVotingTournament contract
+<p>Constructor for the ArguableVotingTournament contract</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>distributionName must be less then 31 bytes long to comply with ShortStrings immutable format
 The initializer function is added as a regular facet to the Diamond Proxy.
 Since initialization is handled by the distributor contract, it's expected that
 the distributor will remove this facet after successful initialization.</p>

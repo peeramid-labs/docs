@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IDistribution/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/architecture/staking/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IDistribution - Rankify Docs</title>
+    <title>Staking - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,9 +15,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IDistribution";
-        var mkdocs_page_input_path = "Ethereum Distribution System/IDistribution.md";
-        var mkdocs_page_url = "/Ethereum%20Distribution%20System/IDistribution/";
+        var mkdocs_page_name = "Staking";
+        var mkdocs_page_input_path = "architecture/staking.md";
+        var mkdocs_page_url = "/architecture/staking/";
       </script>
     
     <!--[if lt IE 9]>
@@ -56,16 +56,28 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/overview/">Overview</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/poc/">Ranking system</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../poc/">Ranking system</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/fellowship/">Fellowships</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fellowship/">Fellowships</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../MAO/">Meritocratic Autonomous Organizations</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/staking/">Staking</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Staking</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#market-of-discussion-hosting">Market of Discussion Hosting</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mpc-cvpp-nodes-consensus">MPC CVPP Nodes Consensus</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#staking-pools">Staking Pools</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#higher-order-disputes">Higher Order Disputes</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assigning-a-node-to-a-discussion-circle">Assigning a Node to a Discussion Circle</a>
+    </li>
+    </ul>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
@@ -74,36 +86,28 @@
               </ul>
               <p class="caption"><span class="caption-text">Developing</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../create/">SDK</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" >Ethereum Distribution System</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../IContractURI/">IContractURI</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">IDistribution</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#distributed">Distributed</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#instantiate">instantiate</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#get">get</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IDistributor/">IDistributor Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IERC7746/">IERC7746 Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IInitializer/">IInitializer</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IInstaller/">IInstaller Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IRepository/">IRepository Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
                 </li>
     </ul>
                   </li>
@@ -169,11 +173,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Contract API</li>
-          <li class="breadcrumb-item">Ethereum Distribution System</li>
-      <li class="breadcrumb-item active">IDistribution</li>
+          <li class="breadcrumb-item">Architecture</li>
+      <li class="breadcrumb-item active">Staking</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/peeramid-labs/edit/master/docs/Ethereum Distribution System/IDistribution.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/architecture/staking.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -181,118 +184,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="idistribution">IDistribution<a class="headerlink" href="#idistribution" title="Permanent link">#</a></h1>
-<p>Interface for distribution-related functionalities. It can get sources and produce a new instances out from them. It also provides metadata about the distribution.</p>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>It is highly recommended to keep implementation stateless, and use <code>immutable</code> variables for any state. This allows your code to be referred in distributor and respositories via ERC7744. It's also easier to reason about, and more gas efficient.</p>
-</div>
-<h3 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">#</a></h3>
-<p>Emitted when a distribution occurs.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Distributed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">distributor</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>distributor</code></td>
-<td><code>address</code></td>
-<td>The address of the entity that performed the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
-<p>Instantiates a new instance with the given parameters.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>data</code></td>
-<td><code>bytes</code></td>
-<td>The data to be used for instantiation.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Output</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
+                <h1 id="staking">Staking<a class="headerlink" href="#staking" title="Permanent link">#</a></h1>
+<p>A CVPP node is assigned to serve whenever a fellowship discussion circle is created. This node has a secure signer key to digitally sign messages and encrypt transactions. The protocol does not enforce node implementation; it simply mandates that signatures for CVPP discussion circle phases serving participants are issued and recorded on the settlement layer.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>It MUST emit Distributed event.</p>
+<p>This is just high level overview, staking protocol is still under development.</p>
 </div>
-<h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
-<p>Retrieves the current distribution sources.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>sources<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Output</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sources</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that are used for instantiation.</td>
-</tr>
-<tr>
-<td><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
-<!--CONTRACT_END-->
+<h2 id="market-of-discussion-hosting">Market of Discussion Hosting<a class="headerlink" href="#market-of-discussion-hosting" title="Permanent link">#</a></h2>
+<p>Nodes, implemented as MPC, TEE, or centralized servers, compete for users based on privacy features and availability guarantees. This allows Fellowships with varying security needs to choose different operator pools, balancing their requirements within the blockchain trilemma.</p>
+<h2 id="mpc-cvpp-nodes-consensus">MPC CVPP Nodes Consensus<a class="headerlink" href="#mpc-cvpp-nodes-consensus" title="Permanent link">#</a></h2>
+<p>A multi-party computed threshold signature algorithm is used to create decentralized consensus. This lets the free market choose between centralized custodial solutions and existing solutions like Internet Computer <a href="https://internetcomputer.org/whitepaper.pdf">Chain-Keys</a> or <a href="https://github.com/LIT-Protocol/whitepaper/blob/main/Lit%20Protocol%20Whitepaper%20(2024).pdf">Lit Protocol</a>.</p>
+<p>In a very high level overview, Rankify architecture can be described with the following diagram:
+<img alt="network overview" src="../../assets/network_overview.png" /></p>
+<h2 id="staking-pools">Staking Pools<a class="headerlink" href="#staking-pools" title="Permanent link">#</a></h2>
+<p>CVPP Node operators joining a pool stake collateral to back up their guarantees. Nested pools are possible for Multi-party computation cases, allowing nodes to incentivize activity in multi-party setups.</p>
+<h2 id="higher-order-disputes">Higher Order Disputes<a class="headerlink" href="#higher-order-disputes" title="Permanent link">#</a></h2>
+<p>Other nodes in the CVPP pool can dispute further conflicts between participants and CVPP Node signers.</p>
+<h2 id="assigning-a-node-to-a-discussion-circle">Assigning a Node to a Discussion Circle<a class="headerlink" href="#assigning-a-node-to-a-discussion-circle" title="Permanent link">#</a></h2>
+<p>The creator of a new fellowship instance can specify a designated staking pool. This lets creators predefine fellowship constraints to pools or pool routing contracts.</p>
+<p>For a new discussion circle within the fellowship, the circle creator must specify a CVPP node eligible for serving and present the node's signature or proof of willingness to cooperate. This on-chain commitment can be used for settlements. Participants must also obtain a node signature for their participation acceptance.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../IContractURI/" class="btn btn-neutral float-left" title="IContractURI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../IDistributor/" class="btn btn-neutral float-right" title="IDistributor Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../MAO/" class="btn btn-neutral float-left" title="Meritocratic Autonomous Organizations"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../cvpp/" class="btn btn-neutral float-right" title="Continuous Voting Proposing Protocol">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -319,10 +235,10 @@
         </span>
     
     
-      <span><a href="../IContractURI/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../MAO/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../IDistributor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../cvpp/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

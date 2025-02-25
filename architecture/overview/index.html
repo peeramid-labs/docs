@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+
+<html class="writer-html5" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://rankify.it/architecture/overview/" rel="canonical"/>
+<link href="../../img/favicon.ico" rel="shortcut icon"/>
+<title>Overview - Rankify Docs</title>
+<link href="../../css/theme.css" rel="stylesheet"/>
+<link href="../../css/theme_extra.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
+<link href="../../css/custom.css" rel="stylesheet"/>
+<link href="../../assets/mkdocs_puml/puml.css" rel="stylesheet"/>
+<link href="../../assets/mkdocs_puml/interaction.css" rel="stylesheet"/>
+<script>
+        // Current page data
+        var mkdocs_page_name = "Overview";
+        var mkdocs_page_input_path = "architecture/overview.md";
+        var mkdocs_page_url = "/architecture/overview/";
+      </script>
+<!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body class="wy-body-for-nav" role="document">
+<div class="wy-grid-for-nav">
+<nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
+<div class="wy-side-scroll">
+<div class="wy-side-nav-search">
+<a class="icon icon-home" href="../.."> Rankify Docs
+        </a><div role="search">
+<form action="../../search.html" class="wy-form" id="rtd-search-form" method="get">
+<input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
+</form>
+</div>
+</div>
+<div aria-label="Navigation menu" class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation">
+<p class="caption"><span class="caption-text">Welcome</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../concepts/">Key Concepts</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../usecases/">Use Cases</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Architecture</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal current" href="#">Overview</a>
+<ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="#available-distributions">Available Distributions</a>
+<ul>
+<li class="toctree-l3"><a class="reference internal" href="#1-meritocratic-autonomous-organization-mao">1. Meritocratic Autonomous Organization (MAO)</a>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#2-acid-distribution">2. ACID Distribution</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../poc/">Ranking system</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../fellowship/">Fellowships</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../MAO/">Meritocratic Autonomous Organizations</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../staking/">Staking</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../acid/">Autonomous Competence Identification Protocol</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developing</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../create/">SDK</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Contract API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal">Ethereum Distribution System</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal">Rankify</a>
+<ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/DAODistributor/">DAODistributor</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/IErrors/">IErrors</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/ILockableERC1155/">ILockableERC1155</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankToken/">IRankToken</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/IRankifyInstance/">IRankifyInstance</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/MAODistribution/">MAODistribution</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/RankToken/">RankToken</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/Rankify/">Rankify</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../Multipass/">IMultipass</a>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Support</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../support/">Community channels</a>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../support/faq/">Frequently asked questions</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
+<nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
+<i class="fa fa-bars" data-toggle="wy-nav-top"></i>
+<a href="../..">Rankify Docs</a>
+</nav>
+<div class="wy-nav-content">
+<div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
+<ul class="wy-breadcrumbs">
+<li><a aria-label="Docs" class="icon icon-home" href="../.."></a></li>
+<li class="breadcrumb-item">Architecture</li>
+<li class="breadcrumb-item active">Overview</li>
+<li class="wy-breadcrumbs-aside">
+<a class="icon icon-github" href="https://github.com/peeramid-labs/edit/master/docs/architecture/overview.md"> Edit on GitHub</a>
+</li>
+</ul>
+<hr/>
+</div>
+<div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
+<div class="section" itemprop="articleBody">
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">#</a></h1>
+<p>Rankify is a platform for creating and participating in tokenized voting systems. Our platform is designed to be used by DAOs to create tokenized voting systems for their communities.</p>
+<h2 id="available-distributions">Available Distributions<a class="headerlink" href="#available-distributions" title="Permanent link">#</a></h2>
+<h3 id="1-meritocratic-autonomous-organization-mao">1. Meritocratic Autonomous Organization (MAO)<a class="headerlink" href="#1-meritocratic-autonomous-organization-mao" title="Permanent link">#</a></h3>
+<p>The MAO distribution (<a href="./src/distributions/MAODistribution.sol">MAODistribution.sol</a>) creates a complete infrastructure for a Meritocratic Autonomous Organization, including:
+- Rank and governance tokens
+- Autonomous Competence Identification Distribution</p>
+<h3 id="2-acid-distribution">2. ACID Distribution<a class="headerlink" href="#2-acid-distribution" title="Permanent link">#</a></h3>
+<p>The Autonomous Competence Identification Distribution (<a href="./src/distributions/ArguableVotingTournament.sol">ArguableVotingTournament.sol</a>) implements:
+- Turn-based game mechanics
+- Voting and proposal systems
+- EIP-712 compliant message signing
+- Modular architecture</p>
+<ul>
+<li><strong>Game Master Nodes</strong>: Trusted environment where voters can submit their opinions and intents.</li>
+<li><strong>Distributor</strong>: A contract where fellowship templates are stored and instantiated.</li>
+<li><strong>Fellowship</strong>: A smart contract representing a fellowship.</li>
+<li><strong>Rank Token</strong>: A smart contract representing a rank token.</li>
+</ul>
+<p>In a high level overview, Rankify architecture consists of game master nodes or servers who act as trusted environment where voters can submit their opinions and intents and the trusted server will ensure that these votes or opinions are indeed structured correctly according to the rules of the fellowship and will attest those. The participants later will submit those proposals or opinions to the on-chain contract which will facilitate all of the calculation of the scores and will act as trusted environment. Additionally, Staking and SCRO conditions are implemented, ensuring game theoretic alignment for the game master nodes to actually serve the service level agreements with their users.</p>
+<div class="mermaid">graph TD
+    subgraph "DAO"
+        A[DAO] -- control --&gt; B(Distributor)
+      end
+    subgraph Users
+        U1[Users 1...N]
+    end
+            U1 -- intents &amp; opinions --&gt; H
+       B -- instantiate --&gt; Fellowship
+
+    subgraph Developers
+        D1[Developer 1]
+    end
+
+    GM[GM CVPP Nodes]
+
+    GM -- submit --&gt; H
+    U1 &lt;-- attest --&gt; GM
+    B -- list --&gt; C
+    D1 -- deploy --&gt; C[Distributions]
+    subgraph MAO
+    subgraph Fellowship
+
+    H -- mints --&gt; J[Rank Token]
+    U1 -- instantiate listed --&gt; B
+    U1 -- create --&gt; H{Thread}
+    end
+
+    J -- Exit --&gt; K[ERC20 MAO token]
+    end
+</div>
+</div>
+</div><footer>
+<div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
+<a class="btn btn-neutral float-left" href="../../usecases/" title="Use Cases"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+<a class="btn btn-neutral float-right" href="../poc/" title="Ranking system">Next <span class="icon icon-circle-arrow-right"></span></a>
+</div>
+<hr/>
+<div role="contentinfo">
+<!-- Copyright etc -->
+</div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+</div>
+</div>
+</section>
+</div>
+<div aria-label="Versions" class="rst-versions" role="note">
+<span class="rst-current-version" data-toggle="rst-current-version">
+<span>
+<a class="fa fa-github" href="https://github.com/peeramid-labs" style="color: #fcfcfc"> GitHub</a>
+</span>
+<span><a href="../../usecases/" style="color: #fcfcfc">« Previous</a></span>
+<span><a href="../poc/" style="color: #fcfcfc">Next »</a></span>
+</span>
+</div>
+<script src="../../js/jquery-3.6.0.min.js"></script>
+<script>var base_url = "../..";</script>
+<script src="../../js/theme_extra.js"></script>
+<script src="../../js/theme.js"></script>
+<script src="../../search/main.js"></script>
+<script src="../../assets/mkdocs_puml/puml.js"></script>
+<script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+<script src="../../assets/mkdocs_puml/interaction.js"></script>
+<script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+<script src="https://unpkg.com/mermaid@9.4.3/dist/mermaid.min.js"></script><script>mermaid.initialize({
+    theme: "light"
+});</script></body>
+</html>

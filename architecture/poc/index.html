@@ -3,9 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Ethereum%20Distribution%20System/IDistribution/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/architecture/poc/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>IDistribution - Rankify Docs</title>
+    <title>Ranking system - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,9 +15,9 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "IDistribution";
-        var mkdocs_page_input_path = "Ethereum Distribution System/IDistribution.md";
-        var mkdocs_page_url = "/Ethereum%20Distribution%20System/IDistribution/";
+        var mkdocs_page_name = "Ranking system";
+        var mkdocs_page_input_path = "architecture/poc.md";
+        var mkdocs_page_url = "/architecture/poc/";
       </script>
     
     <!--[if lt IE 9]>
@@ -56,16 +56,34 @@
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Architecture</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/overview/">Overview</a>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/poc/">Ranking system</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Ranking system</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#proof-of-competence">Proof of Competence</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#defining-competence">Defining competence</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#competence-as-a-token">Competence as a token</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#transferability">Transferability</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ranking-ladder">Ranking Ladder</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rank-token">Rank token</a>
+    </li>
+    </ul>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/fellowship/">Fellowships</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../fellowship/">Fellowships</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../MAO/">Meritocratic Autonomous Organizations</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/staking/">Staking</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../staking/">Staking</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
@@ -74,36 +92,28 @@
               </ul>
               <p class="caption"><span class="caption-text">Developing</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/">Overview</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../architecture/create/">SDK</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../create/">SDK</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Contract API</span></p>
-              <ul class="current">
-                  <li class="toctree-l1 current"><a class="reference internal current" >Ethereum Distribution System</a>
-    <ul class="current">
-                <li class="toctree-l2"><a class="reference internal" href="../IContractURI/">IContractURI</a>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
                 </li>
-                <li class="toctree-l2 current"><a class="reference internal current" href="#">IDistribution</a>
-    <ul class="current">
-    <li class="toctree-l3"><a class="reference internal" href="#distributed">Distributed</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#instantiate">instantiate</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#get">get</a>
-    </li>
-    </ul>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IDistributor/">IDistributor Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IERC7746/">IERC7746 Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IInitializer/">IInitializer</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IInstaller/">IInstaller Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
                 </li>
-                <li class="toctree-l2"><a class="reference internal" href="../IRepository/">IRepository Interface</a>
+                <li class="toctree-l2"><a class="reference internal" href="../../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
                 </li>
     </ul>
                   </li>
@@ -169,11 +179,10 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Contract API</li>
-          <li class="breadcrumb-item">Ethereum Distribution System</li>
-      <li class="breadcrumb-item active">IDistribution</li>
+          <li class="breadcrumb-item">Architecture</li>
+      <li class="breadcrumb-item active">Ranking system</li>
     <li class="wy-breadcrumbs-aside">
-          <a href="https://github.com/peeramid-labs/edit/master/docs/Ethereum Distribution System/IDistribution.md" class="icon icon-github"> Edit on GitHub</a>
+          <a href="https://github.com/peeramid-labs/edit/master/docs/architecture/poc.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
   </ul>
   <hr/>
@@ -181,118 +190,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="idistribution">IDistribution<a class="headerlink" href="#idistribution" title="Permanent link">#</a></h1>
-<p>Interface for distribution-related functionalities. It can get sources and produce a new instances out from them. It also provides metadata about the distribution.</p>
-<div class="admonition notice">
-<p class="admonition-title">Notice</p>
-<p>It is highly recommended to keep implementation stateless, and use <code>immutable</code> variables for any state. This allows your code to be referred in distributor and respositories via ERC7744. It's also easier to reason about, and more gas efficient.</p>
-</div>
-<h3 id="distributed">Distributed<a class="headerlink" href="#distributed" title="Permanent link">#</a></h3>
-<p>Emitted when a distribution occurs.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Distributed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">distributor</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>distributor</code></td>
-<td><code>address</code></td>
-<td>The address of the entity that performed the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="instantiate">instantiate<a class="headerlink" href="#instantiate" title="Permanent link">#</a></h3>
-<p>Instantiates a new instance with the given parameters.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">instantiate</span><span class="p">(</span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>instances<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Input</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>data</code></td>
-<td><code>bytes</code></td>
-<td>The data to be used for instantiation.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong>Output</strong></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>instances</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that were produced.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It MUST emit Distributed event.</p>
-</div>
-<h3 id="get">get<a class="headerlink" href="#get" title="Permanent link">#</a></h3>
-<p>Retrieves the current distribution sources.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">get</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>sources<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">distributionName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">distributionVersion</span><span class="p">)</span>
-</code></pre></div>
-<table>
-<thead>
-<tr>
-<th>Output</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>sources</code></td>
-<td><code>address[]</code></td>
-<td>An array of addresses that are used for instantiation.</td>
-</tr>
-<tr>
-<td><code>distributionName</code></td>
-<td><code>bytes32</code></td>
-<td>The name of the distribution.</td>
-</tr>
-<tr>
-<td><code>distributionVersion</code></td>
-<td><code>uint256</code></td>
-<td>The version of the distribution.</td>
-</tr>
-</tbody>
-</table>
-<!--CONTRACT_END-->
+                <h1 id="ranking-system">Ranking system<a class="headerlink" href="#ranking-system" title="Permanent link">#</a></h1>
+<h2 id="proof-of-competence">Proof of Competence<a class="headerlink" href="#proof-of-competence" title="Permanent link">#</a></h2>
+<p>Proof of competence is a core concept behind Peeramid Network, which aims to establish agent competence to conduct knowledge work related to specific types of labor that needs to be produced. This can be used to define the relationship between anyone contributing knowledge work and their ability to participate in organizational management and provide their competence related labor without need to have any external approval or attestations.</p>
+<p>Peeramid Network core assumptions are:</p>
+<ul>
+<li>Competition that drives progress can be tamed to streamline continuous improvement of truly autonomous systems in the form of collaboration.</li>
+<li>Measuring knowledge works creates a doorway for measuring one's competence hence allows to create meritocratic organizations and knowledge work markets.</li>
+<li>Today's professional management HR and corporate governance systems are in similar stagnation as the banking system was compared to distributed ledger technology innovation.</li>
+</ul>
+<h3 id="defining-competence">Defining competence<a class="headerlink" href="#defining-competence" title="Permanent link">#</a></h3>
+<p>We define competence as time and value one is willing to commit in one's own development and resulting peer recognition issued in return to that commitment.</p>
+<p>Hence by design, competence i a subjective concept and is time-dependent value, which is why it is possible to apply spectral analysis and dynamic system modeling to it.</p>
+<h3 id="competence-as-a-token">Competence as a token<a class="headerlink" href="#competence-as-a-token" title="Permanent link">#</a></h3>
+<p>Competence is a token that is issued to the contributor based on the time and value one is willing to commit in one's own development and resulting peer recognition issued in return to that commitment.</p>
+<h4 id="transferability">Transferability<a class="headerlink" href="#transferability" title="Permanent link">#</a></h4>
+<p>Competence tokens are subject to the same transferability rules as any other token. This allows to create a market for competence tokens and to use them as a medium of exchange.</p>
+<p>While arguable, we believe that competence tokens should be transferable only between projects that are part of the same organization as this simply obeys the free market principles and can be seen as way of formalizing process of lobbying interests.</p>
+<p>Since process of competence creation is a time and value commitment, it is possible to create a market for competence tokens by using it as a medium of exchange between projects.</p>
+<h2 id="ranking-ladder">Ranking Ladder<a class="headerlink" href="#ranking-ladder" title="Permanent link">#</a></h2>
+<p><img alt="Ranking Ladder" src="../../assets/ranking.png" /></p>
+<p>Ranking ladder is a system of ranks that are assigned to the contributors based on their competence. Recognized agents in the network are awarded with higher ranks, which allows them to participate in more complex and valuable projects. Experts of higher ranks have larger staked when they set their competence token as a collateral.
+Continuing this process iteratively, the network creates a feedback loop that allows to create a self-organizing system of agents that are able to produce value for the network.</p>
+<h2 id="rank-token">Rank token<a class="headerlink" href="#rank-token" title="Permanent link">#</a></h2>
+<p>Rank token is a token that is issued to the contributors based on their competence. It is a representation of the contributor's rank in the network.</p>
+<p>It is implemented as extended ERC1155 token described by <a href="../../rankify/RankToken/">IRankToken</a> interface.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../IContractURI/" class="btn btn-neutral float-left" title="IContractURI"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../IDistributor/" class="btn btn-neutral float-right" title="IDistributor Interface">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../overview/" class="btn btn-neutral float-left" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../fellowship/" class="btn btn-neutral float-right" title="Fellowships">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -319,10 +247,10 @@
         </span>
     
     
-      <span><a href="../IContractURI/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../overview/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../IDistributor/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../fellowship/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>

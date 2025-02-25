@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/Multipass/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>IMultipass - Rankify Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../css/custom.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/puml.css" rel="stylesheet" />
+        <link href="../assets/mkdocs_puml/interaction.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "IMultipass";
+        var mkdocs_page_input_path = "Multipass.md";
+        var mkdocs_page_url = "/Multipass/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/solidity.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/typescript.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/rust.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/bash.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Rankify Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Welcome</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="..">Getting started</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../usecases/">Use Cases</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/staking/">Staking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cvpp/">Continuous Voting Proposing Protocol</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../acid/">Autonomous Competence Identification Protocol</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Developing</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../architecture/create/">SDK</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Contract API</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" >Ethereum Distribution System</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IContractURI/">IContractURI</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistribution/">IDistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IDistributor/">IDistributor Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IERC7746/">IERC7746 Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInitializer/">IInitializer</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IInstaller/">IInstaller Interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../Ethereum%20Distribution%20System/IRepository/">IRepository Interface</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" >Rankify</a>
+    <ul>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ArguableVotingTournament/">ArguableVotingTournament Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DAODistributor/">DAODistributor</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DiamondDistribution/">Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/DistributableGovernanceERC20/">DistributableGovernanceERC20</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/EIP712InspectorFacet/">EIP712InspectorFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IERC1155Receiver/">ERC1155 transfer receiver interface</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IErrors/">IErrors</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/ILockableERC1155/">ILockableERC1155</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankToken/">IRankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/IRankifyInstance/">IRankifyInstance</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/InitializedDiamondDistribution/">Initialized Diamond Proxy Distribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/MAODistribution/">MAODistribution</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankToken/">RankToken</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/Rankify/">Rankify</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceGameMastersFacet/">RankifyInstanceGameMastersFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceMainFacet/">RankifyInstanceMainFacet</a>
+                </li>
+                <li class="toctree-l2"><a class="reference internal" href="../rankify/RankifyInstanceRequirementsFacet/">RankifyInstanceRequirementsFacet</a>
+                </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">IMultipass</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#invalidqueryreasons">InvalidQueryReasons</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidquery">invalidQuery</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#nameexists">nameExists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#recordexists">recordExists</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#isactive">isActive</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#signatureexpired">signatureExpired</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidsignature">invalidSignature</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mathoverflow">mathOverflow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invaliddomain">invalidDomain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referralrewardstoohigh">referralRewardsTooHigh</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidregistrar">invalidRegistrar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#paymenttoolow">paymentTooLow</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#paymendfailed">paymendFailed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referredself">referredSelf</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#domainnotactive">domainNotActive</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usernotfound">userNotFound</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidnamechange">invalidnameChange</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidnonce">invalidNonce</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#invalidnonceincrement">invalidNonceIncrement</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#resolverecord">resolveRecord</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#initializedomain">initializeDomain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#activatedomain">activateDomain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deactivatedomain">deactivateDomain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changefee">changeFee</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changeregistrar">changeRegistrar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#deletename">deleteName</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changereferralprogram">changeReferralProgram</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#changerenewalfee">changeRenewalFee</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#register">register</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getdomainstate">getDomainState</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getcontractstate">getContractState</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#fundswithdawn">fundsWithdawn</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#initializeddomain">InitializedDomain</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#domainactivated">DomainActivated</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#domaindeactivated">DomainDeactivated</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#domainfeechanged">DomainFeeChanged</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registrarchanged">RegistrarChanged</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#namedeleted">nameDeleted</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referralprogramchanged">ReferralProgramChanged</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#registered">Registered</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#referred">Referred</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#renewed">Renewed</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#renewalfeechanged">RenewalFeeChanged</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#getdomainstatebyid">getDomainStateById</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#renewrecord">renewRecord</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Support</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/">Community channels</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../support/faq/">Frequently asked questions</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Rankify Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Contract API</li>
+      <li class="breadcrumb-item active">IMultipass</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/peeramid-labs/edit/master/docs/Multipass.md" class="icon icon-github"> Edit on GitHub</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="imultipass">IMultipass<a class="headerlink" href="#imultipass" title="Permanent link">#</a></h1>
+<p>Interface for the Multipass contract. Multipass contract acts as cross-domain registry, allowing owner to specify registrars and domains that can be used to register names.
+It also allows for referral program, where referrers can earn rewards for referring new registrations.</p>
+<h3 id="invalidqueryreasons">InvalidQueryReasons<a class="headerlink" href="#invalidqueryreasons" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">enum</span><span class="w"> </span><span class="nv">InvalidQueryReasons</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span>EMPTY_ID<span class="p">,</span>
+<span class="w">  </span>EMPTY_DOMAIN<span class="p">,</span>
+<span class="w">  </span>EMPTY_ADDRESS
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="invalidquery">invalidQuery<a class="headerlink" href="#invalidquery" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidQuery<span class="p">(</span><span class="kt">enum</span><span class="w"> </span><span class="nv">IMultipass</span><span class="p">.</span>InvalidQueryReasons<span class="w"> </span>reason<span class="p">)</span>
+</code></pre></div>
+<h3 id="nameexists">nameExists<a class="headerlink" href="#nameexists" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>nameExists<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="recordexists">recordExists<a class="headerlink" href="#recordexists" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>recordExists<span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>newRecord<span class="p">)</span>
+</code></pre></div>
+<h3 id="isactive">isActive<a class="headerlink" href="#isactive" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>isActive<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="w"> </span><span class="nv">isActive</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="signatureexpired">signatureExpired<a class="headerlink" href="#signatureexpired" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>signatureExpired<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">signatureDeadline</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidsignature">invalidSignature<a class="headerlink" href="#invalidsignature" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidSignature<span class="p">()</span>
+</code></pre></div>
+<h3 id="mathoverflow">mathOverflow<a class="headerlink" href="#mathoverflow" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>mathOverflow<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">a</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">b</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invaliddomain">invalidDomain<a class="headerlink" href="#invaliddomain" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidDomain<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="referralrewardstoohigh">referralRewardsTooHigh<a class="headerlink" href="#referralrewardstoohigh" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>referralRewardsTooHigh<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referrerReward</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referralDiscount</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidregistrar">invalidRegistrar<a class="headerlink" href="#invalidregistrar" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidRegistrar<span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">registrar</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="paymenttoolow">paymentTooLow<a class="headerlink" href="#paymenttoolow" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>paymentTooLow<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">value</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="paymendfailed">paymendFailed<a class="headerlink" href="#paymendfailed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>paymendFailed<span class="p">()</span>
+</code></pre></div>
+<h3 id="referredself">referredSelf<a class="headerlink" href="#referredself" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>referredSelf<span class="p">()</span>
+</code></pre></div>
+<h3 id="domainnotactive">domainNotActive<a class="headerlink" href="#domainnotactive" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>domainNotActive<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="usernotfound">userNotFound<a class="headerlink" href="#usernotfound" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>userNotFound<span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>NameQuery<span class="w"> </span>query<span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidnamechange">invalidnameChange<a class="headerlink" href="#invalidnamechange" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidnameChange<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">newName</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidnonce">invalidNonce<a class="headerlink" href="#invalidnonce" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidNonce<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">nonce</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="invalidnonceincrement">invalidNonceIncrement<a class="headerlink" href="#invalidnonceincrement" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code>error<span class="w"> </span>invalidNonceIncrement<span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">old</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newer</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="resolverecord">resolveRecord<a class="headerlink" href="#resolverecord" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">resolveRecord</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>NameQuery<span class="w"> </span>query<span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>query</code></td>
+<td><code>struct LibMultipass.NameQuery</code></td>
+<td>The name query to resolve.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>bool</code></td>
+<td>A boolean indicating whether the record was found, and the resolved record.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>1</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Retrieves the resolved record for a given name query.</p>
+</div>
+<h3 id="initializedomain">initializeDomain<a class="headerlink" href="#initializedomain" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">initializeDomain</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">registrar</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">renewalFee</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referrerReward</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referralDiscount</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Initializes new LibMultipass.Domain and configures it's parameters</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+registrar is not zero
+domainName is not empty
+domainIndex is either zero(auto assign) or can be one of preoccupied LibMultipass.Domain names
+domainName does not exist yet
+onlyOwner
+referrerReward+referralDiscount cannot be larger than fee
+@param registrar address of registrar
+@param fee fee in base currency of network
+@param domainName name of LibMultipass.Domain
+@param referrerReward referral fee share in base currency of network
+@param referralDiscount referral discount in base currency of network</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././InitializedDomain">InitializedDomain</a> event.</p>
+</div>
+<h3 id="activatedomain">activateDomain<a class="headerlink" href="#activatedomain" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">activateDomain</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Activates LibMultipass.Domain name</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+msg.sender is Owner</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././DomainActivated">DomainActivated</a> event.</p>
+</div>
+<h3 id="deactivatedomain">deactivateDomain<a class="headerlink" href="#deactivatedomain" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">deactivateDomain</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Deactivates LibMultipass.Domain name</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Deactivated LibMultipass.Domain cannot mutate names and will return zeros</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+msg.sender is Owner OR registrar</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././DomainDeactivated">DomainDeactivated</a> event.</p>
+</div>
+<h3 id="changefee">changeFee<a class="headerlink" href="#changefee" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeFee</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Changes registrar address</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+msg.sender is Owner</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././DomainFeeChanged">DomainFeeChanged</a> event.</p>
+</div>
+<h3 id="changeregistrar">changeRegistrar<a class="headerlink" href="#changeregistrar" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeRegistrar</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">newRegistrar</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Changes registrar address</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+msg.sender is Owner</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././RegistrarChangeRequested">RegistrarChangeRequested</a> event.</p>
+</div>
+<h3 id="deletename">deleteName<a class="headerlink" href="#deletename" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">deleteName</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>NameQuery<span class="w"> </span>query<span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>deletes name</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+msg.sender is Owner</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././DomainTTLChangeRequested">DomainTTLChangeRequested</a> event.</p>
+</div>
+<h3 id="changereferralprogram">changeReferralProgram<a class="headerlink" href="#changereferralprogram" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeReferralProgram</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referrerFeeShare</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referralDiscount</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>executes all pending changes to LibMultipass.Domain that fulfill TTL</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+domainName must be set
+referrerFeeShare+referralDiscount cannot be larger than 2^32</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././ReferralProgramChangeRequested">ReferralProgramChangeRequested</a> event.</p>
+</div>
+<h3 id="changerenewalfee">changeRenewalFee<a class="headerlink" href="#changerenewalfee" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">changeRenewalFee</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>changes renewal fee for domain</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+domainName must be set
+fee must be set</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././RenewalFeeChangeRequested">RenewalFeeChangeRequested</a> event.</p>
+</div>
+<h3 id="register">register<a class="headerlink" href="#register" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">register</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>newRecord<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">registrarSignature</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>NameQuery<span class="w"> </span>referrer<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">referralCode</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>registers new name under LibMultipass.Domain</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Requirements:
+all arguments must be set
+domainName must be active
+resolveRecord for given arguments should return no LibMultipass.Record</p>
+</div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emits an <a href=".././registered">Registered</a> event.</p>
+</div>
+<h3 id="getdomainstate">getDomainState<a class="headerlink" href="#getdomainstate" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDomainState</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Domain<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>name of the LibMultipass.Domain</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>struct LibMultipass.Domain</code></td>
+<td>(name,       fee,        referrerReward,        referralDiscount,        isActive,        registrar,        ttl,         registerSize)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>returns LibMultipass.Domain state variables</p>
+</div>
+<h3 id="getcontractstate">getContractState<a class="headerlink" href="#getcontractstate" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getContractState</span><span class="p">()</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Output</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>uint256</code></td>
+<td>(s_numDomains)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>returns contract state variables</p>
+</div>
+<h3 id="fundswithdawn">fundsWithdawn<a class="headerlink" href="#fundswithdawn" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">fundsWithdawn</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">amount</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">account</span><span class="p">)</span>
+</code></pre></div>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>returns price for registering name</p>
+</div>
+<h3 id="initializeddomain">InitializedDomain<a class="headerlink" href="#initializeddomain" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">InitializedDomain</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">registrar</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">fee</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">renewalFee</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referrerReward</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">referralDiscount</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>registrar</code></td>
+<td><code>address</code></td>
+<td>The address of the registrar for the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>fee</code></td>
+<td><code>uint256</code></td>
+<td>The fee required for registration in the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>renewalFee</code></td>
+<td><code>uint256</code></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>referrerReward</code></td>
+<td><code>uint256</code></td>
+<td>The reward for referring new registrations to the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>referralDiscount</code></td>
+<td><code>uint256</code></td>
+<td>The discount for referrals in the domain.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Initializes a new domain with the specified parameters.</p>
+</div>
+<h3 id="domainactivated">DomainActivated<a class="headerlink" href="#domainactivated" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DomainActivated</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the activated domain.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a domain is activated.</p>
+</div>
+<h3 id="domaindeactivated">DomainDeactivated<a class="headerlink" href="#domaindeactivated" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DomainDeactivated</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the deactivated domain.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a domain is deactivated.</p>
+</div>
+<h3 id="domainfeechanged">DomainFeeChanged<a class="headerlink" href="#domainfeechanged" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">DomainFeeChanged</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newFee</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newFee</code></td>
+<td><code>uint256</code></td>
+<td>The new fee for the domain.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when the fee for a domain is changed.</p>
+</div>
+<h3 id="registrarchanged">RegistrarChanged<a class="headerlink" href="#registrarchanged" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">RegistrarChanged</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">registrar</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The name of the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>registrar</code></td>
+<td><code>address</code></td>
+<td>The address of the new registrar.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a registrar change is requested for a domain.</p>
+</div>
+<h3 id="namedeleted">nameDeleted<a class="headerlink" href="#namedeleted" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">nameDeleted</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">wallet</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">name</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>wallet</code></td>
+<td><code>address</code></td>
+<td>The address of the wallet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>The ID of the name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>name</code></td>
+<td><code>bytes32</code></td>
+<td>The name.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a name is deleted.</p>
+</div>
+<h3 id="referralprogramchanged">ReferralProgramChanged<a class="headerlink" href="#referralprogramchanged" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">ReferralProgramChanged</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">reward</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">discount</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>reward</code></td>
+<td><code>uint256</code></td>
+<td>The referral reward amount.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>discount</code></td>
+<td><code>uint256</code></td>
+<td>The referral discount amount.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when the referral program for a domain is changed.</p>
+</div>
+<h3 id="registered">Registered<a class="headerlink" href="#registered" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Registered</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>NewRecord<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>NewRecord</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td>The new record.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a domain is registered.</p>
+</div>
+<h3 id="referred">Referred<a class="headerlink" href="#referred" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Referred</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>refferrer<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>newRecord<span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>refferrer</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td>The record of the referrer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRecord</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td>The new record.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a user is referred.</p>
+</div>
+<h3 id="renewed">Renewed<a class="headerlink" href="#renewed" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">Renewed</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">wallet</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">id</span><span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>newRecord<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>wallet</code></td>
+<td><code>address</code></td>
+<td>The address of the wallet.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>bytes32</code></td>
+<td>The ID of the record.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newRecord</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td>The new record.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a user record is renewed.</p>
+</div>
+<h3 id="renewalfeechanged">RenewalFeeChanged<a class="headerlink" href="#renewalfeechanged" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">event</span><span class="w"> </span><span class="nv">RenewalFeeChanged</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">domainName</span><span class="p">,</span><span class="w"> </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">newFee</span><span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>domainName</code></td>
+<td><code>bytes32</code></td>
+<td>The domain name.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>newFee</code></td>
+<td><code>uint256</code></td>
+<td>The new renewal fee.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Emitted when a domain renewal fee is changed.</p>
+</div>
+<h3 id="getdomainstatebyid">getDomainStateById<a class="headerlink" href="#getdomainstatebyid" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">getDomainStateById</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">id</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Domain<span class="p">)</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>id</code></td>
+<td><code>uint256</code></td>
+<td>The ID of the domain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Output</strong></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>0</code></td>
+<td><code>struct LibMultipass.Domain</code></td>
+<td>The domain state as a <code>LibMultipass.Domain</code> struct.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition notice">
+<p class="admonition-title">Notice</p>
+<p>Retrieves the domain state by its ID.</p>
+</div>
+<h3 id="renewrecord">renewRecord<a class="headerlink" href="#renewrecord" title="Permanent link">#</a></h3>
+<p>renews record for given query</p>
+<div class="highlight"><pre><span></span><code><span class="kt">function</span><span class="w"> </span><span class="nv">renewRecord</span><span class="p">(</span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>NameQuery<span class="w"> </span>query<span class="p">,</span><span class="w"> </span><span class="kt">struct</span><span class="w"> </span><span class="nv">LibMultipass</span><span class="p">.</span>Record<span class="w"> </span>record<span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">registrarSignature</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">payable</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Input</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>query</code></td>
+<td><code>struct LibMultipass.NameQuery</code></td>
+<td>name query</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>record</code></td>
+<td><code>struct LibMultipass.Record</code></td>
+<td>new record</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>registrarSignature</code></td>
+<td><code>bytes</code></td>
+<td>registrar signature</td>
+</tr>
+</tbody>
+</table>
+<!--CONTRACT_END-->
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../rankify/RankifyInstanceRequirementsFacet/" class="btn btn-neutral float-left" title="RankifyInstanceRequirementsFacet"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../support/" class="btn btn-neutral float-right" title="Community channels">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/peeramid-labs" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../rankify/RankifyInstanceRequirementsFacet/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../support/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+      <script src="../assets/mkdocs_puml/puml.js"></script>
+      <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      <script src="../assets/mkdocs_puml/interaction.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

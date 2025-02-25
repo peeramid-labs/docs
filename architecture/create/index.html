@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://rankify.it/architecture/create/" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Creating new MAO - Peeramid Network Docs</title>
+    <title>SDK - Rankify Docs</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -15,7 +15,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Creating new MAO";
+        var mkdocs_page_name = "SDK";
         var mkdocs_page_input_path = "architecture/create.md";
         var mkdocs_page_url = "/architecture/create/";
       </script>
@@ -37,7 +37,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Peeramid Network Docs
+          <a href="../.." class="icon icon-home"> Rankify Docs
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -50,9 +50,23 @@
               <ul>
                   <li class="toctree-l1"><a class="reference internal" href="../..">Getting started</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../concepts/">Key Concepts</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../usecases/">Use Cases</a>
+                  </li>
               </ul>
-              <p class="caption"><span class="caption-text">Core Concepts</span></p>
+              <p class="caption"><span class="caption-text">Architecture</span></p>
               <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../overview/">Overview</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../poc/">Ranking system</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../fellowship/">Fellowships</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../MAO/">Meritocratic Autonomous Organizations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../staking/">Staking</a>
+                  </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../cvpp/">Continuous Voting Proposing Protocol</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../acid/">Autonomous Competence Identification Protocol</a>
@@ -62,9 +76,15 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../">Overview</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Creating new MAO</a>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">SDK</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#getting-distributorsdistid">Getting DistributorsDistId</a>
+    <li class="toctree-l2"><a class="reference internal" href="#pre-requisites">Pre-requisites:</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cli-usage">CLI Usage</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#using-playerclass">Using PlayerClass</a>
     </li>
     </ul>
                   </li>
@@ -127,6 +147,8 @@
                 </li>
     </ul>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../Multipass/">IMultipass</a>
+                  </li>
               </ul>
               <p class="caption"><span class="caption-text">Support</span></p>
               <ul>
@@ -142,7 +164,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Peeramid Network Docs</a>
+          <a href="../..">Rankify Docs</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -150,7 +172,7 @@
   <ul class="wy-breadcrumbs">
     <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
           <li class="breadcrumb-item">Developing</li>
-      <li class="breadcrumb-item active">Creating new MAO</li>
+      <li class="breadcrumb-item active">SDK</li>
     <li class="wy-breadcrumbs-aside">
           <a href="https://github.com/peeramid-labs/edit/master/docs/architecture/create.md" class="icon icon-github"> Edit on GitHub</a>
     </li>
@@ -160,47 +182,49 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="creating-new-mao">Creating new MAO<a class="headerlink" href="#creating-new-mao" title="Permanent link">#</a></h1>
-<p>In order to instantiate the MAO distribution, you don't need to deploy a thing. You just need to call the <code>instantiate</code> function of the the <a href="./src/distributors/PeeramidLabsDistributor.sol">PeeramidLabsDistributor.sol</a> contract and specify proper distribution Id and arguments.
-<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w">  </span><span class="nx">MAODistribution</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rankify-contracts/types&#39;</span><span class="p">;</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">distributorArguments</span><span class="o">:</span><span class="w"> </span><span class="kt">MAODistribution.DistributorArgumentsStruct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">DAOSEttings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nx">daoURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/dao&#39;</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">subdomain</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;example&#39;</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">metadata</span><span class="o">:</span><span class="w"> </span><span class="kt">ethers.utils.hexlify</span><span class="p">(</span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toUtf8Bytes</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)),</span>
-<span class="w">          </span><span class="nx">tokenName</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tokenName&#39;</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">tokenSymbol</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;tokenSymbol&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">        </span><span class="nx">ACIDSettings</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">          </span><span class="nx">RankTokenContractURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/rank&#39;</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">gamePrice</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">joinGamePrice</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">maxPlayersSize</span><span class="o">:</span><span class="w"> </span><span class="kt">16</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">maxTurns</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">metadata</span><span class="o">:</span><span class="w"> </span><span class="kt">ethers.utils.hexlify</span><span class="p">(</span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">toUtf8Bytes</span><span class="p">(</span><span class="s1">&#39;metadata&#39;</span><span class="p">)),</span>
-<span class="w">          </span><span class="nx">minPlayersSize</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">paymentToken</span><span class="o">:</span><span class="w"> </span><span class="kt">rankify.address</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">rankTokenURI</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://example.com/rank&#39;</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">timePerTurn</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">timeToJoin</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span>
-<span class="w">          </span><span class="nx">voteCredits</span><span class="o">:</span><span class="w"> </span><span class="kt">14</span><span class="p">,</span>
-<span class="w">        </span><span class="p">},</span>
-<span class="w">      </span><span class="p">};</span>
-<span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">defaultAbiCoder</span><span class="p">.</span><span class="nx">encode</span><span class="p">(</span>
-<span class="w">        </span><span class="p">[</span>
-<span class="w">          </span><span class="s1">&#39;tuple(tuple(string daoURI, string subdomain, bytes metadata, string tokenName, string tokenSymbol) DAOSEttings, tuple(uint256 timePerTurn, uint256 maxPlayersSize, uint256 minPlayersSize, uint256 timeToJoin, uint256 maxTurns, uint256 voteCredits, uint256 gamePrice, address paymentToken, uint256 joinGamePrice, string metadata, string rankTokenURI, string RankTokenContractURI) ACIDSettings)&#39;</span><span class="p">,</span>
-<span class="w">        </span><span class="p">],</span>
-<span class="w">        </span><span class="p">[</span><span class="nx">distributorArguments</span><span class="p">],</span>
-<span class="w">      </span><span class="p">);</span>
-<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">distributorsDistId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">DISTRIBUTOR_DIST_ID</span><span class="p">;</span>
-<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">distributorContract</span><span class="p">.</span><span class="nx">instantiate</span><span class="p">(</span><span class="nx">distributorsDistId</span><span class="p">,</span><span class="w"> </span><span class="nx">data</span><span class="p">);</span>
-</code></pre></div></p>
-<h2 id="getting-distributorsdistid">Getting DistributorsDistId<a class="headerlink" href="#getting-distributorsdistid" title="Permanent link">#</a></h2>
-<p>While in development, simplest way to get <code>distributorsDistId</code> for MAO distribution is to call <code>getDistributions</code> at <code>PeeramidLabsDistributor</code> contract and look for. It's likely to be only one.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>We will host a public API and upgrade our SDK to get the list of distributions soon.</p>
-</div>
+                <h1 id="sdk">SDK<a class="headerlink" href="#sdk" title="Permanent link">#</a></h1>
+<p>In order to ease development and client side operations we provide sdk:</p>
+<h2 id="pre-requisites">Pre-requisites:<a class="headerlink" href="#pre-requisites" title="Permanent link">#</a></h2>
+<ul>
+<li>Node <code>v22.12.0</code> or higher</li>
+<li><code>viem=^2.22.8"</code></li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using npm</span>
+npm<span class="w"> </span>install<span class="w"> </span>@peeramid-labs/sdk
+
+<span class="c1"># Using yarn</span>
+yarn<span class="w"> </span>add<span class="w"> </span>@peeramid-labs/sdk
+
+<span class="c1"># Using pnpm</span>
+pnpm<span class="w"> </span>add<span class="w"> </span>@peeramid-labs/sdk
+</code></pre></div>
+<h2 id="cli-usage">CLI Usage<a class="headerlink" href="#cli-usage" title="Permanent link">#</a></h2>
+<p>The SDK includes a command-line interface for interacting with Peeramid contracts:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Set up environment variables</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">RPC_URL</span><span class="o">=</span><span class="s2">&quot;your-rpc-url&quot;</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">PRIVATE_KEY</span><span class="o">=</span><span class="s2">&quot;your-private-key&quot;</span>
+
+<span class="c1"># List available commands</span>
+peeramid<span class="w"> </span>--help
+
+<span class="c1"># Examples:</span>
+peeramid<span class="w"> </span>distributions<span class="w"> </span>list
+peeramid<span class="w"> </span>fellowship<span class="w"> </span>create
+peeramid<span class="w"> </span>instances<span class="w"> </span>list
+peeramid<span class="w"> </span>multipass<span class="w"> </span>domains<span class="w"> </span>create
+</code></pre></div>
+<h2 id="using-playerclass">Using PlayerClass<a class="headerlink" href="#using-playerclass" title="Permanent link">#</a></h2>
+<div class="highlight"><pre><span></span><code><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">RankifyPlayer</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;@peeramid-labs/sdk&quot;</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">player</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RankifyPlayer</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">publicClient</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">walletClient</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">chainId</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">instanceAddress</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">account</span>
+<span class="w">    </span><span class="p">})</span>
+</code></pre></div>
               
             </div>
           </div><footer>
