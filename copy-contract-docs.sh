@@ -44,7 +44,8 @@ cp -r node_modules/rankify-contracts/docs/contracts/tokens/* docs/rankify
 cp -r node_modules/rankify-contracts/docs/contracts/distributions/* docs/rankify
 cp node_modules/rankify-contracts/docs/contracts/DAODistributor.md docs/rankify/
 cp -r node_modules/@peeramid-labs/eds/docs/contracts/interfaces/* "docs/Ethereum Distribution System"
-# cp -r node_modules/@peeramid-labs/sdk/docs/* "docs/sdk"
+cp -r node_modules/@peeramid-labs/multipass/docs/contracts/interfaces/* "docs/Multipass.md"
+cp -r node_modules/@peeramid-labs/sdk/docs/* "docs/sdk"
 
 # Process the copied files to reduce size
 process_md_files "docs/rankify"

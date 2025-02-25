@@ -5,3 +5,4 @@ pymdown-extensions>=10.8.1 # Markdown extensions for MkDocs
 mkautodoc>=0.2.0
 mkdocs-mermaid2-plugin>=1.1.1
 mkdocs-awesome-pages-plugin>=2.9.3
+mkdocs-include-dir-to-nav>=1.2.0
