@@ -18,6 +18,7 @@ nav:
     - Developing:
           - "architecture/index.md"
           - "architecture/create.md"
+          - "addresses.md"
     # - SDK: "sdk"
     - Contract API:
           - ...
